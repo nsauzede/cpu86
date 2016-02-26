@@ -1,0 +1,105 @@
+Running: d:\vendors\Xilinx\ISE_DS\ISE\bin\nt\unwrapped\fuse.exe -intstyle ise -incremental -o D:/hdl_designs/cpu8088/website/cpu86/drigmorn1/Drigmorn1_tb_isim_beh.exe -prj D:/hdl_designs/cpu8088/website/cpu86/drigmorn1/Drigmorn1_tb_beh.prj work.Drigmorn1_tb 
+ISim M.63c (signature 0xb869381d)
+Number of CPUs detected in this system: 2
+Turning on mult-threading, number of parallel sub-compilation jobs: 4 
+Determining compilation order of HDL files
+Parsing VHDL file "D:/hdl_designs/cpu8088/website/cpu86/drigmorn1/../Opencores/slib_mv_filter.vhd" into library work
+Parsing VHDL file "D:/hdl_designs/cpu8088/website/cpu86/drigmorn1/../Opencores/slib_counter.vhd" into library work
+Parsing VHDL file "D:/hdl_designs/cpu8088/website/cpu86/drigmorn1/../cpu86_rtl/r_table.vhd" into library work
+Parsing VHDL file "D:/hdl_designs/cpu8088/website/cpu86/drigmorn1/../cpu86_rtl/n_table.vhd" into library work
+Parsing VHDL file "D:/hdl_designs/cpu8088/website/cpu86/drigmorn1/../cpu86_rtl/m_table.vhd" into library work
+Parsing VHDL file "D:/hdl_designs/cpu8088/website/cpu86/drigmorn1/../cpu86_rtl/multiplier_rtl.vhd" into library work
+Parsing VHDL file "D:/hdl_designs/cpu8088/website/cpu86/drigmorn1/../cpu86_rtl/d_table.vhd" into library work
+Parsing VHDL file "D:/hdl_designs/cpu8088/website/cpu86/drigmorn1/../cpu86_rtl/divider_rtl_ser.vhd" into library work
+Parsing VHDL file "D:/hdl_designs/cpu8088/website/cpu86/drigmorn1/../cpu86_rtl/cpu86pack.vhd" into library work
+Parsing VHDL file "D:/hdl_designs/cpu8088/website/cpu86/drigmorn1/../cpu86_rtl/cpu86instr.vhd" into library work
+Parsing VHDL file "D:/hdl_designs/cpu8088/website/cpu86/drigmorn1/../cpu86_rtl/a_table.vhd" into library work
+Parsing VHDL file "D:/hdl_designs/cpu8088/website/cpu86/drigmorn1/../Opencores/uart_transmitter.vhd" into library work
+Parsing VHDL file "D:/hdl_designs/cpu8088/website/cpu86/drigmorn1/../Opencores/uart_receiver.vhd" into library work
+Parsing VHDL file "D:/hdl_designs/cpu8088/website/cpu86/drigmorn1/../Opencores/uart_interrupt.vhd" into library work
+Parsing VHDL file "D:/hdl_designs/cpu8088/website/cpu86/drigmorn1/../Opencores/uart_baudgen.vhd" into library work
+Parsing VHDL file "D:/hdl_designs/cpu8088/website/cpu86/drigmorn1/../Opencores/slib_input_sync.vhd" into library work
+Parsing VHDL file "D:/hdl_designs/cpu8088/website/cpu86/drigmorn1/../Opencores/slib_input_filter.vhd" into library work
+Parsing VHDL file "D:/hdl_designs/cpu8088/website/cpu86/drigmorn1/../Opencores/slib_fifo.vhd" into library work
+Parsing VHDL file "D:/hdl_designs/cpu8088/website/cpu86/drigmorn1/../Opencores/slib_edge_detect.vhd" into library work
+Parsing VHDL file "D:/hdl_designs/cpu8088/website/cpu86/drigmorn1/../Opencores/slib_clock_div.vhd" into library work
+Parsing VHDL file "D:/hdl_designs/cpu8088/website/cpu86/drigmorn1/../cpu86_rtl/segregfile_rtl.vhd" into library work
+Parsing VHDL file "D:/hdl_designs/cpu8088/website/cpu86/drigmorn1/../cpu86_rtl/regshiftmux_regshift.vhd" into library work
+Parsing VHDL file "D:/hdl_designs/cpu8088/website/cpu86/drigmorn1/../cpu86_rtl/ipregister_rtl.vhd" into library work
+Parsing VHDL file "D:/hdl_designs/cpu8088/website/cpu86/drigmorn1/../cpu86_rtl/formatter_struct.vhd" into library work
+Parsing VHDL file "D:/hdl_designs/cpu8088/website/cpu86/drigmorn1/../cpu86_rtl/dataregfile_rtl.vhd" into library work
+Parsing VHDL file "D:/hdl_designs/cpu8088/website/cpu86/drigmorn1/../cpu86_rtl/biufsm_fsm.vhd" into library work
+Parsing VHDL file "D:/hdl_designs/cpu8088/website/cpu86/drigmorn1/../cpu86_rtl/alu_rtl.vhd" into library work
+Parsing VHDL file "D:/hdl_designs/cpu8088/website/cpu86/drigmorn1/../Opencores/uart_16750.vhd" into library work
+Parsing VHDL file "D:/hdl_designs/cpu8088/website/cpu86/drigmorn1/../cpu86_rtl/proc_rtl.vhd" into library work
+Parsing VHDL file "D:/hdl_designs/cpu8088/website/cpu86/drigmorn1/../cpu86_rtl/datapath_struct.vhd" into library work
+Parsing VHDL file "D:/hdl_designs/cpu8088/website/cpu86/drigmorn1/../cpu86_rtl/biu_struct.vhd" into library work
+Parsing VHDL file "D:/hdl_designs/cpu8088/website/cpu86/drigmorn1/../top_rtl/uart_top_struct.vhd" into library work
+Parsing VHDL file "D:/hdl_designs/cpu8088/website/cpu86/drigmorn1/top_drigmorn1/Bootstrap_rtl.vhd" into library work
+Parsing VHDL file "D:/hdl_designs/cpu8088/website/cpu86/drigmorn1/coregen/blk_mem_40K.vhd" into library work
+Parsing VHDL file "D:/hdl_designs/cpu8088/website/cpu86/drigmorn1/../cpu86_rtl/cpu86_struct.vhd" into library work
+Parsing VHDL file "D:/hdl_designs/cpu8088/website/cpu86/drigmorn1/../testbench/utils.vhd" into library work
+Parsing VHDL file "D:/hdl_designs/cpu8088/website/cpu86/drigmorn1/../testbench/uarttx.vhd" into library work
+Parsing VHDL file "D:/hdl_designs/cpu8088/website/cpu86/drigmorn1/../testbench/uartrx.vhd" into library work
+Parsing VHDL file "D:/hdl_designs/cpu8088/website/cpu86/drigmorn1/top_drigmorn1/drigmorn1_top.vhd" into library work
+Parsing VHDL file "D:/hdl_designs/cpu8088/website/cpu86/drigmorn1/testbench/Drigmorn1_tb.vhd" into library work
+Starting static elaboration
+Completed static elaboration
+Fuse Memory Usage: 83384 KB
+Fuse CPU Usage: 3327 ms
+Using precompiled package standard from library std
+Using precompiled package std_logic_1164 from library ieee
+Using precompiled package std_logic_arith from library ieee
+Using precompiled package std_logic_unsigned from library ieee
+Using precompiled package textio from library std
+Using precompiled package std_logic_textio from library ieee
+Using precompiled package numeric_std from library ieee
+Compiling package utils
+Compiling package cpu86pack
+Compiling package cpu86instr
+Compiling architecture fsm of entity biufsm [biufsm_default]
+Compiling architecture rtl of entity a_table [a_table_default]
+Compiling architecture rtl of entity d_table [d_table_default]
+Compiling architecture rtl of entity m_table [m_table_default]
+Compiling architecture rtl of entity n_table [n_table_default]
+Compiling architecture rtl of entity r_table [r_table_default]
+Compiling architecture struct of entity formatter [formatter_default]
+Compiling architecture regshift of entity regshiftmux [regshiftmux_default]
+Compiling architecture struct of entity biu [biu_default]
+Compiling architecture rtl_ser of entity divider [\divider(32,16,8)\]
+Compiling architecture rtl of entity multiplier [\multiplier(16)\]
+Compiling architecture rtl of entity alu [alu_default]
+Compiling architecture rtl of entity dataregfile [dataregfile_default]
+Compiling architecture rtl of entity ipregister [ipregister_default]
+Compiling architecture rtl of entity segregfile [segregfile_default]
+Compiling architecture struct of entity datapath [datapath_default]
+Compiling architecture rtl of entity proc [proc_default]
+Compiling architecture struct of entity cpu86 [cpu86_default]
+Compiling architecture behavioral of entity blk_mem_gen_v3_2_output_stage [\BLK_MEM_GEN_V3_2_output_stage("...]
+Compiling architecture behavioral of entity blk_mem_gen_v3_2 [\BLK_MEM_GEN_V3_2("blk_mem_gen_v...]
+Compiling architecture blk_mem_40k_a of entity blk_mem_40k [blk_mem_40k_default]
+Compiling architecture rtl of entity bootstrap [bootstrap_default]
+Compiling architecture rtl of entity slib_edge_detect [slib_edge_detect_default]
+Compiling architecture rtl of entity slib_input_sync [slib_input_sync_default]
+Compiling architecture rtl of entity slib_input_filter [\slib_input_filter(2)\]
+Compiling architecture rtl of entity uart_interrupt [uart_interrupt_default]
+Compiling architecture rtl of entity uart_baudgen [uart_baudgen_default]
+Compiling architecture rtl of entity slib_clock_div [\slib_clock_div(8)\]
+Compiling architecture rtl of entity slib_fifo [\slib_fifo(8,6)\]
+Compiling architecture rtl of entity slib_fifo [\slib_fifo(11,6)\]
+Compiling architecture rtl of entity uart_transmitter [uart_transmitter_default]
+Compiling architecture rtl of entity slib_counter [\slib_counter(4)\]
+Compiling architecture rtl of entity slib_mv_filter [\slib_mv_filter(4,10)\]
+Compiling architecture rtl of entity uart_receiver [uart_receiver_default]
+Compiling architecture rtl of entity uart_16750 [uart_16750_default]
+Compiling architecture struct of entity uart_top [uart_top_default]
+Compiling architecture struct of entity drigmorn1_top [drigmorn1_top_default]
+Compiling architecture rtl of entity uarttx [uarttx_default]
+Compiling architecture rtl of entity uartrx [uartrx_default]
+Compiling architecture struct of entity drigmorn1_tb
+Time Resolution for simulation is 1ps.
+Waiting for 3 sub-compilation(s) to finish...
+Compiled 89 VHDL Units
+Built simulation executable D:/hdl_designs/cpu8088/website/cpu86/drigmorn1/Drigmorn1_tb_isim_beh.exe
+Fuse Memory Usage: 98884 KB
+Fuse CPU Usage: 4343 ms

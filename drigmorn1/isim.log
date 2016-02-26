@@ -1,0 +1,57 @@
+ISim log file
+Running: D:\hdl_designs\cpu8088\website\cpu86\drigmorn1\Drigmorn1_tb_isim_beh.exe -gui -tclbatch isim.cmd -wdb D:/hdl_designs/cpu8088/website/cpu86/drigmorn1/Drigmorn1_tb_isim_beh.wdb 
+ISim M.63c (signature 0xb869381d)
+This is a Full version of ISim.
+Time resolution is 1 ps
+# onerror resume
+# wave add /
+# run 1000 ns
+Simulator is doing circuit initialization process.
+at 0 ps, Instance /drigmorn1_tb/U_0/U_1/cpubiu/ : Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+at 0 ps, Instance /drigmorn1_tb/U_0/U_1/cpudpath/I6/ALUU1/ : Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+at 0 ps, Instance /drigmorn1_tb/U_0/U_1/cpudpath/I6/ALUU1/ : Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+at 0 ps, Instance /drigmorn1_tb/U_0/U_1/cpudpath/I6/ALUU2/ : Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+at 0 ps, Instance /drigmorn1_tb/U_0/U_1/cpudpath/I6/ALUU2/ : Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+at 0 ps, Instance /drigmorn1_tb/U_0/U_0/U_0/UART_TXFF/ : Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+at 0 ps, Instance /drigmorn1_tb/U_0/U_0/U_0/UART_RXFF/ : Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Finished circuit initialization process.
+# restart
+# run 1 ms
+Simulator is doing circuit initialization process.
+at 0 ps, Instance /drigmorn1_tb/U_0/U_1/cpudpath/I6/ALUU1/ : Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+at 0 ps, Instance /drigmorn1_tb/U_0/U_1/cpudpath/I6/ALUU1/ : Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+at 0 ps, Instance /drigmorn1_tb/U_0/U_1/cpudpath/I6/ALUU2/ : Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+at 0 ps, Instance /drigmorn1_tb/U_0/U_1/cpudpath/I6/ALUU2/ : Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+at 0 ps, Instance /drigmorn1_tb/U_0/U_0/U_0/UART_TXFF/ : Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+at 0 ps, Instance /drigmorn1_tb/U_0/U_0/U_0/UART_RXFF/ : Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Finished circuit initialization process.
+at 2087500 ps(1): Note: Block Memory Generator CORE Generator module is using a behavioral model FOR simulation which will not precisely model memory collision behavior. (/drigmorn1_tb/U_0/U_3/U0/).
+# run 10 ms
+RD UART : MON88 8088/8086 Monitor ver 0.12
+# run 20 ms
+RD UART : Copyright WWW.HT-LAB.COM 2005-2008
+RD UART : All rights reserved.
+RD UART : 
+RD UART : Cmd>R 
+# run 10 ms
+# run 10 ms
+RD UART : AX=0000 BX=0001 CX=0002 DX=0003 SP=0100 BP=0005 SI=0006 DI=0007
+# run 10 ms
+Stopped at time : 54045762500 ps : File "D:/hdl_designs/cpu8088/website/cpu86/cpu86_rtl/biu_struct.vhd" Line 351
+# restart
+# run 60 ms
+Simulator is doing circuit initialization process.
+at 0 ps, Instance /drigmorn1_tb/U_0/U_1/cpudpath/I6/ALUU1/ : Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+at 0 ps, Instance /drigmorn1_tb/U_0/U_1/cpudpath/I6/ALUU1/ : Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+at 0 ps, Instance /drigmorn1_tb/U_0/U_1/cpudpath/I6/ALUU2/ : Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+at 0 ps, Instance /drigmorn1_tb/U_0/U_1/cpudpath/I6/ALUU2/ : Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+at 0 ps, Instance /drigmorn1_tb/U_0/U_0/U_0/UART_TXFF/ : Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+at 0 ps, Instance /drigmorn1_tb/U_0/U_0/U_0/UART_RXFF/ : Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Finished circuit initialization process.
+at 2087500 ps(1): Note: Block Memory Generator CORE Generator module is using a behavioral model FOR simulation which will not precisely model memory collision behavior. (/drigmorn1_tb/U_0/U_3/U0/).
+RD UART : MON88 8088/8086 Monitor ver 0.12
+RD UART : Copyright WWW.HT-LAB.COM 2005-2008
+RD UART : All rights reserved.
+RD UART : 
+RD UART : Cmd>R 
+RD UART : AX=0000 BX=0001 CX=0002 DX=0003 SP=0100 BP=0005 SI=0006 DI=0007

@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<generated_project xmlns="http://www.xilinx.com/XMLSchema" xmlns:xil_pn="http://www.xilinx.com/XMLSchema">
+
+  <!--                                                          -->
+
+  <!--             For tool use only. Do not edit.              -->
+
+  <!--                                                          -->
+
+  <!-- ProjectNavigator created generated project file.         -->
+
+  <!-- For use in tracking generated file and other information -->
+
+  <!-- allowing preservation of process status.                 -->
+
+  <!--                                                          -->
+
+  <!-- Copyright (c) 1995-2010 Xilinx, Inc.  All rights reserved. -->
+
+  <version xmlns="http://www.xilinx.com/XMLSchema">11.1</version>
+
+  <sourceproject xmlns="http://www.xilinx.com/XMLSchema" xil_pn:fileType="FILE_XISE" xil_pn:name="Drigmorn1.xise"/>
+
+  <files xmlns="http://www.xilinx.com/XMLSchema">
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="Drigmorn1_tb_beh.prj"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="Drigmorn1_tb_isim_beh.exe"/>
+    <file xil_pn:fileType="FILE_ISIM_MISC" xil_pn:name="Drigmorn1_tb_isim_beh.wdb"/>
+    <file xil_pn:fileType="FILE_LOG" xil_pn:name="fuse.log"/>
+    <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="isim"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_CMD" xil_pn:name="isim.cmd"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_LOG" xil_pn:name="isim.log"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_INI" xil_pn:name="xilinxsim.ini"/>
+  </files>
+
+  <transforms xmlns="http://www.xilinx.com/XMLSchema">
+    <transform xil_pn:end_ts="1282473601" xil_pn:name="TRAN_copyInitialToAbstractSimulation" xil_pn:start_ts="1282473601">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1282473601" xil_pn:in_ck="-4942263181261812923" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1282473601">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <outfile xil_pn:name="../Opencores/slib_clock_div.vhd"/>
+      <outfile xil_pn:name="../Opencores/slib_counter.vhd"/>
+      <outfile xil_pn:name="../Opencores/slib_edge_detect.vhd"/>
+      <outfile xil_pn:name="../Opencores/slib_fifo.vhd"/>
+      <outfile xil_pn:name="../Opencores/slib_input_filter.vhd"/>
+      <outfile xil_pn:name="../Opencores/slib_input_sync.vhd"/>
+      <outfile xil_pn:name="../Opencores/slib_mv_filter.vhd"/>
+      <outfile xil_pn:name="../Opencores/uart_16750.vhd"/>
+      <outfile xil_pn:name="../Opencores/uart_baudgen.vhd"/>
+      <outfile xil_pn:name="../Opencores/uart_interrupt.vhd"/>
+      <outfile xil_pn:name="../Opencores/uart_receiver.vhd"/>
+      <outfile xil_pn:name="../Opencores/uart_transmitter.vhd"/>
+      <outfile xil_pn:name="../cpu86_rtl/a_table.vhd"/>
+      <outfile xil_pn:name="../cpu86_rtl/alu_rtl.vhd"/>
+      <outfile xil_pn:name="../cpu86_rtl/biu_struct.vhd"/>
+      <outfile xil_pn:name="../cpu86_rtl/biufsm_fsm.vhd"/>
+      <outfile xil_pn:name="../cpu86_rtl/cpu86_struct.vhd"/>
+      <outfile xil_pn:name="../cpu86_rtl/cpu86instr.vhd"/>
+      <outfile xil_pn:name="../cpu86_rtl/cpu86pack.vhd"/>
+      <outfile xil_pn:name="../cpu86_rtl/d_table.vhd"/>
+      <outfile xil_pn:name="../cpu86_rtl/datapath_struct.vhd"/>
+      <outfile xil_pn:name="../cpu86_rtl/dataregfile_rtl.vhd"/>
+      <outfile xil_pn:name="../cpu86_rtl/divider_rtl_ser.vhd"/>
+      <outfile xil_pn:name="../cpu86_rtl/formatter_struct.vhd"/>
+      <outfile xil_pn:name="../cpu86_rtl/ipregister_rtl.vhd"/>
+      <outfile xil_pn:name="../cpu86_rtl/m_table.vhd"/>
+      <outfile xil_pn:name="../cpu86_rtl/multiplier_rtl.vhd"/>
+      <outfile xil_pn:name="../cpu86_rtl/n_table.vhd"/>
+      <outfile xil_pn:name="../cpu86_rtl/proc_rtl.vhd"/>
+      <outfile xil_pn:name="../cpu86_rtl/r_table.vhd"/>
+      <outfile xil_pn:name="../cpu86_rtl/regshiftmux_regshift.vhd"/>
+      <outfile xil_pn:name="../cpu86_rtl/segregfile_rtl.vhd"/>
+      <outfile xil_pn:name="../testbench/uartrx.vhd"/>
+      <outfile xil_pn:name="../testbench/uarttx.vhd"/>
+      <outfile xil_pn:name="../testbench/utils.vhd"/>
+      <outfile xil_pn:name="../top_rtl/uart_top_struct.vhd"/>
+      <outfile xil_pn:name="coregen/blk_mem_40K.vhd"/>
+      <outfile xil_pn:name="testbench/Drigmorn1_tb.vhd"/>
+      <outfile xil_pn:name="top_drigmorn1/Bootstrap_rtl.vhd"/>
+      <outfile xil_pn:name="top_drigmorn1/drigmorn1_top.vhd"/>
+    </transform>
+    <transform xil_pn:end_ts="1282473601" xil_pn:name="TRAN_xawsToSimhdl" xil_pn:prop_ck="-8786215939375688461" xil_pn:start_ts="1282473601">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1282473601" xil_pn:name="TRAN_schematicsToHdlSim" xil_pn:prop_ck="-5028572578940563019" xil_pn:start_ts="1282473601">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1282473601" xil_pn:name="TRAN_regenerateCoresSim" xil_pn:prop_ck="-3893467382531927777" xil_pn:start_ts="1282473601">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1282473601" xil_pn:in_ck="-4942263181261812923" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1282473601">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <outfile xil_pn:name="../Opencores/slib_clock_div.vhd"/>
+      <outfile xil_pn:name="../Opencores/slib_counter.vhd"/>
+      <outfile xil_pn:name="../Opencores/slib_edge_detect.vhd"/>
+      <outfile xil_pn:name="../Opencores/slib_fifo.vhd"/>
+      <outfile xil_pn:name="../Opencores/slib_input_filter.vhd"/>
+      <outfile xil_pn:name="../Opencores/slib_input_sync.vhd"/>
+      <outfile xil_pn:name="../Opencores/slib_mv_filter.vhd"/>
+      <outfile xil_pn:name="../Opencores/uart_16750.vhd"/>
+      <outfile xil_pn:name="../Opencores/uart_baudgen.vhd"/>
+      <outfile xil_pn:name="../Opencores/uart_interrupt.vhd"/>
+      <outfile xil_pn:name="../Opencores/uart_receiver.vhd"/>
+      <outfile xil_pn:name="../Opencores/uart_transmitter.vhd"/>
+      <outfile xil_pn:name="../cpu86_rtl/a_table.vhd"/>
+      <outfile xil_pn:name="../cpu86_rtl/alu_rtl.vhd"/>
+      <outfile xil_pn:name="../cpu86_rtl/biu_struct.vhd"/>
+      <outfile xil_pn:name="../cpu86_rtl/biufsm_fsm.vhd"/>
+      <outfile xil_pn:name="../cpu86_rtl/cpu86_struct.vhd"/>
+      <outfile xil_pn:name="../cpu86_rtl/cpu86instr.vhd"/>
+      <outfile xil_pn:name="../cpu86_rtl/cpu86pack.vhd"/>
+      <outfile xil_pn:name="../cpu86_rtl/d_table.vhd"/>
+      <outfile xil_pn:name="../cpu86_rtl/datapath_struct.vhd"/>
+      <outfile xil_pn:name="../cpu86_rtl/dataregfile_rtl.vhd"/>
+      <outfile xil_pn:name="../cpu86_rtl/divider_rtl_ser.vhd"/>
+      <outfile xil_pn:name="../cpu86_rtl/formatter_struct.vhd"/>
+      <outfile xil_pn:name="../cpu86_rtl/ipregister_rtl.vhd"/>
+      <outfile xil_pn:name="../cpu86_rtl/m_table.vhd"/>
+      <outfile xil_pn:name="../cpu86_rtl/multiplier_rtl.vhd"/>
+      <outfile xil_pn:name="../cpu86_rtl/n_table.vhd"/>
+      <outfile xil_pn:name="../cpu86_rtl/proc_rtl.vhd"/>
+      <outfile xil_pn:name="../cpu86_rtl/r_table.vhd"/>
+      <outfile xil_pn:name="../cpu86_rtl/regshiftmux_regshift.vhd"/>
+      <outfile xil_pn:name="../cpu86_rtl/segregfile_rtl.vhd"/>
+      <outfile xil_pn:name="../testbench/uartrx.vhd"/>
+      <outfile xil_pn:name="../testbench/uarttx.vhd"/>
+      <outfile xil_pn:name="../testbench/utils.vhd"/>
+      <outfile xil_pn:name="../top_rtl/uart_top_struct.vhd"/>
+      <outfile xil_pn:name="coregen/blk_mem_40K.vhd"/>
+      <outfile xil_pn:name="testbench/Drigmorn1_tb.vhd"/>
+      <outfile xil_pn:name="top_drigmorn1/Bootstrap_rtl.vhd"/>
+      <outfile xil_pn:name="top_drigmorn1/drigmorn1_top.vhd"/>
+    </transform>
+    <transform xil_pn:end_ts="1282473613" xil_pn:in_ck="-4942263181261812923" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="6981322159145620499" xil_pn:start_ts="1282473601">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="OutputChanged"/>
+      <outfile xil_pn:name="Drigmorn1_tb_beh.prj"/>
+      <outfile xil_pn:name="Drigmorn1_tb_isim_beh.exe"/>
+      <outfile xil_pn:name="fuse.log"/>
+      <outfile xil_pn:name="isim"/>
+      <outfile xil_pn:name="isim.log"/>
+      <outfile xil_pn:name="xilinxsim.ini"/>
+    </transform>
+    <transform xil_pn:end_ts="1282473613" xil_pn:in_ck="-140568029183718313" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="1987563840486925600" xil_pn:start_ts="1282473613">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="OutputChanged"/>
+      <outfile xil_pn:name="Drigmorn1_tb_isim_beh.wdb"/>
+      <outfile xil_pn:name="isim.cmd"/>
+      <outfile xil_pn:name="isim.log"/>
+    </transform>
+  </transforms>
+
+</generated_project>

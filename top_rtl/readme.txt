@@ -1,0 +1,1 @@
+This directory contains the SIMULATION top level which instantiates the CPU86, bootstrap ROM + the opencores UART.

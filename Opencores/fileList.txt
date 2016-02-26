@@ -1,0 +1,14 @@
+Synthesis filelist
+uart_baudgen.vhd
+slib_clock_div.vhd
+slib_edge_detect.vhd
+slib_input_filter.vhd
+uart_interrupt.vhd
+slib_input_sync.vhd
+slib_counter.vhd
+slib_mv_filter.vhd
+uart_receiver.vhd
+slib_fifo.vhd
+uart_transmitter.vhd
+uart_16750.vhd
+uart_top_struct.vhd
