@@ -1,12 +1,12 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="1.7" >
  <header>
-  <DateModified>2010-08-22T11:39:45</DateModified>
+  <DateModified>2016-02-26T20:48:32</DateModified>
   <ModuleName>drigmorn1_top</ModuleName>
-  <SummaryTimeStamp>Unknown</SummaryTimeStamp>
+  <SummaryTimeStamp>2015-02-13T10:29:07</SummaryTimeStamp>
   <DateInitialized>2009-05-21T11:08:47</DateInitialized>
-  <ImplementationReportsDirectory>D:/hdl_designs/cpu8088/website/cpu86/drigmorn1\</ImplementationReportsDirectory>
-  <SavedFilePath>D:/hdl_designs/cpu8088/website/cpu86/drigmorn1/iseconfig/drigmorn1_top.xreport</SavedFilePath>
+  <ImplementationReportsDirectory>C:/nico/msys/home/sauzeden/git/cpu86/drigmorn1\</ImplementationReportsDirectory>
+  <SavedFilePath>C:/nico/msys/home/sauzeden/git/cpu86/drigmorn1/iseconfig/drigmorn1_top.xreport</SavedFilePath>
   <EnableMessageFiltering>false</EnableMessageFiltering>
  </header>
  <body>

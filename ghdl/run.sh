@@ -67,4 +67,5 @@ ghdl -a --ieee=synopsys -fexplicit ../testbench/cpu86_top_tb_struct.vhd
 echo 'Running Testbench in command line mode'
 ln -sf ../Modelsim/loadfname.dat .
 ghdl -e --ieee=synopsys -fexplicit cpu86_top_tb
-./cpu86_top_tb --stop-time=200ms --ieee-asserts=disable $*
+#./cpu86_top_tb --stop-time=200ms --ieee-asserts=disable $*
+ghdl -r --ieee=synopsys -fexplicit cpu86_top_tb --stop-time=200ms --ieee-asserts=disable $*
