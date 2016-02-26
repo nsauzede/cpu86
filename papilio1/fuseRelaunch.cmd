@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -o "C:/nico/perso/hack/hackerspace/fpga/x86/cpu86/papilio1/papilio1_tb2_isim_beh.exe" -prj "C:/nico/perso/hack/hackerspace/fpga/x86/cpu86/papilio1/papilio1_tb2_beh.prj" "work.papilio1_tb2" 

@@ -1,0 +1,26 @@
+Welcome to Xilinx CORE Generator.
+Help system initialised.
+Wrote project file D:\hdl_designs\cpu8088\website\cpu86\drigmorn1\coregen\coregen.cgp
+Wrote project file D:\hdl_designs\cpu8088\website\cpu86\drigmorn1\coregen\coregen.cgp
+Customizing IP...
+Finished Customizing.
+Generating IP...
+WARNING:sim:89 - A core named <blk_mem_40K> already exists in the output directory. Output products for this core may be overwritten.
+XST: HDL Compilation
+XST: Design Hierarchy Analysis
+XST: HDL Analysis
+XST: HDL Synthesis
+XST: Advanced HDL Synthesis
+XST: Low Level Synthesis
+Generating Implementation files.
+Generating ISE symbol file...
+Generating NGC file.
+Finished Generation Stage.
+Generating ISE file...
+Finished ISE file generation.
+Generating FLIST file...
+Finished FLIST file generation.
+Preparing output directory...
+Finished preparing output directory.
+Moving files to output directory...
+Finished moving files to output directory.

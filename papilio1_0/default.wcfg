@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="C:/nico/perso/hack/hackerspace/fpga/x86/cpu86/papilio1/papilio1_tb_isim_beh.wdb" id="1" type="auto">
+         <top_modules>
+            <top_module name="cpu86instr" />
+            <top_module name="cpu86pack" />
+            <top_module name="numeric_std" />
+            <top_module name="papilio1_tb" />
+            <top_module name="std_logic_1164" />
+            <top_module name="std_logic_arith" />
+            <top_module name="std_logic_textio" />
+            <top_module name="std_logic_unsigned" />
+            <top_module name="textio" />
+            <top_module name="utils" />
+            <top_module name="vcomponents" />
+            <top_module name="vital_primitives" />
+            <top_module name="vital_timing" />
+            <top_module name="vpkg" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <WVObjectSize size="28" />
+   <wvobject fp_name="/papilio1_tb/U_0/U_0/irq" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">irq</obj_property>
+      <obj_property name="ObjectShortName">irq</obj_property>
+   </wvobject>
+   <wvobject fp_name="/papilio1_tb/dind1_s" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">dind1_s</obj_property>
+      <obj_property name="ObjectShortName">dind1_s</obj_property>
+   </wvobject>
+   <wvobject fp_name="/papilio1_tb/dind2_s" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">dind2_s</obj_property>
+      <obj_property name="ObjectShortName">dind2_s</obj_property>
+   </wvobject>
+   <wvobject fp_name="/papilio1_tb/clock_40mhz" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">clock_40mhz</obj_property>
+      <obj_property name="ObjectShortName">clock_40mhz</obj_property>
+   </wvobject>
+   <wvobject fp_name="/papilio1_tb/clock_32mhz" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">clock_32mhz</obj_property>
+      <obj_property name="ObjectShortName">clock_32mhz</obj_property>
+   </wvobject>
+   <wvobject fp_name="/papilio1_tb/cts" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">cts</obj_property>
+      <obj_property name="ObjectShortName">cts</obj_property>
+   </wvobject>
+   <wvobject fp_name="/papilio1_tb/resetn" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">resetn</obj_property>
+      <obj_property name="ObjectShortName">resetn</obj_property>
+   </wvobject>
+   <wvobject fp_name="/papilio1_tb/txd" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">txd</obj_property>
+      <obj_property name="ObjectShortName">txd</obj_property>
+   </wvobject>
+   <wvobject fp_name="/papilio1_tb/cpuerror" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">cpuerror</obj_property>
+      <obj_property name="ObjectShortName">cpuerror</obj_property>
+   </wvobject>
+   <wvobject fp_name="/papilio1_tb/rdn_s" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">rdn_s</obj_property>
+      <obj_property name="ObjectShortName">rdn_s</obj_property>
+   </wvobject>
+   <wvobject fp_name="/papilio1_tb/rdrf" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">rdrf</obj_property>
+      <obj_property name="ObjectShortName">rdrf</obj_property>
+   </wvobject>
+   <wvobject fp_name="/papilio1_tb/rxenable" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">rxenable</obj_property>
+      <obj_property name="ObjectShortName">rxenable</obj_property>
+   </wvobject>
+   <wvobject fp_name="/papilio1_tb/txcmd" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">txcmd</obj_property>
+      <obj_property name="ObjectShortName">txcmd</obj_property>
+   </wvobject>
+   <wvobject fp_name="/papilio1_tb/txenable" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">txenable</obj_property>
+      <obj_property name="ObjectShortName">txenable</obj_property>
+   </wvobject>
+   <wvobject fp_name="/papilio1_tb/udbus" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">udbus[7:0]</obj_property>
+      <obj_property name="ObjectShortName">udbus[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/papilio1_tb/divtx_s" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">divtx_s[3:0]</obj_property>
+      <obj_property name="ObjectShortName">divtx_s[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/papilio1_tb/divcnt_s" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">divcnt_s[7:0]</obj_property>
+      <obj_property name="ObjectShortName">divcnt_s[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/papilio1_tb/rxclk16_s" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">rxclk16_s</obj_property>
+      <obj_property name="ObjectShortName">rxclk16_s</obj_property>
+   </wvobject>
+   <wvobject fp_name="/papilio1_tb/tdre_s" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">tdre_s</obj_property>
+      <obj_property name="ObjectShortName">tdre_s</obj_property>
+   </wvobject>
+   <wvobject fp_name="/papilio1_tb/wrn_s" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">wrn_s</obj_property>
+      <obj_property name="ObjectShortName">wrn_s</obj_property>
+   </wvobject>
+   <wvobject fp_name="/papilio1_tb/char_s" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">char_s[7:0]</obj_property>
+      <obj_property name="ObjectShortName">char_s[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/papilio1_tb/rx" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">rx</obj_property>
+      <obj_property name="ObjectShortName">rx</obj_property>
+   </wvobject>
+   <wvobject fp_name="/papilio1_tb/tx" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">tx</obj_property>
+      <obj_property name="ObjectShortName">tx</obj_property>
+   </wvobject>
+   <wvobject fp_name="/papilio1_tb/w1a" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">w1a[15:0]</obj_property>
+      <obj_property name="ObjectShortName">w1a[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/papilio1_tb/w1b" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">w1b[15:0]</obj_property>
+      <obj_property name="ObjectShortName">w1b[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/papilio1_tb/w2c" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">w2c[15:0]</obj_property>
+      <obj_property name="ObjectShortName">w2c[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/papilio1_tb/clk" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/papilio1_tb/divider_c" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">divider_c[7:0]</obj_property>
+      <obj_property name="ObjectShortName">divider_c[7:0]</obj_property>
+   </wvobject>
+</wave_config>

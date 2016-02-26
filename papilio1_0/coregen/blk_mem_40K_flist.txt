@@ -1,0 +1,17 @@
+# Output products list for <blk_mem_40K>
+_xmsgs\
+blk_mem_40K.asy
+blk_mem_40K.gise
+blk_mem_40K.ise
+blk_mem_40K.mif
+blk_mem_40K.ngc
+blk_mem_40K.sym
+blk_mem_40K.vhd
+blk_mem_40K.vho
+blk_mem_40K.xco
+blk_mem_40K.xise
+blk_mem_40K_flist.txt
+blk_mem_40K_readme.txt
+blk_mem_40K_xdb\tmp\
+blk_mem_40K_xmdf.tcl
+blk_mem_gen_ds512.pdf

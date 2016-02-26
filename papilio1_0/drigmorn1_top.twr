@@ -1,0 +1,812 @@
+--------------------------------------------------------------------------------
+Release 14.7 Trace  (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+C:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\trce.exe -intstyle ise -v 3 -s 4
+-n 3 -fastpaths -xml drigmorn1_top.twx drigmorn1_top.ncd -o drigmorn1_top.twr
+drigmorn1_top.pcf -ucf DRIGMORN1.ucf
+
+Design file:              drigmorn1_top.ncd
+Physical constraint file: drigmorn1_top.pcf
+Device,package,speed:     xc3s500e,cp132,-4 (PRODUCTION 1.27 2013-10-13)
+Report level:             verbose report
+
+Environment Variable      Effect 
+--------------------      ------ 
+NONE                      No environment variables were set
+--------------------------------------------------------------------------------
+
+INFO:Timing:3412 - To improve timing, see the Timing Closure User Guide (UG612).
+INFO:Timing:2752 - To get complete path coverage, use the unconstrained paths 
+   option. All paths that are not constrained will be reported in the 
+   unconstrained paths section(s) of the report.
+INFO:Timing:3339 - The clock-to-out numbers in this timing report are based on 
+   a 50 Ohm transmission line loading model.  For the details of this model, 
+   and for more information on accounting for different loading conditions, 
+   please see the device datasheet.
+INFO:Timing:3390 - This architecture does not support a default System Jitter 
+   value, please add SYSTEM_JITTER constraint to the UCF to modify the Clock 
+   Uncertainty calculation.
+INFO:Timing:3389 - This architecture does not support 'Discrete Jitter' and 
+   'Phase Error' calculations, these terms will be zero in the Clock 
+   Uncertainty calculation.  Please make appropriate modification to 
+   SYSTEM_JITTER to account for the unsupported Discrete Jitter and Phase 
+   Error.
+
+================================================================================
+Timing constraint: TS_CLOCK_40MHZ = PERIOD TIMEGRP "CLOCK_40MHZ" 25 ns HIGH 
+50%;
+For more information, see Period Analysis in the Timing Closure User Guide (UG612).
+
+ 84085966 paths analyzed, 5409 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected. (0 setup errors, 0 hold errors, 0 component switching limit errors)
+ Minimum period is  24.972ns.
+--------------------------------------------------------------------------------
+
+Paths for end point U_1/cpudpath/I6/psrreg_s_0 (SLICE_X67Y16.F2), 1795365 paths
+--------------------------------------------------------------------------------
+Slack (setup path):     0.028ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               U_1/cpuproc/path.alu_operation_11_1 (FF)
+  Destination:          U_1/cpudpath/I6/psrreg_s_0 (FF)
+  Requirement:          25.000ns
+  Data Path Delay:      24.972ns (Levels of Logic = 15)
+  Clock Path Skew:      0.000ns
+  Source Clock:         CLOCK_40MHZ_BUFGP rising at 0.000ns
+  Destination Clock:    CLOCK_40MHZ_BUFGP rising at 25.000ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: U_1/cpuproc/path.alu_operation_11_1 to U_1/cpudpath/I6/psrreg_s_0
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X46Y64.YQ      Tcko                  0.652   U_1/cpuproc/path.alu_operation_11_1
+                                                       U_1/cpuproc/path.alu_operation_11_1
+    SLICE_X46Y69.G2      net (fanout=11)       1.217   U_1/cpuproc/path.alu_operation_11_1
+    SLICE_X46Y69.Y       Tilo                  0.759   N561
+                                                       U_1/cpudpath/I0/alu_inbusa<1>1_SW0
+    SLICE_X44Y68.G1      net (fanout=2)        0.409   N560
+    SLICE_X44Y68.X       Tif5x                 1.152   U_1/cpudpath/I0/alu_inbusa<1>75
+                                                       U_1/cpudpath/I0/alu_inbusa<1>75_F
+                                                       U_1/cpudpath/I0/alu_inbusa<1>75
+    SLICE_X41Y43.G4      net (fanout=3)        1.317   U_1/cpudpath/I0/alu_inbusa<1>75
+    SLICE_X41Y43.Y       Tilo                  0.704   U_1/cpudpath/I6/dasbus_s_addsub0000<7>
+                                                       U_1/cpudpath/I0/alu_inbusa<1>173
+    SLICE_X52Y44.G2      net (fanout=15)       1.364   U_1/cpudpath/alu_inbusa<1>
+    SLICE_X52Y44.Y       Tilo                  0.759   U_1/cpudpath/I6/N235
+                                                       U_1/cpudpath/I6/aaabus_s_12_or00001
+    SLICE_X52Y44.F2      net (fanout=10)       0.438   U_1/cpudpath/I6/setaaa_s
+    SLICE_X52Y44.X       Tilo                  0.759   U_1/cpudpath/I6/N235
+                                                       U_1/cpudpath/I6/alubus_s<10>421
+    SLICE_X50Y46.F1      net (fanout=8)        0.676   U_1/cpudpath/I6/N235
+    SLICE_X50Y46.X       Tilo                  0.759   U_1/cpudpath/I6/alubus_s<14>197
+                                                       U_1/cpudpath/I6/alubus_s<14>197
+    SLICE_X51Y41.G3      net (fanout=2)        0.882   U_1/cpudpath/I6/alubus_s<14>197
+    SLICE_X51Y41.X       Tif5x                 1.025   N2229
+                                                       U_1/cpudpath/I6/alubus_s<14>211_SW0_F
+                                                       U_1/cpudpath/I6/alubus_s<14>211_SW0
+    SLICE_X50Y23.G4      net (fanout=1)        0.968   N2229
+    SLICE_X50Y23.Y       Tilo                  0.759   U_1/cpudpath/I6/alubus_s<14>211
+                                                       U_1/cpudpath/I6/alubus_s<14>211
+    SLICE_X51Y23.BX      net (fanout=2)        0.458   U_1/cpudpath/I6/alubus_s<14>211
+    SLICE_X51Y23.X       Tbxx                  0.739   N1184
+                                                       U_1/cpudpath/I6/alubus_s<14>155_SW0
+    SLICE_X53Y26.F2      net (fanout=2)        0.964   N1184
+    SLICE_X53Y26.X       Tilo                  0.704   N1286
+                                                       U_1/cpudpath/I6/alubus_s<14>119_SW1
+    SLICE_X52Y33.G4      net (fanout=1)        0.973   N1286
+    SLICE_X52Y33.Y       Tilo                  0.759   N1511
+                                                       U_1/cpudpath/I6/alubus_s<14>235
+    SLICE_X52Y33.F2      net (fanout=5)        0.420   U_1/cpudpath/I6/alubus_s<14>235
+    SLICE_X52Y33.X       Tilo                  0.759   N1511
+                                                       U_1/cpudpath/I6/zflaghigh_s5_SW0
+    SLICE_X52Y29.G1      net (fanout=1)        0.651   N1511
+    SLICE_X52Y29.Y       Tilo                  0.759   U_1/cpudpath/I6/psrreg_s<6>
+                                                       U_1/cpudpath/I6/zflaghigh_s13_SW0_SW0_SW0_SW0
+    SLICE_X67Y18.G4      net (fanout=2)        1.198   U_1/cpudpath/I6/zflaghigh_s13
+    SLICE_X67Y18.Y       Tilo                  0.704   U_1/cpudpath/I6/psrreg_s<11>
+                                                       U_1/cpudpath/I6/overflow_s870
+    SLICE_X67Y16.F2      net (fanout=2)        0.448   U_1/cpudpath/I6/overflow_s870
+    SLICE_X67Y16.CLK     Tfck                  0.837   U_1/cpudpath/I6/psrreg_s<0>
+                                                       U_1/cpudpath/I6/psrreg_s_0_mux0000297
+                                                       U_1/cpudpath/I6/psrreg_s_0
+    -------------------------------------------------  ---------------------------
+    Total                                     24.972ns (12.589ns logic, 12.383ns route)
+                                                       (50.4% logic, 49.6% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     0.187ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               U_1/cpuproc/path.alu_operation_11 (FF)
+  Destination:          U_1/cpudpath/I6/psrreg_s_0 (FF)
+  Requirement:          25.000ns
+  Data Path Delay:      24.813ns (Levels of Logic = 15)
+  Clock Path Skew:      0.000ns
+  Source Clock:         CLOCK_40MHZ_BUFGP rising at 0.000ns
+  Destination Clock:    CLOCK_40MHZ_BUFGP rising at 25.000ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: U_1/cpuproc/path.alu_operation_11 to U_1/cpudpath/I6/psrreg_s_0
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X42Y60.XQ      Tcko                  0.592   U_1/cpuproc/path.alu_operation_11
+                                                       U_1/cpuproc/path.alu_operation_11
+    SLICE_X39Y58.F3      net (fanout=29)       1.401   U_1/cpuproc/path.alu_operation_11
+    SLICE_X39Y58.X       Tilo                  0.704   N445
+                                                       U_1/cpudpath/I0/alu_inbusa<6>1_SW1
+    SLICE_X42Y61.G3      net (fanout=2)        0.556   N445
+    SLICE_X42Y61.X       Tif5x                 1.152   U_1/cpudpath/I0/alu_inbusa<6>75
+                                                       U_1/cpudpath/I0/alu_inbusa<6>75_F
+                                                       U_1/cpudpath/I0/alu_inbusa<6>75
+    SLICE_X47Y53.G4      net (fanout=2)        0.824   U_1/cpudpath/I0/alu_inbusa<6>75
+    SLICE_X47Y53.Y       Tilo                  0.704   U_1/cpudpath/alu_inbusa<5>
+                                                       U_1/cpudpath/I0/alu_inbusa<6>173
+    SLICE_X66Y39.BX      net (fanout=12)       2.831   U_1/cpudpath/alu_inbusa<6>
+    SLICE_X66Y39.X       Tbxx                  0.806   U_1/cpudpath/I6/alureg_s<22>
+                                                       U_1/cpudpath/I6/abus_s<6>
+    SLICE_X67Y40.F2      net (fanout=10)       1.440   U_1/cpudpath/I6/abus_s<6>
+    SLICE_X67Y40.X       Tif5x                 1.025   N732
+                                                       U_1/cpudpath/I6/cbus_s_7_or00001_SW0_G
+                                                       U_1/cpudpath/I6/cbus_s_7_or00001_SW0
+    SLICE_X55Y42.G2      net (fanout=4)        0.849   N732
+    SLICE_X55Y42.X       Tif5x                 1.025   U_1/cpudpath/I6/cbus_s<10>
+                                                       U_1/cpudpath/I6/cbus_s_10_or00001_F
+                                                       U_1/cpudpath/I6/cbus_s_10_or00001
+    SLICE_X53Y35.G3      net (fanout=3)        0.861   U_1/cpudpath/I6/cbus_s<10>
+    SLICE_X53Y35.Y       Tilo                  0.704   U_1/cpudpath/I6/cbus_s<12>
+                                                       U_1/cpudpath/I6/cbus_s_11_or00001
+    SLICE_X53Y35.F4      net (fanout=2)        0.038   U_1/cpudpath/I6/cbus_s<11>
+    SLICE_X53Y35.X       Tilo                  0.704   U_1/cpudpath/I6/cbus_s<12>
+                                                       U_1/cpudpath/I6/cbus_s_12_or00001
+    SLICE_X53Y31.G3      net (fanout=6)        0.365   U_1/cpudpath/I6/cbus_s<12>
+    SLICE_X53Y31.Y       Tilo                  0.704   N1599
+                                                       U_1/cpudpath/Mmux_sibus_35_SW0_SW1
+    SLICE_X52Y28.G2      net (fanout=2)        0.413   N2343
+    SLICE_X52Y28.Y       Tilo                  0.759   N1182
+                                                       U_1/cpudpath/I6/alubus_s<14>269_SW0_SW0
+    SLICE_X52Y28.F4      net (fanout=2)        0.037   N773
+    SLICE_X52Y28.X       Tilo                  0.759   N1182
+                                                       U_1/cpudpath/I6/alubus_s<13>192_SW1
+    SLICE_X53Y29.F1      net (fanout=1)        0.476   N1182
+    SLICE_X53Y29.X       Tilo                  0.704   N616
+                                                       U_1/cpudpath/I6/alubus_s<14>269_SW0
+    SLICE_X52Y29.G2      net (fanout=1)        0.434   N616
+    SLICE_X52Y29.Y       Tilo                  0.759   U_1/cpudpath/I6/psrreg_s<6>
+                                                       U_1/cpudpath/I6/zflaghigh_s13_SW0_SW0_SW0_SW0
+    SLICE_X67Y18.G4      net (fanout=2)        1.198   U_1/cpudpath/I6/zflaghigh_s13
+    SLICE_X67Y18.Y       Tilo                  0.704   U_1/cpudpath/I6/psrreg_s<11>
+                                                       U_1/cpudpath/I6/overflow_s870
+    SLICE_X67Y16.F2      net (fanout=2)        0.448   U_1/cpudpath/I6/overflow_s870
+    SLICE_X67Y16.CLK     Tfck                  0.837   U_1/cpudpath/I6/psrreg_s<0>
+                                                       U_1/cpudpath/I6/psrreg_s_0_mux0000297
+                                                       U_1/cpudpath/I6/psrreg_s_0
+    -------------------------------------------------  ---------------------------
+    Total                                     24.813ns (12.642ns logic, 12.171ns route)
+                                                       (50.9% logic, 49.1% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     0.206ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               U_1/cpuproc/path.alu_operation_11 (FF)
+  Destination:          U_1/cpudpath/I6/psrreg_s_0 (FF)
+  Requirement:          25.000ns
+  Data Path Delay:      24.794ns (Levels of Logic = 13)
+  Clock Path Skew:      0.000ns
+  Source Clock:         CLOCK_40MHZ_BUFGP rising at 0.000ns
+  Destination Clock:    CLOCK_40MHZ_BUFGP rising at 25.000ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: U_1/cpuproc/path.alu_operation_11 to U_1/cpudpath/I6/psrreg_s_0
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X42Y60.XQ      Tcko                  0.592   U_1/cpuproc/path.alu_operation_11
+                                                       U_1/cpuproc/path.alu_operation_11
+    SLICE_X39Y58.F3      net (fanout=29)       1.401   U_1/cpuproc/path.alu_operation_11
+    SLICE_X39Y58.X       Tilo                  0.704   N445
+                                                       U_1/cpudpath/I0/alu_inbusa<6>1_SW1
+    SLICE_X42Y61.G3      net (fanout=2)        0.556   N445
+    SLICE_X42Y61.X       Tif5x                 1.152   U_1/cpudpath/I0/alu_inbusa<6>75
+                                                       U_1/cpudpath/I0/alu_inbusa<6>75_F
+                                                       U_1/cpudpath/I0/alu_inbusa<6>75
+    SLICE_X47Y53.G4      net (fanout=2)        0.824   U_1/cpudpath/I0/alu_inbusa<6>75
+    SLICE_X47Y53.Y       Tilo                  0.704   U_1/cpudpath/alu_inbusa<5>
+                                                       U_1/cpudpath/I0/alu_inbusa<6>173
+    SLICE_X66Y39.BX      net (fanout=12)       2.831   U_1/cpudpath/alu_inbusa<6>
+    SLICE_X66Y39.X       Tbxx                  0.806   U_1/cpudpath/I6/alureg_s<22>
+                                                       U_1/cpudpath/I6/abus_s<6>
+    SLICE_X66Y41.G3      net (fanout=10)       1.362   U_1/cpudpath/I6/abus_s<6>
+    SLICE_X66Y41.X       Tif5x                 1.152   N733
+                                                       U_1/cpudpath/I6/cbus_s_7_or00001_SW1_F
+                                                       U_1/cpudpath/I6/cbus_s_7_or00001_SW1
+    SLICE_X54Y40.F4      net (fanout=4)        1.456   N733
+    SLICE_X54Y40.X       Tilo                  0.759   U_1/cpudpath/I6/cbus_s<8>
+                                                       U_1/cpudpath/I6/cbus_s_8_or00001
+    SLICE_X65Y36.G3      net (fanout=2)        2.014   U_1/cpudpath/I6/cbus_s<8>
+    SLICE_X65Y36.Y       Tilo                  0.704   U_1/cpudpath/I6/alubus_s<9>145
+                                                       U_1/cpudpath/I6/alubus_s<9>145_SW0
+    SLICE_X65Y36.F3      net (fanout=1)        0.023   U_1/cpudpath/I6/alubus_s<9>145_SW0/O
+    SLICE_X65Y36.X       Tilo                  0.704   U_1/cpudpath/I6/alubus_s<9>145
+                                                       U_1/cpudpath/I6/alubus_s<9>145
+    SLICE_X53Y33.G2      net (fanout=1)        0.814   U_1/cpudpath/I6/alubus_s<9>145
+    SLICE_X53Y33.Y       Tilo                  0.704   U_1/cpudpath/dibus<9>104
+                                                       U_1/cpudpath/I6/alubus_s<9>208
+    SLICE_X52Y33.F1      net (fanout=5)        0.176   U_1/cpudpath/alubus<9>
+    SLICE_X52Y33.X       Tilo                  0.759   N1511
+                                                       U_1/cpudpath/I6/zflaghigh_s5_SW0
+    SLICE_X52Y29.G1      net (fanout=1)        0.651   N1511
+    SLICE_X52Y29.Y       Tilo                  0.759   U_1/cpudpath/I6/psrreg_s<6>
+                                                       U_1/cpudpath/I6/zflaghigh_s13_SW0_SW0_SW0_SW0
+    SLICE_X67Y18.G4      net (fanout=2)        1.198   U_1/cpudpath/I6/zflaghigh_s13
+    SLICE_X67Y18.Y       Tilo                  0.704   U_1/cpudpath/I6/psrreg_s<11>
+                                                       U_1/cpudpath/I6/overflow_s870
+    SLICE_X67Y16.F2      net (fanout=2)        0.448   U_1/cpudpath/I6/overflow_s870
+    SLICE_X67Y16.CLK     Tfck                  0.837   U_1/cpudpath/I6/psrreg_s<0>
+                                                       U_1/cpudpath/I6/psrreg_s_0_mux0000297
+                                                       U_1/cpudpath/I6/psrreg_s_0
+    -------------------------------------------------  ---------------------------
+    Total                                     24.794ns (11.040ns logic, 13.754ns route)
+                                                       (44.5% logic, 55.5% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point U_1/cpudpath/I0/spreg_s_14 (SLICE_X42Y50.BY), 181985 paths
+--------------------------------------------------------------------------------
+Slack (setup path):     0.095ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               U_1/cpuproc/path.alu_operation_11 (FF)
+  Destination:          U_1/cpudpath/I0/spreg_s_14 (FF)
+  Requirement:          25.000ns
+  Data Path Delay:      24.905ns (Levels of Logic = 13)
+  Clock Path Skew:      0.000ns
+  Source Clock:         CLOCK_40MHZ_BUFGP rising at 0.000ns
+  Destination Clock:    CLOCK_40MHZ_BUFGP rising at 25.000ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: U_1/cpuproc/path.alu_operation_11 to U_1/cpudpath/I0/spreg_s_14
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X42Y60.XQ      Tcko                  0.592   U_1/cpuproc/path.alu_operation_11
+                                                       U_1/cpuproc/path.alu_operation_11
+    SLICE_X39Y58.F3      net (fanout=29)       1.401   U_1/cpuproc/path.alu_operation_11
+    SLICE_X39Y58.X       Tilo                  0.704   N445
+                                                       U_1/cpudpath/I0/alu_inbusa<6>1_SW1
+    SLICE_X42Y61.G3      net (fanout=2)        0.556   N445
+    SLICE_X42Y61.X       Tif5x                 1.152   U_1/cpudpath/I0/alu_inbusa<6>75
+                                                       U_1/cpudpath/I0/alu_inbusa<6>75_F
+                                                       U_1/cpudpath/I0/alu_inbusa<6>75
+    SLICE_X47Y53.G4      net (fanout=2)        0.824   U_1/cpudpath/I0/alu_inbusa<6>75
+    SLICE_X47Y53.Y       Tilo                  0.704   U_1/cpudpath/alu_inbusa<5>
+                                                       U_1/cpudpath/I0/alu_inbusa<6>173
+    SLICE_X66Y39.BX      net (fanout=12)       2.831   U_1/cpudpath/alu_inbusa<6>
+    SLICE_X66Y39.X       Tbxx                  0.806   U_1/cpudpath/I6/alureg_s<22>
+                                                       U_1/cpudpath/I6/abus_s<6>
+    SLICE_X67Y40.F2      net (fanout=10)       1.440   U_1/cpudpath/I6/abus_s<6>
+    SLICE_X67Y40.X       Tif5x                 1.025   N732
+                                                       U_1/cpudpath/I6/cbus_s_7_or00001_SW0_G
+                                                       U_1/cpudpath/I6/cbus_s_7_or00001_SW0
+    SLICE_X55Y42.G2      net (fanout=4)        0.849   N732
+    SLICE_X55Y42.X       Tif5x                 1.025   U_1/cpudpath/I6/cbus_s<10>
+                                                       U_1/cpudpath/I6/cbus_s_10_or00001_F
+                                                       U_1/cpudpath/I6/cbus_s_10_or00001
+    SLICE_X53Y35.G3      net (fanout=3)        0.861   U_1/cpudpath/I6/cbus_s<10>
+    SLICE_X53Y35.Y       Tilo                  0.704   U_1/cpudpath/I6/cbus_s<12>
+                                                       U_1/cpudpath/I6/cbus_s_11_or00001
+    SLICE_X53Y35.F4      net (fanout=2)        0.038   U_1/cpudpath/I6/cbus_s<11>
+    SLICE_X53Y35.X       Tilo                  0.704   U_1/cpudpath/I6/cbus_s<12>
+                                                       U_1/cpudpath/I6/cbus_s_12_or00001
+    SLICE_X64Y31.G2      net (fanout=6)        0.911   U_1/cpudpath/I6/cbus_s<12>
+    SLICE_X64Y31.Y       Tilo                  0.759   U_1/cpudpath/I6/cbus_s<16>
+                                                       U_1/cpudpath/I6/cbus_s_14_or00001
+    SLICE_X52Y34.G3      net (fanout=4)        0.796   U_1/cpudpath/I6/cbus_s<14>
+    SLICE_X52Y34.Y       Tilo                  0.759   N1187
+                                                       U_1/cpudpath/I6/alubus_s<14>269_SW4_SW0
+    SLICE_X52Y34.F4      net (fanout=1)        0.023   U_1/cpudpath/I6/alubus_s<14>269_SW4_SW0/O
+    SLICE_X52Y34.X       Tilo                  0.759   N1187
+                                                       U_1/cpudpath/I6/alubus_s<14>269_SW4
+    SLICE_X43Y44.G2      net (fanout=1)        1.629   N1187
+    SLICE_X43Y44.Y       Tilo                  0.704   U_1/cpudpath/path_dbus_output<1>_2_f5_38
+                                                       U_1/cpudpath/dibus<14>104
+    SLICE_X42Y49.F1      net (fanout=6)        0.691   U_1/cpudpath/dibus<14>104
+    SLICE_X42Y49.X       Tilo                  0.759   U_1/cpudpath/I0/sireg_s<14>
+                                                       U_1/cpudpath/dibus<14>135
+    SLICE_X42Y50.BY      net (fanout=3)        0.517   U_1/cpudpath/dibus<14>
+    SLICE_X42Y50.CLK     Tdick                 0.382   U_1/cpudpath/I0/spreg_s<15>
+                                                       U_1/cpudpath/I0/spreg_s_14
+    -------------------------------------------------  ---------------------------
+    Total                                     24.905ns (11.538ns logic, 13.367ns route)
+                                                       (46.3% logic, 53.7% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     0.115ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               U_1/cpuproc/path.alu_operation_0 (FF)
+  Destination:          U_1/cpudpath/I0/spreg_s_14 (FF)
+  Requirement:          25.000ns
+  Data Path Delay:      24.852ns (Levels of Logic = 14)
+  Clock Path Skew:      -0.033ns (0.110 - 0.143)
+  Source Clock:         CLOCK_40MHZ_BUFGP rising at 0.000ns
+  Destination Clock:    CLOCK_40MHZ_BUFGP rising at 25.000ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: U_1/cpuproc/path.alu_operation_0 to U_1/cpudpath/I0/spreg_s_14
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X64Y13.YQ      Tcko                  0.652   U_1/cpuproc/path.alu_operation_1
+                                                       U_1/cpuproc/path.alu_operation_0
+    SLICE_X54Y12.F3      net (fanout=188)      2.196   U_1/cpuproc/path.alu_operation_0
+    SLICE_X54Y12.X       Tilo                  0.759   U_1/cpudpath/I6/N248
+                                                       U_1/cpudpath/I6/psrreg_s_7_mux0000131
+    SLICE_X52Y18.F1      net (fanout=4)        1.296   U_1/cpudpath/I6/N248
+    SLICE_X52Y18.X       Tilo                  0.759   U_1/cpudpath/I6/N90
+                                                       U_1/cpudpath/I6/alubus_s_or00001
+    SLICE_X53Y27.F2      net (fanout=3)        1.332   U_1/cpudpath/I6/N90
+    SLICE_X53Y27.X       Tilo                  0.704   U_1/cpudpath/I6/addbbus_s_or00001
+                                                       U_1/cpudpath/I6/addbbus_s_or00001_1
+    SLICE_X53Y36.G1      net (fanout=6)        1.878   U_1/cpudpath/I6/addbbus_s_or00001
+    SLICE_X53Y36.X       Tif5x                 1.025   N739
+                                                       U_1/cpudpath/I6/cbus_s_3_or00001_SW1_F
+                                                       U_1/cpudpath/I6/cbus_s_3_or00001_SW1
+    SLICE_X55Y36.G2      net (fanout=2)        0.421   N739
+    SLICE_X55Y36.Y       Tilo                  0.704   U_1/cpudpath/I6/cbus_s<6>
+                                                       U_1/cpudpath/I6/cbus_s_4_or00001
+    SLICE_X55Y36.F3      net (fanout=4)        0.039   U_1/cpudpath/I6/cbus_s<4>
+    SLICE_X55Y36.X       Tilo                  0.704   U_1/cpudpath/I6/cbus_s<6>
+                                                       U_1/cpudpath/I6/cbus_s_6_or00001
+    SLICE_X55Y42.BX      net (fanout=6)        0.648   U_1/cpudpath/I6/cbus_s<6>
+    SLICE_X55Y42.X       Tbxx                  0.739   U_1/cpudpath/I6/cbus_s<10>
+                                                       U_1/cpudpath/I6/cbus_s_10_or00001
+    SLICE_X53Y35.G3      net (fanout=3)        0.861   U_1/cpudpath/I6/cbus_s<10>
+    SLICE_X53Y35.Y       Tilo                  0.704   U_1/cpudpath/I6/cbus_s<12>
+                                                       U_1/cpudpath/I6/cbus_s_11_or00001
+    SLICE_X53Y35.F4      net (fanout=2)        0.038   U_1/cpudpath/I6/cbus_s<11>
+    SLICE_X53Y35.X       Tilo                  0.704   U_1/cpudpath/I6/cbus_s<12>
+                                                       U_1/cpudpath/I6/cbus_s_12_or00001
+    SLICE_X64Y31.G2      net (fanout=6)        0.911   U_1/cpudpath/I6/cbus_s<12>
+    SLICE_X64Y31.Y       Tilo                  0.759   U_1/cpudpath/I6/cbus_s<16>
+                                                       U_1/cpudpath/I6/cbus_s_14_or00001
+    SLICE_X52Y34.G3      net (fanout=4)        0.796   U_1/cpudpath/I6/cbus_s<14>
+    SLICE_X52Y34.Y       Tilo                  0.759   N1187
+                                                       U_1/cpudpath/I6/alubus_s<14>269_SW4_SW0
+    SLICE_X52Y34.F4      net (fanout=1)        0.023   U_1/cpudpath/I6/alubus_s<14>269_SW4_SW0/O
+    SLICE_X52Y34.X       Tilo                  0.759   N1187
+                                                       U_1/cpudpath/I6/alubus_s<14>269_SW4
+    SLICE_X43Y44.G2      net (fanout=1)        1.629   N1187
+    SLICE_X43Y44.Y       Tilo                  0.704   U_1/cpudpath/path_dbus_output<1>_2_f5_38
+                                                       U_1/cpudpath/dibus<14>104
+    SLICE_X42Y49.F1      net (fanout=6)        0.691   U_1/cpudpath/dibus<14>104
+    SLICE_X42Y49.X       Tilo                  0.759   U_1/cpudpath/I0/sireg_s<14>
+                                                       U_1/cpudpath/dibus<14>135
+    SLICE_X42Y50.BY      net (fanout=3)        0.517   U_1/cpudpath/dibus<14>
+    SLICE_X42Y50.CLK     Tdick                 0.382   U_1/cpudpath/I0/spreg_s<15>
+                                                       U_1/cpudpath/I0/spreg_s_14
+    -------------------------------------------------  ---------------------------
+    Total                                     24.852ns (11.576ns logic, 13.276ns route)
+                                                       (46.6% logic, 53.4% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     0.117ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               U_1/cpuproc/path.alu_operation_0 (FF)
+  Destination:          U_1/cpudpath/I0/spreg_s_14 (FF)
+  Requirement:          25.000ns
+  Data Path Delay:      24.850ns (Levels of Logic = 14)
+  Clock Path Skew:      -0.033ns (0.110 - 0.143)
+  Source Clock:         CLOCK_40MHZ_BUFGP rising at 0.000ns
+  Destination Clock:    CLOCK_40MHZ_BUFGP rising at 25.000ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: U_1/cpuproc/path.alu_operation_0 to U_1/cpudpath/I0/spreg_s_14
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X64Y13.YQ      Tcko                  0.652   U_1/cpuproc/path.alu_operation_1
+                                                       U_1/cpuproc/path.alu_operation_0
+    SLICE_X54Y12.F3      net (fanout=188)      2.196   U_1/cpuproc/path.alu_operation_0
+    SLICE_X54Y12.X       Tilo                  0.759   U_1/cpudpath/I6/N248
+                                                       U_1/cpudpath/I6/psrreg_s_7_mux0000131
+    SLICE_X52Y18.F1      net (fanout=4)        1.296   U_1/cpudpath/I6/N248
+    SLICE_X52Y18.X       Tilo                  0.759   U_1/cpudpath/I6/N90
+                                                       U_1/cpudpath/I6/alubus_s_or00001
+    SLICE_X53Y27.F2      net (fanout=3)        1.332   U_1/cpudpath/I6/N90
+    SLICE_X53Y27.X       Tilo                  0.704   U_1/cpudpath/I6/addbbus_s_or00001
+                                                       U_1/cpudpath/I6/addbbus_s_or00001_1
+    SLICE_X52Y36.G4      net (fanout=6)        1.769   U_1/cpudpath/I6/addbbus_s_or00001
+    SLICE_X52Y36.X       Tif5x                 1.152   N738
+                                                       U_1/cpudpath/I6/cbus_s_3_or00001_SW0_F
+                                                       U_1/cpudpath/I6/cbus_s_3_or00001_SW0
+    SLICE_X55Y36.G3      net (fanout=2)        0.401   N738
+    SLICE_X55Y36.Y       Tilo                  0.704   U_1/cpudpath/I6/cbus_s<6>
+                                                       U_1/cpudpath/I6/cbus_s_4_or00001
+    SLICE_X55Y36.F3      net (fanout=4)        0.039   U_1/cpudpath/I6/cbus_s<4>
+    SLICE_X55Y36.X       Tilo                  0.704   U_1/cpudpath/I6/cbus_s<6>
+                                                       U_1/cpudpath/I6/cbus_s_6_or00001
+    SLICE_X55Y42.BX      net (fanout=6)        0.648   U_1/cpudpath/I6/cbus_s<6>
+    SLICE_X55Y42.X       Tbxx                  0.739   U_1/cpudpath/I6/cbus_s<10>
+                                                       U_1/cpudpath/I6/cbus_s_10_or00001
+    SLICE_X53Y35.G3      net (fanout=3)        0.861   U_1/cpudpath/I6/cbus_s<10>
+    SLICE_X53Y35.Y       Tilo                  0.704   U_1/cpudpath/I6/cbus_s<12>
+                                                       U_1/cpudpath/I6/cbus_s_11_or00001
+    SLICE_X53Y35.F4      net (fanout=2)        0.038   U_1/cpudpath/I6/cbus_s<11>
+    SLICE_X53Y35.X       Tilo                  0.704   U_1/cpudpath/I6/cbus_s<12>
+                                                       U_1/cpudpath/I6/cbus_s_12_or00001
+    SLICE_X64Y31.G2      net (fanout=6)        0.911   U_1/cpudpath/I6/cbus_s<12>
+    SLICE_X64Y31.Y       Tilo                  0.759   U_1/cpudpath/I6/cbus_s<16>
+                                                       U_1/cpudpath/I6/cbus_s_14_or00001
+    SLICE_X52Y34.G3      net (fanout=4)        0.796   U_1/cpudpath/I6/cbus_s<14>
+    SLICE_X52Y34.Y       Tilo                  0.759   N1187
+                                                       U_1/cpudpath/I6/alubus_s<14>269_SW4_SW0
+    SLICE_X52Y34.F4      net (fanout=1)        0.023   U_1/cpudpath/I6/alubus_s<14>269_SW4_SW0/O
+    SLICE_X52Y34.X       Tilo                  0.759   N1187
+                                                       U_1/cpudpath/I6/alubus_s<14>269_SW4
+    SLICE_X43Y44.G2      net (fanout=1)        1.629   N1187
+    SLICE_X43Y44.Y       Tilo                  0.704   U_1/cpudpath/path_dbus_output<1>_2_f5_38
+                                                       U_1/cpudpath/dibus<14>104
+    SLICE_X42Y49.F1      net (fanout=6)        0.691   U_1/cpudpath/dibus<14>104
+    SLICE_X42Y49.X       Tilo                  0.759   U_1/cpudpath/I0/sireg_s<14>
+                                                       U_1/cpudpath/dibus<14>135
+    SLICE_X42Y50.BY      net (fanout=3)        0.517   U_1/cpudpath/dibus<14>
+    SLICE_X42Y50.CLK     Tdick                 0.382   U_1/cpudpath/I0/spreg_s<15>
+                                                       U_1/cpudpath/I0/spreg_s_14
+    -------------------------------------------------  ---------------------------
+    Total                                     24.850ns (11.703ns logic, 13.147ns route)
+                                                       (47.1% logic, 52.9% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point U_1/cpudpath/I0/direg_s_14 (SLICE_X42Y51.BY), 181985 paths
+--------------------------------------------------------------------------------
+Slack (setup path):     0.095ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               U_1/cpuproc/path.alu_operation_11 (FF)
+  Destination:          U_1/cpudpath/I0/direg_s_14 (FF)
+  Requirement:          25.000ns
+  Data Path Delay:      24.905ns (Levels of Logic = 13)
+  Clock Path Skew:      0.000ns
+  Source Clock:         CLOCK_40MHZ_BUFGP rising at 0.000ns
+  Destination Clock:    CLOCK_40MHZ_BUFGP rising at 25.000ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: U_1/cpuproc/path.alu_operation_11 to U_1/cpudpath/I0/direg_s_14
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X42Y60.XQ      Tcko                  0.592   U_1/cpuproc/path.alu_operation_11
+                                                       U_1/cpuproc/path.alu_operation_11
+    SLICE_X39Y58.F3      net (fanout=29)       1.401   U_1/cpuproc/path.alu_operation_11
+    SLICE_X39Y58.X       Tilo                  0.704   N445
+                                                       U_1/cpudpath/I0/alu_inbusa<6>1_SW1
+    SLICE_X42Y61.G3      net (fanout=2)        0.556   N445
+    SLICE_X42Y61.X       Tif5x                 1.152   U_1/cpudpath/I0/alu_inbusa<6>75
+                                                       U_1/cpudpath/I0/alu_inbusa<6>75_F
+                                                       U_1/cpudpath/I0/alu_inbusa<6>75
+    SLICE_X47Y53.G4      net (fanout=2)        0.824   U_1/cpudpath/I0/alu_inbusa<6>75
+    SLICE_X47Y53.Y       Tilo                  0.704   U_1/cpudpath/alu_inbusa<5>
+                                                       U_1/cpudpath/I0/alu_inbusa<6>173
+    SLICE_X66Y39.BX      net (fanout=12)       2.831   U_1/cpudpath/alu_inbusa<6>
+    SLICE_X66Y39.X       Tbxx                  0.806   U_1/cpudpath/I6/alureg_s<22>
+                                                       U_1/cpudpath/I6/abus_s<6>
+    SLICE_X67Y40.F2      net (fanout=10)       1.440   U_1/cpudpath/I6/abus_s<6>
+    SLICE_X67Y40.X       Tif5x                 1.025   N732
+                                                       U_1/cpudpath/I6/cbus_s_7_or00001_SW0_G
+                                                       U_1/cpudpath/I6/cbus_s_7_or00001_SW0
+    SLICE_X55Y42.G2      net (fanout=4)        0.849   N732
+    SLICE_X55Y42.X       Tif5x                 1.025   U_1/cpudpath/I6/cbus_s<10>
+                                                       U_1/cpudpath/I6/cbus_s_10_or00001_F
+                                                       U_1/cpudpath/I6/cbus_s_10_or00001
+    SLICE_X53Y35.G3      net (fanout=3)        0.861   U_1/cpudpath/I6/cbus_s<10>
+    SLICE_X53Y35.Y       Tilo                  0.704   U_1/cpudpath/I6/cbus_s<12>
+                                                       U_1/cpudpath/I6/cbus_s_11_or00001
+    SLICE_X53Y35.F4      net (fanout=2)        0.038   U_1/cpudpath/I6/cbus_s<11>
+    SLICE_X53Y35.X       Tilo                  0.704   U_1/cpudpath/I6/cbus_s<12>
+                                                       U_1/cpudpath/I6/cbus_s_12_or00001
+    SLICE_X64Y31.G2      net (fanout=6)        0.911   U_1/cpudpath/I6/cbus_s<12>
+    SLICE_X64Y31.Y       Tilo                  0.759   U_1/cpudpath/I6/cbus_s<16>
+                                                       U_1/cpudpath/I6/cbus_s_14_or00001
+    SLICE_X52Y34.G3      net (fanout=4)        0.796   U_1/cpudpath/I6/cbus_s<14>
+    SLICE_X52Y34.Y       Tilo                  0.759   N1187
+                                                       U_1/cpudpath/I6/alubus_s<14>269_SW4_SW0
+    SLICE_X52Y34.F4      net (fanout=1)        0.023   U_1/cpudpath/I6/alubus_s<14>269_SW4_SW0/O
+    SLICE_X52Y34.X       Tilo                  0.759   N1187
+                                                       U_1/cpudpath/I6/alubus_s<14>269_SW4
+    SLICE_X43Y44.G2      net (fanout=1)        1.629   N1187
+    SLICE_X43Y44.Y       Tilo                  0.704   U_1/cpudpath/path_dbus_output<1>_2_f5_38
+                                                       U_1/cpudpath/dibus<14>104
+    SLICE_X42Y49.F1      net (fanout=6)        0.691   U_1/cpudpath/dibus<14>104
+    SLICE_X42Y49.X       Tilo                  0.759   U_1/cpudpath/I0/sireg_s<14>
+                                                       U_1/cpudpath/dibus<14>135
+    SLICE_X42Y51.BY      net (fanout=3)        0.517   U_1/cpudpath/dibus<14>
+    SLICE_X42Y51.CLK     Tdick                 0.382   U_1/cpudpath/I0/direg_s<15>
+                                                       U_1/cpudpath/I0/direg_s_14
+    -------------------------------------------------  ---------------------------
+    Total                                     24.905ns (11.538ns logic, 13.367ns route)
+                                                       (46.3% logic, 53.7% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     0.115ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               U_1/cpuproc/path.alu_operation_0 (FF)
+  Destination:          U_1/cpudpath/I0/direg_s_14 (FF)
+  Requirement:          25.000ns
+  Data Path Delay:      24.852ns (Levels of Logic = 14)
+  Clock Path Skew:      -0.033ns (0.110 - 0.143)
+  Source Clock:         CLOCK_40MHZ_BUFGP rising at 0.000ns
+  Destination Clock:    CLOCK_40MHZ_BUFGP rising at 25.000ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: U_1/cpuproc/path.alu_operation_0 to U_1/cpudpath/I0/direg_s_14
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X64Y13.YQ      Tcko                  0.652   U_1/cpuproc/path.alu_operation_1
+                                                       U_1/cpuproc/path.alu_operation_0
+    SLICE_X54Y12.F3      net (fanout=188)      2.196   U_1/cpuproc/path.alu_operation_0
+    SLICE_X54Y12.X       Tilo                  0.759   U_1/cpudpath/I6/N248
+                                                       U_1/cpudpath/I6/psrreg_s_7_mux0000131
+    SLICE_X52Y18.F1      net (fanout=4)        1.296   U_1/cpudpath/I6/N248
+    SLICE_X52Y18.X       Tilo                  0.759   U_1/cpudpath/I6/N90
+                                                       U_1/cpudpath/I6/alubus_s_or00001
+    SLICE_X53Y27.F2      net (fanout=3)        1.332   U_1/cpudpath/I6/N90
+    SLICE_X53Y27.X       Tilo                  0.704   U_1/cpudpath/I6/addbbus_s_or00001
+                                                       U_1/cpudpath/I6/addbbus_s_or00001_1
+    SLICE_X53Y36.G1      net (fanout=6)        1.878   U_1/cpudpath/I6/addbbus_s_or00001
+    SLICE_X53Y36.X       Tif5x                 1.025   N739
+                                                       U_1/cpudpath/I6/cbus_s_3_or00001_SW1_F
+                                                       U_1/cpudpath/I6/cbus_s_3_or00001_SW1
+    SLICE_X55Y36.G2      net (fanout=2)        0.421   N739
+    SLICE_X55Y36.Y       Tilo                  0.704   U_1/cpudpath/I6/cbus_s<6>
+                                                       U_1/cpudpath/I6/cbus_s_4_or00001
+    SLICE_X55Y36.F3      net (fanout=4)        0.039   U_1/cpudpath/I6/cbus_s<4>
+    SLICE_X55Y36.X       Tilo                  0.704   U_1/cpudpath/I6/cbus_s<6>
+                                                       U_1/cpudpath/I6/cbus_s_6_or00001
+    SLICE_X55Y42.BX      net (fanout=6)        0.648   U_1/cpudpath/I6/cbus_s<6>
+    SLICE_X55Y42.X       Tbxx                  0.739   U_1/cpudpath/I6/cbus_s<10>
+                                                       U_1/cpudpath/I6/cbus_s_10_or00001
+    SLICE_X53Y35.G3      net (fanout=3)        0.861   U_1/cpudpath/I6/cbus_s<10>
+    SLICE_X53Y35.Y       Tilo                  0.704   U_1/cpudpath/I6/cbus_s<12>
+                                                       U_1/cpudpath/I6/cbus_s_11_or00001
+    SLICE_X53Y35.F4      net (fanout=2)        0.038   U_1/cpudpath/I6/cbus_s<11>
+    SLICE_X53Y35.X       Tilo                  0.704   U_1/cpudpath/I6/cbus_s<12>
+                                                       U_1/cpudpath/I6/cbus_s_12_or00001
+    SLICE_X64Y31.G2      net (fanout=6)        0.911   U_1/cpudpath/I6/cbus_s<12>
+    SLICE_X64Y31.Y       Tilo                  0.759   U_1/cpudpath/I6/cbus_s<16>
+                                                       U_1/cpudpath/I6/cbus_s_14_or00001
+    SLICE_X52Y34.G3      net (fanout=4)        0.796   U_1/cpudpath/I6/cbus_s<14>
+    SLICE_X52Y34.Y       Tilo                  0.759   N1187
+                                                       U_1/cpudpath/I6/alubus_s<14>269_SW4_SW0
+    SLICE_X52Y34.F4      net (fanout=1)        0.023   U_1/cpudpath/I6/alubus_s<14>269_SW4_SW0/O
+    SLICE_X52Y34.X       Tilo                  0.759   N1187
+                                                       U_1/cpudpath/I6/alubus_s<14>269_SW4
+    SLICE_X43Y44.G2      net (fanout=1)        1.629   N1187
+    SLICE_X43Y44.Y       Tilo                  0.704   U_1/cpudpath/path_dbus_output<1>_2_f5_38
+                                                       U_1/cpudpath/dibus<14>104
+    SLICE_X42Y49.F1      net (fanout=6)        0.691   U_1/cpudpath/dibus<14>104
+    SLICE_X42Y49.X       Tilo                  0.759   U_1/cpudpath/I0/sireg_s<14>
+                                                       U_1/cpudpath/dibus<14>135
+    SLICE_X42Y51.BY      net (fanout=3)        0.517   U_1/cpudpath/dibus<14>
+    SLICE_X42Y51.CLK     Tdick                 0.382   U_1/cpudpath/I0/direg_s<15>
+                                                       U_1/cpudpath/I0/direg_s_14
+    -------------------------------------------------  ---------------------------
+    Total                                     24.852ns (11.576ns logic, 13.276ns route)
+                                                       (46.6% logic, 53.4% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     0.117ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               U_1/cpuproc/path.alu_operation_0 (FF)
+  Destination:          U_1/cpudpath/I0/direg_s_14 (FF)
+  Requirement:          25.000ns
+  Data Path Delay:      24.850ns (Levels of Logic = 14)
+  Clock Path Skew:      -0.033ns (0.110 - 0.143)
+  Source Clock:         CLOCK_40MHZ_BUFGP rising at 0.000ns
+  Destination Clock:    CLOCK_40MHZ_BUFGP rising at 25.000ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: U_1/cpuproc/path.alu_operation_0 to U_1/cpudpath/I0/direg_s_14
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X64Y13.YQ      Tcko                  0.652   U_1/cpuproc/path.alu_operation_1
+                                                       U_1/cpuproc/path.alu_operation_0
+    SLICE_X54Y12.F3      net (fanout=188)      2.196   U_1/cpuproc/path.alu_operation_0
+    SLICE_X54Y12.X       Tilo                  0.759   U_1/cpudpath/I6/N248
+                                                       U_1/cpudpath/I6/psrreg_s_7_mux0000131
+    SLICE_X52Y18.F1      net (fanout=4)        1.296   U_1/cpudpath/I6/N248
+    SLICE_X52Y18.X       Tilo                  0.759   U_1/cpudpath/I6/N90
+                                                       U_1/cpudpath/I6/alubus_s_or00001
+    SLICE_X53Y27.F2      net (fanout=3)        1.332   U_1/cpudpath/I6/N90
+    SLICE_X53Y27.X       Tilo                  0.704   U_1/cpudpath/I6/addbbus_s_or00001
+                                                       U_1/cpudpath/I6/addbbus_s_or00001_1
+    SLICE_X52Y36.G4      net (fanout=6)        1.769   U_1/cpudpath/I6/addbbus_s_or00001
+    SLICE_X52Y36.X       Tif5x                 1.152   N738
+                                                       U_1/cpudpath/I6/cbus_s_3_or00001_SW0_F
+                                                       U_1/cpudpath/I6/cbus_s_3_or00001_SW0
+    SLICE_X55Y36.G3      net (fanout=2)        0.401   N738
+    SLICE_X55Y36.Y       Tilo                  0.704   U_1/cpudpath/I6/cbus_s<6>
+                                                       U_1/cpudpath/I6/cbus_s_4_or00001
+    SLICE_X55Y36.F3      net (fanout=4)        0.039   U_1/cpudpath/I6/cbus_s<4>
+    SLICE_X55Y36.X       Tilo                  0.704   U_1/cpudpath/I6/cbus_s<6>
+                                                       U_1/cpudpath/I6/cbus_s_6_or00001
+    SLICE_X55Y42.BX      net (fanout=6)        0.648   U_1/cpudpath/I6/cbus_s<6>
+    SLICE_X55Y42.X       Tbxx                  0.739   U_1/cpudpath/I6/cbus_s<10>
+                                                       U_1/cpudpath/I6/cbus_s_10_or00001
+    SLICE_X53Y35.G3      net (fanout=3)        0.861   U_1/cpudpath/I6/cbus_s<10>
+    SLICE_X53Y35.Y       Tilo                  0.704   U_1/cpudpath/I6/cbus_s<12>
+                                                       U_1/cpudpath/I6/cbus_s_11_or00001
+    SLICE_X53Y35.F4      net (fanout=2)        0.038   U_1/cpudpath/I6/cbus_s<11>
+    SLICE_X53Y35.X       Tilo                  0.704   U_1/cpudpath/I6/cbus_s<12>
+                                                       U_1/cpudpath/I6/cbus_s_12_or00001
+    SLICE_X64Y31.G2      net (fanout=6)        0.911   U_1/cpudpath/I6/cbus_s<12>
+    SLICE_X64Y31.Y       Tilo                  0.759   U_1/cpudpath/I6/cbus_s<16>
+                                                       U_1/cpudpath/I6/cbus_s_14_or00001
+    SLICE_X52Y34.G3      net (fanout=4)        0.796   U_1/cpudpath/I6/cbus_s<14>
+    SLICE_X52Y34.Y       Tilo                  0.759   N1187
+                                                       U_1/cpudpath/I6/alubus_s<14>269_SW4_SW0
+    SLICE_X52Y34.F4      net (fanout=1)        0.023   U_1/cpudpath/I6/alubus_s<14>269_SW4_SW0/O
+    SLICE_X52Y34.X       Tilo                  0.759   N1187
+                                                       U_1/cpudpath/I6/alubus_s<14>269_SW4
+    SLICE_X43Y44.G2      net (fanout=1)        1.629   N1187
+    SLICE_X43Y44.Y       Tilo                  0.704   U_1/cpudpath/path_dbus_output<1>_2_f5_38
+                                                       U_1/cpudpath/dibus<14>104
+    SLICE_X42Y49.F1      net (fanout=6)        0.691   U_1/cpudpath/dibus<14>104
+    SLICE_X42Y49.X       Tilo                  0.759   U_1/cpudpath/I0/sireg_s<14>
+                                                       U_1/cpudpath/dibus<14>135
+    SLICE_X42Y51.BY      net (fanout=3)        0.517   U_1/cpudpath/dibus<14>
+    SLICE_X42Y51.CLK     Tdick                 0.382   U_1/cpudpath/I0/direg_s<15>
+                                                       U_1/cpudpath/I0/direg_s_14
+    -------------------------------------------------  ---------------------------
+    Total                                     24.850ns (11.703ns logic, 13.147ns route)
+                                                       (47.1% logic, 52.9% route)
+
+--------------------------------------------------------------------------------
+
+Hold Paths: TS_CLOCK_40MHZ = PERIOD TIMEGRP "CLOCK_40MHZ" 25 ns HIGH 50%;
+--------------------------------------------------------------------------------
+
+Paths for end point U_0/U_0/UART_RXFF/Mram_iFIFOMem7.SLICEM_G (SLICE_X56Y89.BY), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      0.812ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               U_0/U_0/iRXFIFOD_1 (FF)
+  Destination:          U_0/U_0/UART_RXFF/Mram_iFIFOMem7.SLICEM_G (RAM)
+  Requirement:          0.000ns
+  Data Path Delay:      0.812ns (Levels of Logic = 1)
+  Clock Path Skew:      0.000ns
+  Source Clock:         CLOCK_40MHZ_BUFGP rising at 25.000ns
+  Destination Clock:    CLOCK_40MHZ_BUFGP rising at 25.000ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path: U_0/U_0/iRXFIFOD_1 to U_0/U_0/UART_RXFF/Mram_iFIFOMem7.SLICEM_G
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X57Y88.XQ      Tcko                  0.473   U_0/U_0/iRXFIFOD<1>
+                                                       U_0/U_0/iRXFIFOD_1
+    SLICE_X56Y89.BY      net (fanout=4)        0.466   U_0/U_0/iRXFIFOD<1>
+    SLICE_X56Y89.CLK     Tdh         (-Th)     0.127   U_0/U_0/UART_RXFF/N19
+                                                       U_0/U_0/UART_RXFF/Mram_iFIFOMem7.SLICEM_G
+    -------------------------------------------------  ---------------------------
+    Total                                      0.812ns (0.346ns logic, 0.466ns route)
+                                                       (42.6% logic, 57.4% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point U_0/U_0/UART_RXFF/Mram_iFIFOMem31.SLICEM_G (SLICE_X46Y89.BY), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      0.817ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               U_0/U_0/iRXFIFOD_7 (FF)
+  Destination:          U_0/U_0/UART_RXFF/Mram_iFIFOMem31.SLICEM_G (RAM)
+  Requirement:          0.000ns
+  Data Path Delay:      0.819ns (Levels of Logic = 1)
+  Clock Path Skew:      0.002ns (0.017 - 0.015)
+  Source Clock:         CLOCK_40MHZ_BUFGP rising at 25.000ns
+  Destination Clock:    CLOCK_40MHZ_BUFGP rising at 25.000ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path: U_0/U_0/iRXFIFOD_7 to U_0/U_0/UART_RXFF/Mram_iFIFOMem31.SLICEM_G
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X47Y86.XQ      Tcko                  0.473   U_0/U_0/iRXFIFOD<7>
+                                                       U_0/U_0/iRXFIFOD_7
+    SLICE_X46Y89.BY      net (fanout=4)        0.473   U_0/U_0/iRXFIFOD<7>
+    SLICE_X46Y89.CLK     Tdh         (-Th)     0.127   U_0/U_0/UART_RXFF/N67
+                                                       U_0/U_0/UART_RXFF/Mram_iFIFOMem31.SLICEM_G
+    -------------------------------------------------  ---------------------------
+    Total                                      0.819ns (0.346ns logic, 0.473ns route)
+                                                       (42.2% logic, 57.8% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point U_0/U_0/UART_RXFF/Mram_iFIFOMem29.SLICEM_G (SLICE_X46Y86.BY), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      0.818ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               U_0/U_0/iRXFIFOD_7 (FF)
+  Destination:          U_0/U_0/UART_RXFF/Mram_iFIFOMem29.SLICEM_G (RAM)
+  Requirement:          0.000ns
+  Data Path Delay:      0.818ns (Levels of Logic = 1)
+  Clock Path Skew:      0.000ns
+  Source Clock:         CLOCK_40MHZ_BUFGP rising at 25.000ns
+  Destination Clock:    CLOCK_40MHZ_BUFGP rising at 25.000ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path: U_0/U_0/iRXFIFOD_7 to U_0/U_0/UART_RXFF/Mram_iFIFOMem29.SLICEM_G
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X47Y86.XQ      Tcko                  0.473   U_0/U_0/iRXFIFOD<7>
+                                                       U_0/U_0/iRXFIFOD_7
+    SLICE_X46Y86.BY      net (fanout=4)        0.472   U_0/U_0/iRXFIFOD<7>
+    SLICE_X46Y86.CLK     Tdh         (-Th)     0.127   U_0/U_0/UART_RXFF/N63
+                                                       U_0/U_0/UART_RXFF/Mram_iFIFOMem29.SLICEM_G
+    -------------------------------------------------  ---------------------------
+    Total                                      0.818ns (0.346ns logic, 0.472ns route)
+                                                       (42.3% logic, 57.7% route)
+
+--------------------------------------------------------------------------------
+
+Component Switching Limit Checks: TS_CLOCK_40MHZ = PERIOD TIMEGRP "CLOCK_40MHZ" 25 ns HIGH 50%;
+--------------------------------------------------------------------------------
+Slack: 21.808ns (period - (min low pulse limit / (low pulse / period)))
+  Period: 25.000ns
+  Low pulse: 12.500ns
+  Low pulse limit: 1.596ns (Trpw)
+  Physical resource: U_0/U_0/UART_TXFF/iRDAddr<3>/SR
+  Logical resource: U_0/U_0/UART_TXFF/iRDAddr_3/SR
+  Location pin: SLICE_X19Y86.SR
+  Clock network: U_1/resoutn
+--------------------------------------------------------------------------------
+Slack: 21.808ns (period - (min high pulse limit / (high pulse / period)))
+  Period: 25.000ns
+  High pulse: 12.500ns
+  High pulse limit: 1.596ns (Trpw)
+  Physical resource: U_0/U_0/UART_TXFF/iRDAddr<3>/SR
+  Logical resource: U_0/U_0/UART_TXFF/iRDAddr_3/SR
+  Location pin: SLICE_X19Y86.SR
+  Clock network: U_1/resoutn
+--------------------------------------------------------------------------------
+Slack: 21.808ns (period - (min low pulse limit / (low pulse / period)))
+  Period: 25.000ns
+  Low pulse: 12.500ns
+  Low pulse limit: 1.596ns (Trpw)
+  Physical resource: U_0/U_0/UART_TXFF/iRDAddr<2>/SR
+  Logical resource: U_0/U_0/UART_TXFF/iRDAddr_2/SR
+  Location pin: SLICE_X13Y89.SR
+  Clock network: U_1/resoutn
+--------------------------------------------------------------------------------
+
+
+All constraints were met.
+
+
+Data Sheet report:
+-----------------
+All values displayed in nanoseconds (ns)
+
+Clock to Setup on destination clock CLOCK_40MHZ
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+CLOCK_40MHZ    |   24.972|         |         |         |
+---------------+---------+---------+---------+---------+
+
+
+Timing summary:
+---------------
+
+Timing errors: 0  Score: 0  (Setup/Max: 0, Hold: 0)
+
+Constraints cover 84085966 paths, 0 nets, and 22574 connections
+
+Design statistics:
+   Minimum period:  24.972ns{1}   (Maximum frequency:  40.045MHz)
+
+
+------------------------------------Footnotes-----------------------------------
+1)  The minimum period statistic assumes all single cycle delays.
+
+Analysis completed Fri Feb 13 10:28:27 2015 
+--------------------------------------------------------------------------------
+
+Trace Settings:
+-------------------------
+Trace Settings 
+
+Peak Memory Usage: 239 MB
+
+
+

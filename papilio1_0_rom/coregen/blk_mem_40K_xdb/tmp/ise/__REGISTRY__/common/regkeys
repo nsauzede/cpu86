@@ -1,0 +1,12 @@
+IncrementalMessagingEnabled
+false
+s
+MessageCaptureEnabled
+true
+s
+MessageFilterFile
+filter.filter
+s
+MessageFilteringEnabled
+false
+s

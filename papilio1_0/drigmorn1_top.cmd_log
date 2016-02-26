@@ -1,0 +1,6 @@
+xst -intstyle ise -ifn "C:/nico/perso/hack/hackerspace/fpga/x86/cpu86/drigmorn1/drigmorn1_top.xst" -ofn "C:/nico/perso/hack/hackerspace/fpga/x86/cpu86/drigmorn1/drigmorn1_top.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc DRIGMORN1.ucf -p xc3s500e-cp132-4 drigmorn1_top.ngc drigmorn1_top.ngd  
+map -intstyle ise -p xc3s500e-cp132-4 -cm area -ir off -pr off -c 100 -o drigmorn1_top_map.ncd drigmorn1_top.ngd drigmorn1_top.pcf 
+par -w -intstyle ise -ol high -t 1 drigmorn1_top_map.ncd drigmorn1_top.ncd drigmorn1_top.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml drigmorn1_top.twx drigmorn1_top.ncd -o drigmorn1_top.twr drigmorn1_top.pcf -ucf DRIGMORN1.ucf 
+bitgen -intstyle ise -f drigmorn1_top.ut drigmorn1_top.ncd 

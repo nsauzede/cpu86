@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- IMPORTANT: This is an internal file that has been generated   -->
+<!--     by the Xilinx ISE software.  Any direct editing or        -->
+<!--     changes made to this file may result in unpredictable     -->
+<!--     behavior or data corruption.  It is strongly advised that -->
+<!--     users do not edit the contents of this file.              -->
+<!--                                                               -->
+<!-- Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.    -->
+
+<messages>
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;C:/nico/msys/home/sauzeden/git/cpu86/papilio2_drigmorn1/Bootstrap_rtl.vhd&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;C:/nico/msys/home/sauzeden/git/cpu86/papilio2_drigmorn1/a_table.vhd&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;C:/nico/msys/home/sauzeden/git/cpu86/papilio2_drigmorn1/aaatop.vhd&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;C:/nico/msys/home/sauzeden/git/cpu86/papilio2_drigmorn1/alu_rtl.vhd&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;C:/nico/msys/home/sauzeden/git/cpu86/papilio2_drigmorn1/biu_struct.vhd&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;C:/nico/msys/home/sauzeden/git/cpu86/papilio2_drigmorn1/biufsm_fsm.vhd&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;C:/nico/msys/home/sauzeden/git/cpu86/papilio2_drigmorn1/cpu86_struct.vhd&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;C:/nico/msys/home/sauzeden/git/cpu86/papilio2_drigmorn1/cpu86instr.vhd&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;C:/nico/msys/home/sauzeden/git/cpu86/papilio2_drigmorn1/cpu86pack.vhd&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;C:/nico/msys/home/sauzeden/git/cpu86/papilio2_drigmorn1/d_table.vhd&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;C:/nico/msys/home/sauzeden/git/cpu86/papilio2_drigmorn1/datapath_struct.vhd&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;C:/nico/msys/home/sauzeden/git/cpu86/papilio2_drigmorn1/dataregfile_rtl.vhd&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;C:/nico/msys/home/sauzeden/git/cpu86/papilio2_drigmorn1/divider_rtl_ser.vhd&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;C:/nico/msys/home/sauzeden/git/cpu86/papilio2_drigmorn1/drigmorn1_top.vhd&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;C:/nico/msys/home/sauzeden/git/cpu86/papilio2_drigmorn1/formatter_struct.vhd&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;C:/nico/msys/home/sauzeden/git/cpu86/papilio2_drigmorn1/ipregister_rtl.vhd&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;C:/nico/msys/home/sauzeden/git/cpu86/papilio2_drigmorn1/m_table.vhd&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;C:/nico/msys/home/sauzeden/git/cpu86/papilio2_drigmorn1/multiplier_rtl.vhd&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;C:/nico/msys/home/sauzeden/git/cpu86/papilio2_drigmorn1/n_table.vhd&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;C:/nico/msys/home/sauzeden/git/cpu86/papilio2_drigmorn1/proc_rtl.vhd&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;C:/nico/msys/home/sauzeden/git/cpu86/papilio2_drigmorn1/r_table.vhd&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;C:/nico/msys/home/sauzeden/git/cpu86/papilio2_drigmorn1/regshiftmux_regshift.vhd&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;C:/nico/msys/home/sauzeden/git/cpu86/papilio2_drigmorn1/segregfile_rtl.vhd&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;C:/nico/msys/home/sauzeden/git/cpu86/papilio2_drigmorn1/slib_clock_div.vhd&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;C:/nico/msys/home/sauzeden/git/cpu86/papilio2_drigmorn1/slib_counter.vhd&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;C:/nico/msys/home/sauzeden/git/cpu86/papilio2_drigmorn1/slib_edge_detect.vhd&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;C:/nico/msys/home/sauzeden/git/cpu86/papilio2_drigmorn1/slib_fifo.vhd&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;C:/nico/msys/home/sauzeden/git/cpu86/papilio2_drigmorn1/slib_input_filter.vhd&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;C:/nico/msys/home/sauzeden/git/cpu86/papilio2_drigmorn1/slib_input_sync.vhd&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;C:/nico/msys/home/sauzeden/git/cpu86/papilio2_drigmorn1/slib_mv_filter.vhd&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;C:/nico/msys/home/sauzeden/git/cpu86/papilio2_drigmorn1/uart_16750.vhd&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;C:/nico/msys/home/sauzeden/git/cpu86/papilio2_drigmorn1/uart_baudgen.vhd&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;C:/nico/msys/home/sauzeden/git/cpu86/papilio2_drigmorn1/uart_interrupt.vhd&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;C:/nico/msys/home/sauzeden/git/cpu86/papilio2_drigmorn1/uart_receiver.vhd&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;C:/nico/msys/home/sauzeden/git/cpu86/papilio2_drigmorn1/uart_top_struct.vhd&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;C:/nico/msys/home/sauzeden/git/cpu86/papilio2_drigmorn1/uart_transmitter.vhd&quot; into library work</arg>
+</msg>
+
+</messages>
+

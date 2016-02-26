@@ -1,0 +1,1716 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 5.00 secs
+Total CPU time to Xst completion: 4.95 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 5.00 secs
+Total CPU time to Xst completion: 4.95 secs
+ 
+--> Reading design: drigmorn1_top.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+	9.1) Device utilization summary
+	9.2) Partition Resource Summary
+	9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "drigmorn1_top.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "drigmorn1_top"
+Output Format                      : NGC
+Target Device                      : xc3s500e-4-cp132
+
+---- Source Options
+Top Module Name                    : drigmorn1_top
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : Yes
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : Yes
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Multiplier Style                   : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 500
+Add Generic Clock Buffer(BUFG)     : 24
+Register Duplication               : YES
+Slice Packing                      : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Yes
+Use Synchronous Set                : Yes
+Use Synchronous Reset              : Yes
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 2
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+Verilog 2001                       : YES
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling vhdl file "C:/nico/perso/hack/hackerspace/fpga/x86/cpu86/Opencores/slib_counter.vhd" in Library work.
+Entity <slib_counter> compiled.
+Entity <slib_counter> (Architecture <rtl>) compiled.
+Compiling vhdl file "C:/nico/perso/hack/hackerspace/fpga/x86/cpu86/Opencores/slib_mv_filter.vhd" in Library work.
+Entity <slib_mv_filter> compiled.
+Entity <slib_mv_filter> (Architecture <rtl>) compiled.
+Compiling vhdl file "C:/nico/perso/hack/hackerspace/fpga/x86/cpu86/cpu86_rtl/cpu86pack.vhd" in Library work.
+Package <cpu86pack> compiled.
+Compiling vhdl file "C:/nico/perso/hack/hackerspace/fpga/x86/cpu86/cpu86_rtl/divider_rtl_ser.vhd" in Library work.
+Entity <divider> compiled.
+Entity <divider> (Architecture <rtl_ser>) compiled.
+Compiling vhdl file "C:/nico/perso/hack/hackerspace/fpga/x86/cpu86/cpu86_rtl/multiplier_rtl.vhd" in Library work.
+Entity <multiplier> compiled.
+Entity <multiplier> (Architecture <rtl>) compiled.
+Compiling vhdl file "C:/nico/perso/hack/hackerspace/fpga/x86/cpu86/cpu86_rtl/cpu86instr.vhd" in Library work.
+Package <cpu86instr> compiled.
+Compiling vhdl file "C:/nico/perso/hack/hackerspace/fpga/x86/cpu86/cpu86_rtl/a_table.vhd" in Library work.
+Entity <a_table> compiled.
+Entity <a_table> (Architecture <rtl>) compiled.
+Compiling vhdl file "C:/nico/perso/hack/hackerspace/fpga/x86/cpu86/cpu86_rtl/d_table.vhd" in Library work.
+Entity <d_table> compiled.
+Entity <d_table> (Architecture <rtl>) compiled.
+Compiling vhdl file "C:/nico/perso/hack/hackerspace/fpga/x86/cpu86/cpu86_rtl/m_table.vhd" in Library work.
+Entity <m_table> compiled.
+Entity <m_table> (Architecture <rtl>) compiled.
+Compiling vhdl file "C:/nico/perso/hack/hackerspace/fpga/x86/cpu86/cpu86_rtl/n_table.vhd" in Library work.
+Entity <n_table> compiled.
+Entity <n_table> (Architecture <rtl>) compiled.
+Compiling vhdl file "C:/nico/perso/hack/hackerspace/fpga/x86/cpu86/cpu86_rtl/r_table.vhd" in Library work.
+Entity <r_table> compiled.
+Entity <r_table> (Architecture <rtl>) compiled.
+Compiling vhdl file "C:/nico/perso/hack/hackerspace/fpga/x86/cpu86/Opencores/slib_edge_detect.vhd" in Library work.
+Entity <slib_edge_detect> compiled.
+Entity <slib_edge_detect> (Architecture <rtl>) compiled.
+Compiling vhdl file "C:/nico/perso/hack/hackerspace/fpga/x86/cpu86/Opencores/slib_input_sync.vhd" in Library work.
+Entity <slib_input_sync> compiled.
+Entity <slib_input_sync> (Architecture <rtl>) compiled.
+Compiling vhdl file "C:/nico/perso/hack/hackerspace/fpga/x86/cpu86/Opencores/slib_input_filter.vhd" in Library work.
+Entity <slib_input_filter> compiled.
+Entity <slib_input_filter> (Architecture <rtl>) compiled.
+Compiling vhdl file "C:/nico/perso/hack/hackerspace/fpga/x86/cpu86/Opencores/uart_interrupt.vhd" in Library work.
+Entity <uart_interrupt> compiled.
+Entity <uart_interrupt> (Architecture <rtl>) compiled.
+Compiling vhdl file "C:/nico/perso/hack/hackerspace/fpga/x86/cpu86/Opencores/uart_baudgen.vhd" in Library work.
+Entity <uart_baudgen> compiled.
+Entity <uart_baudgen> (Architecture <rtl>) compiled.
+Compiling vhdl file "C:/nico/perso/hack/hackerspace/fpga/x86/cpu86/Opencores/slib_clock_div.vhd" in Library work.
+Entity <slib_clock_div> compiled.
+Entity <slib_clock_div> (Architecture <rtl>) compiled.
+Compiling vhdl file "C:/nico/perso/hack/hackerspace/fpga/x86/cpu86/Opencores/slib_fifo.vhd" in Library work.
+Entity <slib_fifo> compiled.
+Entity <slib_fifo> (Architecture <rtl>) compiled.
+Compiling vhdl file "C:/nico/perso/hack/hackerspace/fpga/x86/cpu86/Opencores/uart_transmitter.vhd" in Library work.
+Entity <uart_transmitter> compiled.
+Entity <uart_transmitter> (Architecture <rtl>) compiled.
+Compiling vhdl file "C:/nico/perso/hack/hackerspace/fpga/x86/cpu86/Opencores/uart_receiver.vhd" in Library work.
+Entity <uart_receiver> compiled.
+Entity <uart_receiver> (Architecture <rtl>) compiled.
+Compiling vhdl file "C:/nico/perso/hack/hackerspace/fpga/x86/cpu86/cpu86_rtl/alu_rtl.vhd" in Library work.
+Entity <ALU> compiled.
+Entity <ALU> (Architecture <rtl>) compiled.
+Compiling vhdl file "C:/nico/perso/hack/hackerspace/fpga/x86/cpu86/cpu86_rtl/dataregfile_rtl.vhd" in Library work.
+Entity <dataregfile> compiled.
+Entity <dataregfile> (Architecture <rtl>) compiled.
+Compiling vhdl file "C:/nico/perso/hack/hackerspace/fpga/x86/cpu86/cpu86_rtl/ipregister_rtl.vhd" in Library work.
+Entity <ipregister> compiled.
+Entity <ipregister> (Architecture <rtl>) compiled.
+Compiling vhdl file "C:/nico/perso/hack/hackerspace/fpga/x86/cpu86/cpu86_rtl/segregfile_rtl.vhd" in Library work.
+Entity <segregfile> compiled.
+Entity <segregfile> (Architecture <rtl>) compiled.
+Compiling vhdl file "C:/nico/perso/hack/hackerspace/fpga/x86/cpu86/cpu86_rtl/biufsm_fsm.vhd" in Library work.
+Entity <biufsm> compiled.
+Entity <biufsm> (Architecture <fsm>) compiled.
+Compiling vhdl file "C:/nico/perso/hack/hackerspace/fpga/x86/cpu86/cpu86_rtl/formatter_struct.vhd" in Library work.
+Entity <formatter> compiled.
+Entity <formatter> (Architecture <struct>) compiled.
+Compiling vhdl file "C:/nico/perso/hack/hackerspace/fpga/x86/cpu86/cpu86_rtl/regshiftmux_regshift.vhd" in Library work.
+Entity <regshiftmux> compiled.
+Entity <regshiftmux> (Architecture <regshift>) compiled.
+Compiling vhdl file "C:/nico/perso/hack/hackerspace/fpga/x86/cpu86/Opencores/uart_16750.vhd" in Library work.
+Entity <uart_16750> compiled.
+Entity <uart_16750> (Architecture <rtl>) compiled.
+Compiling vhdl file "C:/nico/perso/hack/hackerspace/fpga/x86/cpu86/cpu86_rtl/biu_struct.vhd" in Library work.
+Entity <biu> compiled.
+Entity <biu> (Architecture <struct>) compiled.
+Compiling vhdl file "C:/nico/perso/hack/hackerspace/fpga/x86/cpu86/cpu86_rtl/datapath_struct.vhd" in Library work.
+Entity <datapath> compiled.
+Entity <datapath> (Architecture <struct>) compiled.
+Compiling vhdl file "C:/nico/perso/hack/hackerspace/fpga/x86/cpu86/cpu86_rtl/proc_rtl.vhd" in Library work.
+Entity <proc> compiled.
+Entity <proc> (Architecture <rtl>) compiled.
+Compiling vhdl file "C:/nico/perso/hack/hackerspace/fpga/x86/cpu86/cpu86_rtl/cpu86_struct.vhd" in Library work.
+Entity <cpu86> compiled.
+Entity <cpu86> (Architecture <struct>) compiled.
+Compiling vhdl file "C:/nico/perso/hack/hackerspace/fpga/x86/cpu86/drigmorn1/coregen/blk_mem_40K.vhd" in Library work.
+Entity <blk_mem_40K> compiled.
+Entity <blk_mem_40K> (Architecture <blk_mem_40K_a>) compiled.
+Compiling vhdl file "C:/nico/perso/hack/hackerspace/fpga/x86/cpu86/drigmorn1/top_drigmorn1/Bootstrap_rtl.vhd" in Library work.
+Entity <bootstrap> compiled.
+Entity <bootstrap> (Architecture <rtl>) compiled.
+Compiling vhdl file "C:/nico/perso/hack/hackerspace/fpga/x86/cpu86/top_rtl/uart_top_struct.vhd" in Library work.
+Entity <uart_top> compiled.
+Entity <uart_top> (Architecture <struct>) compiled.
+Compiling vhdl file "C:/nico/perso/hack/hackerspace/fpga/x86/cpu86/drigmorn1/top_drigmorn1/drigmorn1_top.vhd" in Library work.
+Entity <drigmorn1_top> compiled.
+Entity <drigmorn1_top> (Architecture <struct>) compiled.
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for entity <drigmorn1_top> in library <work> (architecture <struct>).
+
+Analyzing hierarchy for entity <cpu86> in library <work> (architecture <struct>).
+
+Analyzing hierarchy for entity <bootstrap> in library <work> (architecture <rtl>).
+
+Analyzing hierarchy for entity <uart_top> in library <work> (architecture <struct>).
+
+Analyzing hierarchy for entity <biu> in library <work> (architecture <struct>).
+
+Analyzing hierarchy for entity <datapath> in library <work> (architecture <struct>).
+
+Analyzing hierarchy for entity <proc> in library <work> (architecture <rtl>).
+
+Analyzing hierarchy for entity <uart_16750> in library <work> (architecture <rtl>).
+
+Analyzing hierarchy for entity <biufsm> in library <work> (architecture <fsm>).
+
+Analyzing hierarchy for entity <formatter> in library <work> (architecture <struct>).
+
+Analyzing hierarchy for entity <regshiftmux> in library <work> (architecture <regshift>).
+
+Analyzing hierarchy for entity <ALU> in library <work> (architecture <rtl>).
+
+Analyzing hierarchy for entity <dataregfile> in library <work> (architecture <rtl>).
+
+Analyzing hierarchy for entity <ipregister> in library <work> (architecture <rtl>).
+
+Analyzing hierarchy for entity <segregfile> in library <work> (architecture <rtl>).
+
+Analyzing hierarchy for entity <slib_edge_detect> in library <work> (architecture <rtl>).
+
+Analyzing hierarchy for entity <slib_input_sync> in library <work> (architecture <rtl>).
+
+Analyzing hierarchy for entity <slib_input_filter> in library <work> (architecture <rtl>) with generics.
+	SIZE = 2
+
+Analyzing hierarchy for entity <uart_interrupt> in library <work> (architecture <rtl>).
+
+Analyzing hierarchy for entity <uart_baudgen> in library <work> (architecture <rtl>).
+
+Analyzing hierarchy for entity <slib_clock_div> in library <work> (architecture <rtl>) with generics.
+	RATIO = 8
+
+Analyzing hierarchy for entity <slib_fifo> in library <work> (architecture <rtl>) with generics.
+	SIZE_E = 6
+	WIDTH = 8
+
+Analyzing hierarchy for entity <slib_fifo> in library <work> (architecture <rtl>) with generics.
+	SIZE_E = 6
+	WIDTH = 11
+
+Analyzing hierarchy for entity <uart_transmitter> in library <work> (architecture <rtl>).
+
+Analyzing hierarchy for entity <uart_receiver> in library <work> (architecture <rtl>).
+
+Analyzing hierarchy for entity <a_table> in library <work> (architecture <rtl>).
+
+Analyzing hierarchy for entity <d_table> in library <work> (architecture <rtl>).
+
+Analyzing hierarchy for entity <m_table> in library <work> (architecture <rtl>).
+
+Analyzing hierarchy for entity <n_table> in library <work> (architecture <rtl>).
+
+Analyzing hierarchy for entity <r_table> in library <work> (architecture <rtl>).
+
+Analyzing hierarchy for entity <divider> in library <work> (architecture <rtl_ser>) with generics.
+	WIDTH_DIVID = 32
+	WIDTH_DIVIS = 16
+	WIDTH_SHORT = 8
+
+Analyzing hierarchy for entity <multiplier> in library <work> (architecture <rtl>) with generics.
+	WIDTH = 16
+
+Analyzing hierarchy for entity <slib_counter> in library <work> (architecture <rtl>) with generics.
+	WIDTH = 4
+
+Analyzing hierarchy for entity <slib_mv_filter> in library <work> (architecture <rtl>) with generics.
+	THRESHOLD = 10
+	WIDTH = 4
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing Entity <drigmorn1_top> in library <work> (Architecture <struct>).
+WARNING:Xst:753 - "C:/nico/perso/hack/hackerspace/fpga/x86/cpu86/drigmorn1/top_drigmorn1/drigmorn1_top.vhd" line 201: Unconnected output port 'inta' of component 'cpu86'.
+WARNING:Xst:2211 - "C:/nico/perso/hack/hackerspace/fpga/x86/cpu86/drigmorn1/top_drigmorn1/drigmorn1_top.vhd" line 218: Instantiating black box module <blk_mem_40K>.
+WARNING:Xst:753 - "C:/nico/perso/hack/hackerspace/fpga/x86/cpu86/drigmorn1/top_drigmorn1/drigmorn1_top.vhd" line 231: Unconnected output port 'DTRn' of component 'uart_top'.
+WARNING:Xst:753 - "C:/nico/perso/hack/hackerspace/fpga/x86/cpu86/drigmorn1/top_drigmorn1/drigmorn1_top.vhd" line 231: Unconnected output port 'IRQ' of component 'uart_top'.
+Entity <drigmorn1_top> analyzed. Unit <drigmorn1_top> generated.
+
+Analyzing Entity <cpu86> in library <work> (Architecture <struct>).
+Entity <cpu86> analyzed. Unit <cpu86> generated.
+
+Analyzing Entity <biu> in library <work> (Architecture <struct>).
+INFO:Xst:1739 - HDL ADVISOR - "C:/nico/perso/hack/hackerspace/fpga/x86/cpu86/cpu86_rtl/biu_struct.vhd" line 71: declaration of a buffer port will make it difficult for you to validate this design by simulation. It is preferable to declare it as output.
+INFO:Xst:1739 - HDL ADVISOR - "C:/nico/perso/hack/hackerspace/fpga/x86/cpu86/cpu86_rtl/biu_struct.vhd" line 72: declaration of a buffer port will make it difficult for you to validate this design by simulation. It is preferable to declare it as output.
+INFO:Xst:1739 - HDL ADVISOR - "C:/nico/perso/hack/hackerspace/fpga/x86/cpu86/cpu86_rtl/biu_struct.vhd" line 60: declaration of a buffer port will make it difficult for you to validate this design by simulation. It is preferable to declare it as output.
+INFO:Xst:1739 - HDL ADVISOR - "C:/nico/perso/hack/hackerspace/fpga/x86/cpu86/cpu86_rtl/biu_struct.vhd" line 61: declaration of a buffer port will make it difficult for you to validate this design by simulation. It is preferable to declare it as output.
+Entity <biu> analyzed. Unit <biu> generated.
+
+Analyzing Entity <biufsm> in library <work> (Architecture <fsm>).
+Entity <biufsm> analyzed. Unit <biufsm> generated.
+
+Analyzing Entity <formatter> in library <work> (Architecture <struct>).
+Entity <formatter> analyzed. Unit <formatter> generated.
+
+Analyzing Entity <a_table> in library <work> (Architecture <rtl>).
+Entity <a_table> analyzed. Unit <a_table> generated.
+
+Analyzing Entity <d_table> in library <work> (Architecture <rtl>).
+Entity <d_table> analyzed. Unit <d_table> generated.
+
+Analyzing Entity <m_table> in library <work> (Architecture <rtl>).
+Entity <m_table> analyzed. Unit <m_table> generated.
+
+Analyzing Entity <n_table> in library <work> (Architecture <rtl>).
+Entity <n_table> analyzed. Unit <n_table> generated.
+
+Analyzing Entity <r_table> in library <work> (Architecture <rtl>).
+Entity <r_table> analyzed. Unit <r_table> generated.
+
+Analyzing Entity <regshiftmux> in library <work> (Architecture <regshift>).
+Entity <regshiftmux> analyzed. Unit <regshiftmux> generated.
+
+Analyzing Entity <datapath> in library <work> (Architecture <struct>).
+Entity <datapath> analyzed. Unit <datapath> generated.
+
+Analyzing Entity <ALU> in library <work> (Architecture <rtl>).
+INFO:Xst:2679 - Register <psrreg_s<15>> in unit <ALU> has a constant value of 1 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <psrreg_s<14>> in unit <ALU> has a constant value of 1 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <psrreg_s<13>> in unit <ALU> has a constant value of 1 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <psrreg_s<12>> in unit <ALU> has a constant value of 1 during circuit operation. The register is replaced by logic.
+Entity <ALU> analyzed. Unit <ALU> generated.
+
+Analyzing generic Entity <divider> in library <work> (Architecture <rtl_ser>).
+	WIDTH_DIVID = 32
+	WIDTH_DIVIS = 16
+	WIDTH_SHORT = 8
+Entity <divider> analyzed. Unit <divider> generated.
+
+Analyzing generic Entity <multiplier> in library <work> (Architecture <rtl>).
+	WIDTH = 16
+Entity <multiplier> analyzed. Unit <multiplier> generated.
+
+Analyzing Entity <dataregfile> in library <work> (Architecture <rtl>).
+Entity <dataregfile> analyzed. Unit <dataregfile> generated.
+
+Analyzing Entity <ipregister> in library <work> (Architecture <rtl>).
+Entity <ipregister> analyzed. Unit <ipregister> generated.
+
+Analyzing Entity <segregfile> in library <work> (Architecture <rtl>).
+Entity <segregfile> analyzed. Unit <segregfile> generated.
+
+Analyzing Entity <proc> in library <work> (Architecture <rtl>).
+Entity <proc> analyzed. Unit <proc> generated.
+
+Analyzing Entity <bootstrap> in library <work> (Architecture <rtl>).
+Entity <bootstrap> analyzed. Unit <bootstrap> generated.
+
+Analyzing Entity <uart_top> in library <work> (Architecture <struct>).
+WARNING:Xst:753 - "C:/nico/perso/hack/hackerspace/fpga/x86/cpu86/top_rtl/uart_top_struct.vhd" line 114: Unconnected output port 'DDIS' of component 'uart_16750'.
+Entity <uart_top> analyzed. Unit <uart_top> generated.
+
+Analyzing Entity <uart_16750> in library <work> (Architecture <rtl>).
+WARNING:Xst:753 - "C:/nico/perso/hack/hackerspace/fpga/x86/cpu86/Opencores/uart_16750.vhd" line 380: Unconnected output port 'RE' of component 'slib_edge_detect'.
+WARNING:Xst:753 - "C:/nico/perso/hack/hackerspace/fpga/x86/cpu86/Opencores/uart_16750.vhd" line 381: Unconnected output port 'RE' of component 'slib_edge_detect'.
+WARNING:Xst:753 - "C:/nico/perso/hack/hackerspace/fpga/x86/cpu86/Opencores/uart_16750.vhd" line 473: Unconnected output port 'FE' of component 'slib_edge_detect'.
+WARNING:Xst:753 - "C:/nico/perso/hack/hackerspace/fpga/x86/cpu86/Opencores/uart_16750.vhd" line 672: Unconnected output port 'FE' of component 'slib_edge_detect'.
+WARNING:Xst:753 - "C:/nico/perso/hack/hackerspace/fpga/x86/cpu86/Opencores/uart_16750.vhd" line 673: Unconnected output port 'FE' of component 'slib_edge_detect'.
+WARNING:Xst:753 - "C:/nico/perso/hack/hackerspace/fpga/x86/cpu86/Opencores/uart_16750.vhd" line 674: Unconnected output port 'FE' of component 'slib_edge_detect'.
+WARNING:Xst:753 - "C:/nico/perso/hack/hackerspace/fpga/x86/cpu86/Opencores/uart_16750.vhd" line 774: Unconnected output port 'FE' of component 'slib_edge_detect'.
+INFO:Xst:1561 - "C:/nico/perso/hack/hackerspace/fpga/x86/cpu86/Opencores/uart_16750.vhd" line 1042: Mux is complete : default of case is discarded
+Entity <uart_16750> analyzed. Unit <uart_16750> generated.
+
+Analyzing Entity <slib_edge_detect> in library <work> (Architecture <rtl>).
+Entity <slib_edge_detect> analyzed. Unit <slib_edge_detect> generated.
+
+Analyzing Entity <slib_input_sync> in library <work> (Architecture <rtl>).
+Entity <slib_input_sync> analyzed. Unit <slib_input_sync> generated.
+
+Analyzing generic Entity <slib_input_filter> in library <work> (Architecture <rtl>).
+	SIZE = 2
+Entity <slib_input_filter> analyzed. Unit <slib_input_filter> generated.
+
+Analyzing Entity <uart_interrupt> in library <work> (Architecture <rtl>).
+Entity <uart_interrupt> analyzed. Unit <uart_interrupt> generated.
+
+Analyzing Entity <uart_baudgen> in library <work> (Architecture <rtl>).
+Entity <uart_baudgen> analyzed. Unit <uart_baudgen> generated.
+
+Analyzing generic Entity <slib_clock_div> in library <work> (Architecture <rtl>).
+	RATIO = 8
+Entity <slib_clock_div> analyzed. Unit <slib_clock_div> generated.
+
+Analyzing generic Entity <slib_fifo.1> in library <work> (Architecture <rtl>).
+	SIZE_E = 6
+	WIDTH = 8
+Entity <slib_fifo.1> analyzed. Unit <slib_fifo.1> generated.
+
+Analyzing generic Entity <slib_fifo.2> in library <work> (Architecture <rtl>).
+	SIZE_E = 6
+	WIDTH = 11
+Entity <slib_fifo.2> analyzed. Unit <slib_fifo.2> generated.
+
+Analyzing Entity <uart_transmitter> in library <work> (Architecture <rtl>).
+Entity <uart_transmitter> analyzed. Unit <uart_transmitter> generated.
+
+Analyzing Entity <uart_receiver> in library <work> (Architecture <rtl>).
+WARNING:Xst:753 - "C:/nico/perso/hack/hackerspace/fpga/x86/cpu86/Opencores/uart_receiver.vhd" line 107: Unconnected output port 'Q' of component 'slib_counter'.
+Entity <uart_receiver> analyzed. Unit <uart_receiver> generated.
+
+Analyzing generic Entity <slib_counter> in library <work> (Architecture <rtl>).
+	WIDTH = 4
+Entity <slib_counter> analyzed. Unit <slib_counter> generated.
+
+Analyzing generic Entity <slib_mv_filter> in library <work> (Architecture <rtl>).
+	THRESHOLD = 10
+	WIDTH = 4
+Entity <slib_mv_filter> analyzed. Unit <slib_mv_filter> generated.
+
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+INFO:Xst:2679 - Register <intack> in unit <proc> has a constant value of 0 during circuit operation. The register is replaced by logic.
+
+Synthesizing Unit <bootstrap>.
+    Related source file is "C:/nico/perso/hack/hackerspace/fpga/x86/cpu86/drigmorn1/top_drigmorn1/Bootstrap_rtl.vhd".
+    Found 246x8-bit ROM for signal <dbus>.
+    Summary:
+	inferred   1 ROM(s).
+Unit <bootstrap> synthesized.
+
+
+Synthesizing Unit <proc>.
+    Related source file is "C:/nico/perso/hack/hackerspace/fpga/x86/cpu86/cpu86_rtl/proc_rtl.vhd".
+WARNING:Xst:647 - Input <instr.nb> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <status.ax> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <status.div_err> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <status.flag<15:12>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <status.flag<9:8>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <status.flag<5:3>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <status.flag<1>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <inta1> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <instr.data> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <instr.disp> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found finite state machine <FSM_0> for signal <current_state>.
+    -----------------------------------------------------------------------
+    | States             | 7                                              |
+    | Transitions        | 707                                            |
+    | Inputs             | 173                                            |
+    | Outputs            | 6                                              |
+    | Clock              | clk                       (rising_edge)        |
+    | Reset              | reset                     (positive)           |
+    | Reset type         | asynchronous                                   |
+    | Reset State        | sopcode                                        |
+    | Power Up State     | sopcode                                        |
+    | Encoding           | automatic                                      |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found 1-bit register for signal <word>.
+    Found 1-bit register for signal <irq_blocked>.
+    Found 1-bit register for signal <flush_coming>.
+    Found 7-bit register for signal <path.datareg_input>.
+    Found 15-bit register for signal <path.alu_operation>.
+    Found 10-bit register for signal <path.ea_output>.
+    Found 1-bit register for signal <iomem>.
+    Found 4-bit register for signal <path.segreg_input>.
+    Found 2-bit register for signal <path.dbus_output>.
+    Found 1-bit register for signal <flush_reql_s>.
+    Found 8-bit register for signal <passcnt>.
+    Found 8-bit subtractor for signal <passcnt_s$sub0000> created at line 2203.
+    Found 1-bit xor2 for signal <path_s.ea_output$xor0000> created at line 2633.
+    Found 1-bit register for signal <proc_err_s>.
+    Found 1-bit register for signal <rep_flag>.
+    Found 1-bit register for signal <rep_zl_s>.
+    Found 1-bit register for signal <second_pass>.
+    Found 1-bit xor2 for signal <second_pass_s$xor0000> created at line 2510.
+    Found 1-bit register for signal <wrpathl_s.wralu>.
+    Found 1-bit register for signal <wrpathl_s.wrcc>.
+    Found 1-bit register for signal <wrpathl_s.wrd>.
+    Found 1-bit register for signal <wrpathl_s.wrip>.
+    Found 1-bit register for signal <wrpathl_s.wrop>.
+    Found 1-bit register for signal <wrpathl_s.wrs>.
+    Found 1-bit register for signal <wrpathl_s.wrtemp>.
+    Summary:
+	inferred   1 Finite State Machine(s).
+	inferred  54 D-type flip-flop(s).
+	inferred   1 Adder/Subtractor(s).
+Unit <proc> synthesized.
+
+
+Synthesizing Unit <biufsm>.
+    Related source file is "C:/nico/perso/hack/hackerspace/fpga/x86/cpu86/cpu86_rtl/biufsm_fsm.vhd".
+    Found finite state machine <FSM_1> for signal <current_state>.
+    -----------------------------------------------------------------------
+    | States             | 22                                             |
+    | Transitions        | 70                                             |
+    | Inputs             | 11                                             |
+    | Outputs            | 26                                             |
+    | Clock              | clk                       (rising_edge)        |
+    | Reset              | reset                     (positive)           |
+    | Reset type         | asynchronous                                   |
+    | Reset State        | sreset                                         |
+    | Power Up State     | sreset                                         |
+    | Encoding           | automatic                                      |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found 1-bit register for signal <biu_error>.
+    Found 3-bit register for signal <biu_status_cld>.
+    Found 1-bit register for signal <oddflag_s>.
+    Found 3-bit register for signal <ws_s>.
+    Found 3-bit adder for signal <ws_s$addsub0000>.
+    Summary:
+	inferred   1 Finite State Machine(s).
+	inferred   5 D-type flip-flop(s).
+	inferred   1 Adder/Subtractor(s).
+Unit <biufsm> synthesized.
+
+
+Synthesizing Unit <regshiftmux>.
+    Related source file is "C:/nico/perso/hack/hackerspace/fpga/x86/cpu86/cpu86_rtl/regshiftmux_regshift.vhd".
+    Found 1-bit register for signal <reg1freed>.
+    Found 1-bit register for signal <flush_req1_s>.
+    Found 1-bit register for signal <flush_req2_s>.
+    Found 8-bit register for signal <ireg_s>.
+    Found 4-bit register for signal <ldpos_s>.
+    Found 4-bit addsub for signal <ldpos_s$addsub0000>.
+    Found 2-bit register for signal <mod_s>.
+    Found 3-bit register for signal <nbreq_s>.
+    Found 16-bit register for signal <opcaddr_s>.
+    Found 16-bit register for signal <opcdata_s>.
+    Found 16-bit 9-to-1 multiplexer for signal <opcdata_s$mux0001> created at line 194.
+    Found 3-bit register for signal <opcreg_s>.
+    Found 3-bit 5-to-1 multiplexer for signal <opcreg_s$mux0001> created at line 256.
+    Found 72-bit register for signal <reg72_s>.
+    Found 4-bit register for signal <regcnt_s>.
+    Found 4-bit addsub for signal <regcnt_s$addsub0000>.
+    Found 4-bit comparator greatequal for signal <regnbok$cmp_ge0000> created at line 141.
+    Found 3-bit register for signal <rm_s>.
+    Summary:
+	inferred 123 D-type flip-flop(s).
+	inferred   2 Adder/Subtractor(s).
+	inferred   1 Comparator(s).
+	inferred  19 Multiplexer(s).
+Unit <regshiftmux> synthesized.
+
+
+Synthesizing Unit <a_table>.
+    Related source file is "C:/nico/perso/hack/hackerspace/fpga/x86/cpu86/cpu86_rtl/a_table.vhd".
+Unit <a_table> synthesized.
+
+
+Synthesizing Unit <d_table>.
+    Related source file is "C:/nico/perso/hack/hackerspace/fpga/x86/cpu86/cpu86_rtl/d_table.vhd".
+Unit <d_table> synthesized.
+
+
+Synthesizing Unit <m_table>.
+    Related source file is "C:/nico/perso/hack/hackerspace/fpga/x86/cpu86/cpu86_rtl/m_table.vhd".
+Unit <m_table> synthesized.
+
+
+Synthesizing Unit <n_table>.
+    Related source file is "C:/nico/perso/hack/hackerspace/fpga/x86/cpu86/cpu86_rtl/n_table.vhd".
+Unit <n_table> synthesized.
+
+
+Synthesizing Unit <r_table>.
+    Related source file is "C:/nico/perso/hack/hackerspace/fpga/x86/cpu86/cpu86_rtl/r_table.vhd".
+Unit <r_table> synthesized.
+
+
+Synthesizing Unit <dataregfile>.
+    Related source file is "C:/nico/perso/hack/hackerspace/fpga/x86/cpu86/cpu86_rtl/dataregfile_rtl.vhd".
+    Found 16-bit register for signal <axreg_s>.
+    Found 16-bit register for signal <bpreg_s>.
+    Found 16-bit register for signal <bxreg_s>.
+    Found 16-bit register for signal <cxreg_s>.
+    Found 16-bit register for signal <direg_s>.
+    Found 16-bit register for signal <dxreg_s>.
+    Found 16-bit register for signal <sireg_s>.
+    Found 16-bit register for signal <spreg_s>.
+    Summary:
+	inferred 128 D-type flip-flop(s).
+Unit <dataregfile> synthesized.
+
+
+Synthesizing Unit <ipregister>.
+    Related source file is "C:/nico/perso/hack/hackerspace/fpga/x86/cpu86/cpu86_rtl/ipregister_rtl.vhd".
+    Found 16-bit register for signal <ipreg_s>.
+    Summary:
+	inferred  16 D-type flip-flop(s).
+Unit <ipregister> synthesized.
+
+
+Synthesizing Unit <segregfile>.
+    Related source file is "C:/nico/perso/hack/hackerspace/fpga/x86/cpu86/cpu86_rtl/segregfile_rtl.vhd".
+    Found 16-bit register for signal <csreg_s>.
+    Found 16-bit register for signal <dsreg_s>.
+    Found 16-bit register for signal <esreg_s>.
+    Found 16-bit register for signal <ssreg_s>.
+    Summary:
+	inferred  64 D-type flip-flop(s).
+Unit <segregfile> synthesized.
+
+
+Synthesizing Unit <divider>.
+    Related source file is "C:/nico/perso/hack/hackerspace/fpga/x86/cpu86/cpu86_rtl/divider_rtl_ser.vhd".
+WARNING:Xst:647 - Input <w> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:646 - Signal <newaccu_s<32>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <dividend_s<32>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+    Found finite state machine <FSM_2> for signal <state>.
+    -----------------------------------------------------------------------
+    | States             | 3                                              |
+    | Transitions        | 5                                              |
+    | Inputs             | 2                                              |
+    | Outputs            | 3                                              |
+    | Clock              | clk                       (rising_edge)        |
+    | Reset              | reset                     (positive)           |
+    | Reset type         | asynchronous                                   |
+    | Reset State        | s0                                             |
+    | Power Up State     | s0                                             |
+    | Encoding           | automatic                                      |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found 33-bit register for signal <accumulator_s>.
+    Found 33-bit 4-to-1 multiplexer for signal <accumulator_s$mux0000>.
+    Found 17-bit adder for signal <aluout_s>.
+    Found 4-bit down counter for signal <count_s>.
+    Found 33-bit adder for signal <dividend_s$addsub0000> created at line 105.
+    Found 16-bit adder for signal <divis_rect_s>.
+    Found 17-bit adder for signal <divisor_s$addsub0000> created at line 132.
+    Found 16-bit comparator greatequal for signal <overflow_s$cmp_ge0000> created at line 204.
+    Found 1-bit xor2 for signal <signquot_s$xor0000> created at line 125.
+    Found 16-bit adder for signal <squotient_s$addsub0000> created at line 214.
+    Found 16-bit adder for signal <sremainder_s$addsub0000> created at line 210.
+    Summary:
+	inferred   1 Finite State Machine(s).
+	inferred   1 Counter(s).
+	inferred  33 D-type flip-flop(s).
+	inferred   6 Adder/Subtractor(s).
+	inferred   1 Comparator(s).
+	inferred  33 Multiplexer(s).
+Unit <divider> synthesized.
+
+
+Synthesizing Unit <multiplier>.
+    Related source file is "C:/nico/perso/hack/hackerspace/fpga/x86/cpu86/cpu86_rtl/multiplier_rtl.vhd".
+    Found 16-bit adder for signal <multiplicant_s>.
+    Found 16-bit adder for signal <multiplier_s>.
+    Found 32-bit adder for signal <product$addsub0000> created at line 79.
+    Found 16x16-bit multiplier for signal <product_s>.
+    Found 1-bit xor2 for signal <sign_s>.
+    Summary:
+	inferred   3 Adder/Subtractor(s).
+	inferred   1 Multiplier(s).
+Unit <multiplier> synthesized.
+
+
+Synthesizing Unit <slib_edge_detect>.
+    Related source file is "C:/nico/perso/hack/hackerspace/fpga/x86/cpu86/Opencores/slib_edge_detect.vhd".
+    Found 1-bit register for signal <iDd>.
+    Summary:
+	inferred   1 D-type flip-flop(s).
+Unit <slib_edge_detect> synthesized.
+
+
+Synthesizing Unit <slib_input_sync>.
+    Related source file is "C:/nico/perso/hack/hackerspace/fpga/x86/cpu86/Opencores/slib_input_sync.vhd".
+    Found 2-bit register for signal <iD>.
+    Summary:
+	inferred   2 D-type flip-flop(s).
+Unit <slib_input_sync> synthesized.
+
+
+Synthesizing Unit <slib_input_filter>.
+    Related source file is "C:/nico/perso/hack/hackerspace/fpga/x86/cpu86/Opencores/slib_input_filter.vhd".
+    Found 1-bit register for signal <Q>.
+    Found 2-bit updown counter for signal <iCount>.
+    Summary:
+	inferred   1 Counter(s).
+	inferred   1 D-type flip-flop(s).
+Unit <slib_input_filter> synthesized.
+
+
+Synthesizing Unit <uart_interrupt>.
+    Related source file is "C:/nico/perso/hack/hackerspace/fpga/x86/cpu86/Opencores/uart_interrupt.vhd".
+WARNING:Xst:647 - Input <LSR<0>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found 4-bit register for signal <iIIR>.
+Unit <uart_interrupt> synthesized.
+
+
+Synthesizing Unit <uart_baudgen>.
+    Related source file is "C:/nico/perso/hack/hackerspace/fpga/x86/cpu86/Opencores/uart_baudgen.vhd".
+    Found 1-bit register for signal <BAUDTICK>.
+    Found 16-bit up counter for signal <iCounter>.
+    Found 16-bit comparator equal for signal <iCounter$cmp_eq0000> created at line 58.
+    Summary:
+	inferred   1 Counter(s).
+	inferred   1 D-type flip-flop(s).
+	inferred   1 Comparator(s).
+Unit <uart_baudgen> synthesized.
+
+
+Synthesizing Unit <slib_clock_div>.
+    Related source file is "C:/nico/perso/hack/hackerspace/fpga/x86/cpu86/Opencores/slib_clock_div.vhd".
+    Found 3-bit up counter for signal <iCounter>.
+    Found 1-bit register for signal <iQ>.
+    Summary:
+	inferred   1 Counter(s).
+	inferred   1 D-type flip-flop(s).
+Unit <slib_clock_div> synthesized.
+
+
+Synthesizing Unit <slib_fifo_1>.
+    Related source file is "C:/nico/perso/hack/hackerspace/fpga/x86/cpu86/Opencores/slib_fifo.vhd".
+    Found 64x8-bit dual-port RAM <Mram_iFIFOMem> for signal <iFIFOMem>.
+    Found 8-bit register for signal <Q>.
+    Found 1-bit register for signal <iEMPTY>.
+    Found 7-bit comparator equal for signal <iEMPTY$cmp_eq0000> created at line 85.
+    Found 6-bit comparator equal for signal <iFULL$cmp_eq0000> created at line 61.
+    Found 1-bit xor2 for signal <iFULL$xor0000> created at line 61.
+    Found 7-bit up counter for signal <iRDAddr>.
+    Found 6-bit updown counter for signal <iUSAGE>.
+    Found 7-bit up counter for signal <iWRAddr>.
+    Summary:
+	inferred   1 RAM(s).
+	inferred   3 Counter(s).
+	inferred   9 D-type flip-flop(s).
+	inferred   2 Comparator(s).
+Unit <slib_fifo_1> synthesized.
+
+
+Synthesizing Unit <slib_fifo_2>.
+    Related source file is "C:/nico/perso/hack/hackerspace/fpga/x86/cpu86/Opencores/slib_fifo.vhd".
+    Found 64x11-bit dual-port RAM <Mram_iFIFOMem> for signal <iFIFOMem>.
+    Found 11-bit register for signal <Q>.
+    Found 1-bit register for signal <iEMPTY>.
+    Found 7-bit comparator equal for signal <iEMPTY$cmp_eq0000> created at line 85.
+    Found 6-bit comparator equal for signal <iFULL$cmp_eq0000> created at line 61.
+    Found 1-bit xor2 for signal <iFULL$xor0000> created at line 61.
+    Found 7-bit up counter for signal <iRDAddr>.
+    Found 6-bit updown counter for signal <iUSAGE>.
+    Found 7-bit up counter for signal <iWRAddr>.
+    Summary:
+	inferred   1 RAM(s).
+	inferred   3 Counter(s).
+	inferred  12 D-type flip-flop(s).
+	inferred   2 Comparator(s).
+Unit <slib_fifo_2> synthesized.
+
+
+Synthesizing Unit <uart_transmitter>.
+    Related source file is "C:/nico/perso/hack/hackerspace/fpga/x86/cpu86/Opencores/uart_transmitter.vhd".
+WARNING:Xst:647 - Input <CLEAR> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found finite state machine <FSM_3> for signal <CState>.
+    -----------------------------------------------------------------------
+    | States             | 13                                             |
+    | Transitions        | 72                                             |
+    | Inputs             | 8                                              |
+    | Outputs            | 13                                             |
+    | Clock              | CLK                       (rising_edge)        |
+    | Clock enable       | CState$not0000            (positive)           |
+    | Reset              | RST                       (positive)           |
+    | Reset type         | asynchronous                                   |
+    | Reset State        | idle                                           |
+    | Power Up State     | idle                                           |
+    | Encoding           | automatic                                      |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found 1-bit register for signal <iFinished>.
+    Found 1-bit register for signal <iLast>.
+    Found 1-bit 4-to-1 multiplexer for signal <iParity>.
+    Found 1-bit xor2 for signal <iParity$xor0000> created at line 179.
+    Found 1-bit xor2 for signal <iParity$xor0001> created at line 178.
+    Found 1-bit xor2 for signal <iParity$xor0002> created at line 177.
+    Found 1-bit xor5 for signal <iParity$xor0003> created at line 176.
+    Found 1-bit register for signal <iTx2>.
+    Summary:
+	inferred   1 Finite State Machine(s).
+	inferred   3 D-type flip-flop(s).
+	inferred   1 Multiplexer(s).
+	inferred   1 Xor(s).
+Unit <uart_transmitter> synthesized.
+
+
+Synthesizing Unit <slib_counter>.
+    Related source file is "C:/nico/perso/hack/hackerspace/fpga/x86/cpu86/Opencores/slib_counter.vhd".
+    Found 5-bit register for signal <iCounter>.
+    Found 5-bit adder for signal <iCounter$mux0000> created at line 60.
+    Summary:
+	inferred   5 D-type flip-flop(s).
+	inferred   1 Adder/Subtractor(s).
+Unit <slib_counter> synthesized.
+
+
+Synthesizing Unit <slib_mv_filter>.
+    Related source file is "C:/nico/perso/hack/hackerspace/fpga/x86/cpu86/Opencores/slib_mv_filter.vhd".
+    Found 5-bit up counter for signal <iCounter>.
+    Found 31-bit comparator greatequal for signal <iCounter$cmp_ge0000> created at line 58.
+    Found 1-bit register for signal <iQ>.
+    Summary:
+	inferred   1 Counter(s).
+	inferred   1 D-type flip-flop(s).
+	inferred   1 Comparator(s).
+Unit <slib_mv_filter> synthesized.
+
+
+Synthesizing Unit <formatter>.
+    Related source file is "C:/nico/perso/hack/hackerspace/fpga/x86/cpu86/cpu86_rtl/formatter_struct.vhd".
+Unit <formatter> synthesized.
+
+
+Synthesizing Unit <ALU>.
+    Related source file is "C:/nico/perso/hack/hackerspace/fpga/x86/cpu86/cpu86_rtl/alu_rtl.vhd".
+WARNING:Xst:646 - Signal <aas1bus_s<7:4>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <aad2bus_s<10:8>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <aaa1bus_s<7:4>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+    Found 4x8-bit ROM for signal <dasbus_s$mux0000> created at line 611.
+    Found 4x8-bit ROM for signal <daabus_s$mux0000> created at line 588.
+    Found 1-bit register for signal <div_err>.
+    Found 16-bit adder for signal <aaa1bus_s>.
+    Found 4-bit comparator greater for signal <aaabus_s_12$cmp_gt0000> created at line 563.
+    Found 11-bit adder for signal <aad1bus_s>.
+    Found 11-bit adder for signal <aad2bus_s>.
+    Found 16-bit subtractor for signal <aas1bus_s>.
+    Found 16-bit register for signal <alu_temp_s>.
+    Found 16-bit xor2 for signal <alubus_s$xor0000> created at line 646.
+    Found 1-bit register for signal <alucout_s>.
+    Found 32-bit register for signal <alureg_s>.
+    Found 8-bit adder for signal <daabus_s$addsub0000>.
+    Found 8-bit subtractor for signal <dasbus_s$addsub0000>.
+    Found 32-bit register for signal <divresult_s>.
+    Found 16-bit xor3 for signal <outbus_s>.
+    Found 1-bit xor2 for signal <overflow_s$xor0000> created at line 355.
+    Found 1-bit xor2 for signal <overflow_s$xor0001> created at line 357.
+    Found 1-bit xor2 for signal <overflow_s$xor0002> created at line 361.
+    Found 1-bit xor2 for signal <overflow_s$xor0003> created at line 361.
+    Found 1-bit xor2 for signal <overflow_s$xor0004> created at line 377.
+    Found 1-bit xor2 for signal <overflow_s$xor0005> created at line 377.
+    Found 1-bit xor8 for signal <parityflag_s$xor0000> created at line 443.
+    Found 12-bit register for signal <psrreg_s<11:0>>.
+    Found 8-bit comparator greater for signal <setdaa_s_1$cmp_gt0000> created at line 583.
+    Found 1-bit register for signal <startdiv_s>.
+    Found 1-bit register for signal <wl_s>.
+    Summary:
+	inferred   2 ROM(s).
+	inferred  96 D-type flip-flop(s).
+	inferred   6 Adder/Subtractor(s).
+	inferred   2 Comparator(s).
+	inferred  17 Xor(s).
+Unit <ALU> synthesized.
+
+
+Synthesizing Unit <uart_receiver>.
+    Related source file is "C:/nico/perso/hack/hackerspace/fpga/x86/cpu86/Opencores/uart_receiver.vhd".
+WARNING:Xst:647 - Input <STB> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <RXCLEAR> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found finite state machine <FSM_4> for signal <CState>.
+    -----------------------------------------------------------------------
+    | States             | 6                                              |
+    | Transitions        | 15                                             |
+    | Inputs             | 5                                              |
+    | Outputs            | 4                                              |
+    | Clock              | CLK                       (rising_edge)        |
+    | Reset              | RST                       (positive)           |
+    | Reset type         | asynchronous                                   |
+    | Reset State        | idle                                           |
+    | Power Up State     | idle                                           |
+    | Encoding           | automatic                                      |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found 1-bit register for signal <PE>.
+    Found 1-bit register for signal <iBaudStepD>.
+    Found 4-bit up counter for signal <iDataCount>.
+    Found 8-bit register for signal <iDOUT>.
+    Found 1-bit register for signal <iParityReceived>.
+    Found 1-bit xor2 for signal <PE$xor0000> created at line 255.
+    Found 1-bit xor10 for signal <PE$xor0001> created at line 259.
+    Summary:
+	inferred   1 Finite State Machine(s).
+	inferred   1 Counter(s).
+	inferred  11 D-type flip-flop(s).
+	inferred   1 Xor(s).
+Unit <uart_receiver> synthesized.
+
+
+Synthesizing Unit <biu>.
+    Related source file is "C:/nico/perso/hack/hackerspace/fpga/x86/cpu86/cpu86_rtl/biu_struct.vhd".
+WARNING:Xst:647 - Input <status.cl> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <status.ax> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <status.flag<15:10>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <status.flag<7:0>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <status.cx_one> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <status.cx_zero> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:646 - Signal <biu_status> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <abusdp_in> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+    Found 1-bit register for signal <wran>.
+    Found 20-bit register for signal <abus>.
+    Found 8-bit register for signal <dbus_out>.
+    Found 1-bit register for signal <rdn>.
+    Found 1-bit register for signal <wrn>.
+    Found 16-bit register for signal <mdbus_out>.
+    Found 20-bit adder for signal <abus_s>.
+    Found 20-bit 4-to-1 multiplexer for signal <abus_s$mux0000> created at line 502.
+    Found 16-bit register for signal <csbusbiu_s>.
+    Found 1-bit register for signal <instr_trace_s>.
+    Found 1-bit register for signal <inta2_s>.
+    Found 1-bit register for signal <iom_s>.
+    Found 16-bit up counter for signal <ipbusbiu_s>.
+    Found 16-bit adder for signal <ipbusp1_s>.
+    Found 1-bit register for signal <irq_req_internal>.
+    Found 2-bit register for signal <irq_type>.
+    Found 1-bit register for signal <latchclr_d_s>.
+    Found 1-bit register for signal <latchmd_s>.
+    Found 1-bit register for signal <latchrw_d_s>.
+    Found 1-bit register for signal <nmi_s>.
+    Found 2-bit register for signal <nmipre_s>.
+    Found 1-bit register for signal <w_biufsm_s>.
+    Summary:
+	inferred   1 Counter(s).
+	inferred  56 D-type flip-flop(s).
+	inferred   2 Adder/Subtractor(s).
+	inferred  20 Multiplexer(s).
+Unit <biu> synthesized.
+
+
+Synthesizing Unit <datapath>.
+    Related source file is "C:/nico/perso/hack/hackerspace/fpga/x86/cpu86/cpu86_rtl/datapath_struct.vhd".
+WARNING:Xst:647 - Input <instr.reg> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <instr.ireg> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found 16-bit 8-to-1 multiplexer for signal <dbusdp_out>.
+    Found 16-bit adder for signal <eabus_internal$addsub0000>.
+    Found 16-bit 8-to-1 multiplexer for signal <eam_s>.
+    Found 16-bit adder for signal <eam_s$addsub0000>.
+    Found 16-bit 8-to-1 multiplexer for signal <eam_s$mux0002> created at line 237.
+    Found 16-bit 4-to-1 multiplexer for signal <eam_s$mux0005> created at line 262.
+    Found 16-bit adder for signal <eam_s$share0000> created at line 237.
+    Found 16-bit adder for signal <ipbus$addsub0000>.
+    Found 16-bit adder for signal <ipbus$addsub0001> created at line 296.
+    Found 1-bit register for signal <opflag_s>.
+    Found 2-bit register for signal <opreg_s>.
+    Found 16-bit 4-to-1 multiplexer for signal <sibus>.
+    Summary:
+	inferred   1 D-type flip-flop(s).
+	inferred   5 Adder/Subtractor(s).
+	inferred  80 Multiplexer(s).
+Unit <datapath> synthesized.
+
+
+Synthesizing Unit <uart_16750>.
+    Related source file is "C:/nico/perso/hack/hackerspace/fpga/x86/cpu86/Opencores/uart_16750.vhd".
+WARNING:Xst:646 - Signal <iTXFIFOUsage<5>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <iTXFIFOUsage<3:0>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <iRXFIFOUsage<0>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <iRInRE> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <iIIR_PI> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <iIIR_ID2> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <iIIR_ID1> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <iIIR_ID0> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <iIIR_FIFO64> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <iIER_ETBEI> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <iIER_ERBI> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <iIER_ELSI> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <iIER_EDSSI> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <iFCR> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+    Found finite state machine <FSM_5> for signal <State>.
+    -----------------------------------------------------------------------
+    | States             | 4                                              |
+    | Transitions        | 6                                              |
+    | Inputs             | 2                                              |
+    | Outputs            | 3                                              |
+    | Clock              | CLK                       (rising_edge)        |
+    | Reset              | RST                       (positive)           |
+    | Reset type         | asynchronous                                   |
+    | Reset State        | 00                                             |
+    | Power Up State     | 00                                             |
+    | Encoding           | automatic                                      |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found 1-bit register for signal <DDIS>.
+    Found 1-bit register for signal <OUT1N>.
+    Found 1-bit register for signal <DTRN>.
+    Found 1-bit register for signal <OUT2N>.
+    Found 1-bit register for signal <RTSN>.
+    Found 1-bit register for signal <SOUT>.
+    Found 1-bit register for signal <BAUDOUTN>.
+    Found 8-bit 8-to-1 multiplexer for signal <DOUT>.
+    Found 3-bit register for signal <iA>.
+    Found 1-bit register for signal <iCharTimeout>.
+    Found 8-bit register for signal <iDIN>.
+    Found 8-bit register for signal <iDLL>.
+    Found 8-bit register for signal <iDLM>.
+    Found 1-bit register for signal <iFCR_FIFO64E>.
+    Found 1-bit register for signal <iFCR_FIFOEnable>.
+    Found 1-bit register for signal <iFCR_RXFIFOReset>.
+    Found 2-bit register for signal <iFCR_RXTrigger>.
+    Found 1-bit register for signal <iFCR_TXFIFOReset>.
+    Found 7-bit updown counter for signal <iFECounter>.
+    Found 4-bit register for signal <iIER<3:0>>.
+    Found 8-bit register for signal <iLCR>.
+    Found 1-bit register for signal <iLSR_BI>.
+    Found 1-bit register for signal <iLSR_FE>.
+    Found 1-bit register for signal <iLSR_FIFOERR>.
+    Found 1-bit register for signal <iLSR_OE>.
+    Found 1-bit register for signal <iLSR_PE>.
+    Found 6-bit register for signal <iMCR<5:0>>.
+    Found 1-bit register for signal <iMSR_dCTS>.
+    Found 1-bit register for signal <iMSR_dDCD>.
+    Found 1-bit register for signal <iMSR_dDSR>.
+    Found 1-bit register for signal <iMSR_TERI>.
+    Found 1-bit register for signal <iRTS>.
+    Found 1-bit register for signal <iRXFIFOClear>.
+    Found 11-bit register for signal <iRXFIFOD>.
+    Found 1-bit register for signal <iRXFIFOWrite>.
+    Found 8-bit register for signal <iSCR>.
+    Found 1-bit register for signal <iTHRInterrupt>.
+    Found 6-bit up counter for signal <iTimeoutCount>.
+    Found 8-bit register for signal <iTSR>.
+    Found 1-bit register for signal <iTXFIFORead>.
+    Found 1-bit register for signal <iTXRunning>.
+    Found 1-bit register for signal <iTXStart>.
+    Found 1-bit register for signal <State0<0>>.
+    Summary:
+	inferred   1 Finite State Machine(s).
+	inferred   2 Counter(s).
+	inferred 103 D-type flip-flop(s).
+	inferred   8 Multiplexer(s).
+Unit <uart_16750> synthesized.
+
+
+Synthesizing Unit <cpu86>.
+    Related source file is "C:/nico/perso/hack/hackerspace/fpga/x86/cpu86/cpu86_rtl/cpu86_struct.vhd".
+    Found 1-bit register for signal <resoutn>.
+    Found 1-bit register for signal <reset>.
+    Summary:
+	inferred   2 D-type flip-flop(s).
+Unit <cpu86> synthesized.
+
+
+Synthesizing Unit <uart_top>.
+    Related source file is "C:/nico/perso/hack/hackerspace/fpga/x86/cpu86/top_rtl/uart_top_struct.vhd".
+Unit <uart_top> synthesized.
+
+
+Synthesizing Unit <drigmorn1_top>.
+    Related source file is "C:/nico/perso/hack/hackerspace/fpga/x86/cpu86/drigmorn1/top_drigmorn1/drigmorn1_top.vhd".
+WARNING:Xst:646 - Signal <wrcom> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <wran> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <dout1> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <dout> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+    Found 8-bit 4-to-1 multiplexer for signal <dbus_in_cpu>.
+    Summary:
+	inferred   8 Multiplexer(s).
+Unit <drigmorn1_top> synthesized.
+
+INFO:Xst:1767 - HDL ADVISOR - Resource sharing has identified that some arithmetic operations in this design can share the same physical resources for reduced device utilization. For improved clock frequency you may try to disable resource sharing.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 2
+ 64x11-bit dual-port RAM                               : 1
+ 64x8-bit dual-port RAM                                : 1
+# ROMs                                                 : 3
+ 246x8-bit ROM                                         : 1
+ 4x8-bit ROM                                           : 2
+# Multipliers                                          : 1
+ 16x16-bit multiplier                                  : 1
+# Adders/Subtractors                                   : 27
+ 11-bit adder                                          : 2
+ 16-bit adder                                          : 12
+ 16-bit subtractor                                     : 1
+ 17-bit adder                                          : 2
+ 20-bit adder                                          : 1
+ 3-bit adder                                           : 1
+ 32-bit adder                                          : 1
+ 33-bit adder                                          : 1
+ 4-bit addsub                                          : 2
+ 5-bit adder                                           : 1
+ 8-bit adder                                           : 1
+ 8-bit subtractor                                      : 2
+# Counters                                             : 18
+ 16-bit up counter                                     : 2
+ 2-bit updown counter                                  : 4
+ 3-bit up counter                                      : 1
+ 4-bit down counter                                    : 1
+ 4-bit up counter                                      : 1
+ 5-bit up counter                                      : 1
+ 6-bit up counter                                      : 1
+ 6-bit updown counter                                  : 2
+ 7-bit up counter                                      : 4
+ 7-bit updown counter                                  : 1
+# Registers                                            : 371
+ 1-bit register                                        : 324
+ 10-bit register                                       : 1
+ 11-bit register                                       : 2
+ 15-bit register                                       : 1
+ 16-bit register                                       : 13
+ 2-bit register                                        : 6
+ 20-bit register                                       : 1
+ 3-bit register                                        : 6
+ 32-bit register                                       : 1
+ 33-bit register                                       : 1
+ 4-bit register                                        : 4
+ 7-bit register                                        : 1
+ 8-bit register                                        : 10
+# Comparators                                          : 10
+ 16-bit comparator equal                               : 1
+ 16-bit comparator greatequal                          : 1
+ 31-bit comparator greatequal                          : 1
+ 4-bit comparator greatequal                           : 1
+ 4-bit comparator greater                              : 1
+ 6-bit comparator equal                                : 2
+ 7-bit comparator equal                                : 2
+ 8-bit comparator greater                              : 1
+# Multiplexers                                         : 12
+ 1-bit 4-to-1 multiplexer                              : 1
+ 16-bit 4-to-1 multiplexer                             : 2
+ 16-bit 8-to-1 multiplexer                             : 3
+ 16-bit 9-to-1 multiplexer                             : 1
+ 20-bit 4-to-1 multiplexer                             : 1
+ 3-bit 5-to-1 multiplexer                              : 1
+ 33-bit 4-to-1 multiplexer                             : 1
+ 8-bit 4-to-1 multiplexer                              : 1
+ 8-bit 8-to-1 multiplexer                              : 1
+# Xors                                                 : 36
+ 1-bit xor10                                           : 1
+ 1-bit xor2                                            : 16
+ 1-bit xor3                                            : 16
+ 1-bit xor5                                            : 1
+ 1-bit xor8                                            : 1
+ 16-bit xor2                                           : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+Analyzing FSM <FSM_5> for best encoding.
+Optimizing FSM <U_0/U_0/State/FSM> on signal <State[1:2]> with gray encoding.
+-------------------
+ State | Encoding
+-------------------
+ 00    | 00
+ 01    | 01
+ 10    | 11
+ 11    | 10
+-------------------
+Analyzing FSM <FSM_4> for best encoding.
+Optimizing FSM <U_0/U_0/UART_RX/CState/FSM> on signal <CState[1:3]> with gray encoding.
+-------------------
+ State | Encoding
+-------------------
+ idle  | 000
+ start | 001
+ data  | 011
+ par   | 010
+ stop  | 110
+ mwait | 111
+-------------------
+Analyzing FSM <FSM_3> for best encoding.
+Optimizing FSM <U_0/U_0/UART_TX/CState/FSM> on signal <CState[1:4]> with gray encoding.
+-------------------
+ State | Encoding
+-------------------
+ idle  | 0000
+ start | 0001
+ bit0  | 0011
+ bit1  | 0010
+ bit2  | 0110
+ bit3  | 0111
+ bit4  | 0101
+ bit5  | 1101
+ bit6  | 1111
+ bit7  | 1110
+ par   | 0100
+ stop  | 1100
+ stop2 | 1010
+-------------------
+Analyzing FSM <FSM_2> for best encoding.
+Optimizing FSM <U_1/cpudpath/I6/ALUU1/state/FSM> on signal <state[1:2]> with user encoding.
+-------------------
+ State | Encoding
+-------------------
+ s0    | 00
+ s1    | 01
+ s2    | 10
+-------------------
+Analyzing FSM <FSM_1> for best encoding.
+Optimizing FSM <U_1/cpubiu/fsm/current_state/FSM> on signal <current_state[1:22]> with one-hot encoding.
+-----------------------------------
+ State   | Encoding
+-----------------------------------
+ sreset  | 0000000000000000000001
+ sws     | 0000000000000000010000
+ smaxws  | 0000000000000000001000
+ sack    | 0000000000000000100000
+ srdopc  | 0000000000000000000010
+ serror  | 0000000000001000000000
+ swrite  | 0000000000000001000000
+ swsw    | 0000000000100000000000
+ smaxwsw | 0000000001000000000000
+ sackw   | 0000000010000000000000
+ swrodd  | 0000000100000000000000
+ sread   | 0000000000000010000000
+ srdodd  | 0000100000000000000000
+ swsr    | 0000001000000000000000
+ smaxwsr | 0000010000000000000000
+ sackr   | 0001000000000000000000
+ sflush1 | 0000000000000000000100
+ sfull   | 0000000000010000000000
+ sint    | 0000000000000100000000
+ sintws2 | 1000000000000000000000
+ sflush2 | 0010000000000000000000
+ sintws1 | 0100000000000000000000
+-----------------------------------
+Analyzing FSM <FSM_0> for best encoding.
+Optimizing FSM <U_1/cpuproc/current_state/FSM> on signal <current_state[1:7]> with one-hot encoding.
+-----------------------
+ State     | Encoding
+-----------------------
+ sopcode   | 0000001
+ sdecode   | 0000010
+ sreadmem  | 0000100
+ swritemem | 0001000
+ sexecute  | 0010000
+ sflush    | 1000000
+ shalt     | 0100000
+-----------------------
+Reading core <blk_mem_40K.ngc>.
+Loading core <blk_mem_40K> for timing and area information for instance <U_3>.
+INFO:Xst:2261 - The FF/Latch <path.datareg_input_3> in Unit <cpuproc> is equivalent to the following FF/Latch, which will be removed : <word> 
+WARNING:Xst:1710 - FF/Latch <nmipre_s_0> (without init value) has a constant value of 0 in block <cpubiu>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <inta2_s> (without init value) has a constant value of 0 in block <cpubiu>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <iD_0> (without init value) has a constant value of 0 in block <UART_IS_DSR>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <iD_0> (without init value) has a constant value of 0 in block <UART_IS_DCD>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <iD_0> (without init value) has a constant value of 0 in block <UART_IS_RI>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <nmipre_s_1> (without init value) has a constant value of 0 in block <cpubiu>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <iD_1> (without init value) has a constant value of 0 in block <UART_IS_DSR>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <iD_1> (without init value) has a constant value of 0 in block <UART_IS_DCD>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <iD_1> (without init value) has a constant value of 0 in block <UART_IS_RI>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <nmi_s> (without init value) has a constant value of 0 in block <cpubiu>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <irq_type_1> (without init value) has a constant value of 0 in block <cpubiu>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1290 - Hierarchical block <UART_IS_DSR> is unconnected in block <U_0>.
+   It will be removed from the design.
+WARNING:Xst:1290 - Hierarchical block <UART_IS_DCD> is unconnected in block <U_0>.
+   It will be removed from the design.
+WARNING:Xst:1290 - Hierarchical block <UART_IS_RI> is unconnected in block <U_0>.
+   It will be removed from the design.
+
+Synthesizing (advanced) Unit <slib_fifo_1>.
+INFO:Xst:3231 - The small RAM <Mram_iFIFOMem> will be implemented on LUTs in order to maximize performance and save block RAM resources. If you want to force its implementation on block, use option/constraint ram_style.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 64-word x 8-bit                     |          |
+    |     clkA           | connected to signal <CLK>           | rise     |
+    |     weA            | connected to signal <_and0000>      | high     |
+    |     addrA          | connected to signal <iWRAddr>       |          |
+    |     diA            | connected to signal <D>             |          |
+    -----------------------------------------------------------------------
+    | Port B                                                              |
+    |     aspect ratio   | 64-word x 8-bit                     |          |
+    |     addrB          | connected to signal <iRDAddr>       |          |
+    |     doB            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+Unit <slib_fifo_1> synthesized (advanced).
+
+Synthesizing (advanced) Unit <slib_fifo_2>.
+INFO:Xst:3230 - The RAM description <Mram_iFIFOMem> will not be implemented on the device block RAM because of limited available resources. If you would like this RAM to be implemented in block RAM, please select a larger device or increase the value specified by the BRAM_Utilization_Ratio constraint.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 64-word x 11-bit                    |          |
+    |     clkA           | connected to signal <CLK>           | rise     |
+    |     weA            | connected to signal <_and0000>      | high     |
+    |     addrA          | connected to signal <iWRAddr>       |          |
+    |     diA            | connected to signal <D>             |          |
+    -----------------------------------------------------------------------
+    | Port B                                                              |
+    |     aspect ratio   | 64-word x 11-bit                    |          |
+    |     addrB          | connected to signal <iRDAddr>       |          |
+    |     doB            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+Unit <slib_fifo_2> synthesized (advanced).
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# FSMs                                                 : 6
+# RAMs                                                 : 2
+ 64x11-bit dual-port distributed RAM                   : 1
+ 64x8-bit dual-port distributed RAM                    : 1
+# ROMs                                                 : 3
+ 246x8-bit ROM                                         : 1
+ 4x8-bit ROM                                           : 2
+# Multipliers                                          : 1
+ 16x16-bit multiplier                                  : 1
+# Adders/Subtractors                                   : 27
+ 16-bit adder                                          : 12
+ 16-bit subtractor                                     : 1
+ 17-bit adder                                          : 2
+ 20-bit adder                                          : 1
+ 3-bit adder                                           : 1
+ 32-bit adder                                          : 2
+ 4-bit addsub                                          : 2
+ 5-bit adder                                           : 1
+ 8-bit adder                                           : 3
+ 8-bit subtractor                                      : 2
+# Counters                                             : 18
+ 16-bit up counter                                     : 2
+ 2-bit updown counter                                  : 4
+ 3-bit up counter                                      : 1
+ 4-bit down counter                                    : 1
+ 4-bit up counter                                      : 1
+ 5-bit up counter                                      : 1
+ 6-bit up counter                                      : 1
+ 6-bit updown counter                                  : 2
+ 7-bit up counter                                      : 4
+ 7-bit updown counter                                  : 1
+# Registers                                            : 797
+ Flip-Flops                                            : 797
+# Comparators                                          : 10
+ 16-bit comparator equal                               : 1
+ 16-bit comparator greatequal                          : 1
+ 31-bit comparator greatequal                          : 1
+ 4-bit comparator greatequal                           : 1
+ 4-bit comparator greater                              : 1
+ 6-bit comparator equal                                : 2
+ 7-bit comparator equal                                : 2
+ 8-bit comparator greater                              : 1
+# Multiplexers                                         : 19
+ 1-bit 4-to-1 multiplexer                              : 1
+ 1-bit 8-to-1 multiplexer                              : 8
+ 16-bit 4-to-1 multiplexer                             : 2
+ 16-bit 8-to-1 multiplexer                             : 3
+ 16-bit 9-to-1 multiplexer                             : 1
+ 20-bit 4-to-1 multiplexer                             : 1
+ 3-bit 5-to-1 multiplexer                              : 1
+ 33-bit 4-to-1 multiplexer                             : 1
+ 8-bit 4-to-1 multiplexer                              : 1
+# Xors                                                 : 36
+ 1-bit xor10                                           : 1
+ 1-bit xor2                                            : 16
+ 1-bit xor3                                            : 16
+ 1-bit xor5                                            : 1
+ 1-bit xor8                                            : 1
+ 16-bit xor2                                           : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+WARNING:Xst:1989 - Unit <uart_16750>: instances <UART_IS_DSR>, <UART_IS_DCD> of unit <slib_input_sync> are equivalent, second instance is removed
+WARNING:Xst:1989 - Unit <uart_16750>: instances <UART_IS_DSR>, <UART_IS_RI> of unit <slib_input_sync> are equivalent, second instance is removed
+WARNING:Xst:1710 - FF/Latch <nmipre_s_0> (without init value) has a constant value of 0 in block <biu>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <nmipre_s_1> (without init value) has a constant value of 0 in block <biu>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <nmi_s> (without init value) has a constant value of 0 in block <biu>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <irq_type_1> (without init value) has a constant value of 0 in block <biu>. This FF/Latch will be trimmed during the optimization process.
+INFO:Xst:2261 - The FF/Latch <path.datareg_input_3> in Unit <proc> is equivalent to the following FF/Latch, which will be removed : <word> 
+WARNING:Xst:1710 - FF/Latch <UART_IS_DSR/iD_0> (without init value) has a constant value of 0 in block <uart_16750>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <UART_IS_DSR/iD_1> (without init value) has a constant value of 0 in block <uart_16750>. This FF/Latch will be trimmed during the optimization process.
+INFO:Xst:2146 - In block <ALU>, ROM <Mrom_dasbus_s_mux0000> <Mrom_daabus_s_mux0000> are equivalent, XST will keep only <Mrom_dasbus_s_mux0000>.
+
+Optimizing unit <drigmorn1_top> ...
+
+Optimizing unit <n_table> ...
+
+Optimizing unit <dataregfile> ...
+
+Optimizing unit <ipregister> ...
+
+Optimizing unit <segregfile> ...
+
+Optimizing unit <divider> ...
+
+Optimizing unit <multiplier> ...
+
+Optimizing unit <slib_fifo_1> ...
+
+Optimizing unit <slib_fifo_2> ...
+
+Optimizing unit <uart_transmitter> ...
+
+Optimizing unit <slib_counter> ...
+
+Optimizing unit <slib_mv_filter> ...
+
+Optimizing unit <proc> ...
+
+Optimizing unit <biufsm> ...
+
+Optimizing unit <regshiftmux> ...
+
+Optimizing unit <uart_interrupt> ...
+
+Optimizing unit <ALU> ...
+
+Optimizing unit <uart_receiver> ...
+
+Optimizing unit <biu> ...
+
+Optimizing unit <datapath> ...
+
+Optimizing unit <uart_16750> ...
+WARNING:Xst:1710 - FF/Latch <U_1/cpubiu/inta2_s> (without init value) has a constant value of 0 in block <drigmorn1_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:2677 - Node <U_1/cpubiu/fsm/biu_status_cld_1> of sequential type is unconnected in block <drigmorn1_top>.
+WARNING:Xst:2677 - Node <U_1/cpubiu/fsm/biu_status_cld_0> of sequential type is unconnected in block <drigmorn1_top>.
+WARNING:Xst:2677 - Node <U_1/cpubiu/fsm/biu_status_cld_2> of sequential type is unconnected in block <drigmorn1_top>.
+WARNING:Xst:2677 - Node <U_1/cpubiu/wran> of sequential type is unconnected in block <drigmorn1_top>.
+WARNING:Xst:2677 - Node <U_0/U_0/UART_TXFF/iUSAGE_5> of sequential type is unconnected in block <drigmorn1_top>.
+WARNING:Xst:2677 - Node <U_0/U_0/DTRN> of sequential type is unconnected in block <drigmorn1_top>.
+WARNING:Xst:2677 - Node <U_0/U_0/DDIS> of sequential type is unconnected in block <drigmorn1_top>.
+
+Mapping all equations...
+Building and optimizing final netlist ...
+INFO:Xst:2261 - The FF/Latch <U_1/cpuproc/flush_reql_s> in Unit <drigmorn1_top> is equivalent to the following FF/Latch, which will be removed : <U_1/cpubiu/shift/flush_req1_s> 
+Found area constraint ratio of 100 (+ 5) on block drigmorn1_top, actual ratio is 65.
+FlipFlop U_1/cpubiu/shift/reg72_s_64 has been replicated 1 time(s)
+FlipFlop U_1/cpubiu/shift/reg72_s_66 has been replicated 1 time(s)
+FlipFlop U_1/cpubiu/shift/reg72_s_67 has been replicated 1 time(s)
+FlipFlop U_1/cpubiu/shift/reg72_s_69 has been replicated 1 time(s)
+FlipFlop U_1/cpubiu/shift/reg72_s_70 has been replicated 1 time(s)
+FlipFlop U_1/cpuproc/path.alu_operation_0 has been replicated 1 time(s)
+FlipFlop U_1/cpuproc/path.alu_operation_1 has been replicated 1 time(s)
+FlipFlop U_1/cpuproc/path.alu_operation_10 has been replicated 1 time(s)
+FlipFlop U_1/cpuproc/path.alu_operation_11 has been replicated 1 time(s)
+FlipFlop U_1/cpuproc/path.alu_operation_12 has been replicated 1 time(s)
+FlipFlop U_1/cpuproc/path.alu_operation_4 has been replicated 1 time(s)
+FlipFlop U_1/cpuproc/path.alu_operation_5 has been replicated 1 time(s)
+FlipFlop U_1/reset has been replicated 1 time(s)
+FlipFlop U_1/resoutn has been replicated 1 time(s) to handle iob=true attribute.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 940
+ Flip-Flops                                            : 940
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : drigmorn1_top.ngr
+Top Level Output File Name         : drigmorn1_top
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : No
+
+Design Statistics
+# IOs                              : 10
+
+Cell Usage :
+# BELS                             : 6701
+#      GND                         : 2
+#      INV                         : 88
+#      LUT1                        : 17
+#      LUT2                        : 293
+#      LUT2_D                      : 32
+#      LUT2_L                      : 35
+#      LUT3                        : 1216
+#      LUT3_D                      : 52
+#      LUT3_L                      : 68
+#      LUT4                        : 3043
+#      LUT4_D                      : 209
+#      LUT4_L                      : 269
+#      MULT_AND                    : 7
+#      MUXCY                       : 383
+#      MUXF5                       : 592
+#      MUXF6                       : 27
+#      MUXF7                       : 1
+#      VCC                         : 2
+#      XORCY                       : 365
+# FlipFlops/Latches                : 943
+#      FDC                         : 115
+#      FDCE                        : 726
+#      FDE                         : 23
+#      FDP                         : 8
+#      FDPE                        : 71
+# RAMS                             : 96
+#      RAM16X1D                    : 76
+#      RAMB16_S1_S1                : 16
+#      RAMB16_S2_S2                : 4
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 9
+#      IBUF                        : 3
+#      OBUF                        : 6
+# MULTs                            : 1
+#      MULT18X18SIO                : 1
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 3s500ecp132-4 
+
+ Number of Slices:                     2803  out of   4656    60%  
+ Number of Slice Flip Flops:            942  out of   9312    10%  
+ Number of 4 input LUTs:               5474  out of   9312    58%  
+    Number used as logic:              5322
+    Number used as RAMs:                152
+ Number of IOs:                          10
+ Number of bonded IOBs:                  10  out of     92    10%  
+    IOB Flip Flops:                       1
+ Number of BRAMs:                        20  out of     20   100%  
+ Number of MULT18X18SIOs:                 1  out of     20     5%  
+ Number of GCLKs:                         1  out of     24     4%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+--------------------------------------------------------------------------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)                                                                      | Load  |
+-----------------------------------+--------------------------------------------------------------------------------------------+-------+
+CLOCK_40MHZ                        | BUFGP                                                                                      | 1039  |
+U_3/BU2/dbiterr                    | NONE(U_3/BU2/U0/blk_mem_generator/valid.cstr/ramloop[19].ram.r/s3_init.ram/dpram.dp1x1.ram)| 20    |
+-----------------------------------+--------------------------------------------------------------------------------------------+-------+
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+
+Asynchronous Control Signals Information:
+----------------------------------------
+-----------------------------------+---------------------------------+-------+
+Control Signal                     | Buffer(FF name)                 | Load  |
+-----------------------------------+---------------------------------+-------+
+U_1/reset(U_1/reset:Q)             | NONE(U_1/cpubiu/abus_0)         | 336   |
+U_1/reset_1(U_1/reset_1:Q)         | NONE(U_1/cpudpath/I0/dxreg_s_13)| 336   |
+U_0/rst(U_0/rst1_INV_0:O)          | NONE(U_0/U_0/BAUDOUTN)          | 244   |
+por(por1_INV_0:O)                  | NONE(U_1/reset)                 | 4     |
+-----------------------------------+---------------------------------+-------+
+
+Timing Summary:
+---------------
+Speed Grade: -4
+
+   Minimum period: 23.746ns (Maximum Frequency: 42.113MHz)
+   Minimum input arrival time before clock: 1.946ns
+   Maximum output required time after clock: 5.582ns
+   Maximum combinational path delay: No path found
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'CLOCK_40MHZ'
+  Clock period: 23.746ns (frequency: 42.113MHz)
+  Total number of paths / destination ports: 84085893 / 2852
+-------------------------------------------------------------------------
+Delay:               23.746ns (Levels of Logic = 39)
+  Source:            U_1/cpuproc/path.alu_operation_2 (FF)
+  Destination:       U_1/cpudpath/I6/psrreg_s_11 (FF)
+  Source Clock:      CLOCK_40MHZ rising
+  Destination Clock: CLOCK_40MHZ rising
+
+  Data Path: U_1/cpuproc/path.alu_operation_2 to U_1/cpudpath/I6/psrreg_s_11
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCE:C->Q           111   0.591   1.322  U_1/cpuproc/path.alu_operation_2 (U_1/cpuproc/path.alu_operation_2)
+     LUT4_D:I2->O        106   0.704   1.290  U_1/cpudpath/I6/alubus_s<14>41 (U_1/cpudpath/I6/N227)
+     LUT4:I3->O            1   0.704   0.424  U_1/cpudpath/I6/ALUU2/rec_v_mux0000<0>1 (U_1/cpudpath/I6/ALUU2/rec_v_mux0000<0>)
+     LUT4:I3->O            1   0.704   0.000  U_1/cpudpath/I6/ALUU2/Madd_multiplicant_s_lut<0> (U_1/cpudpath/I6/ALUU2/Madd_multiplicant_s_lut<0>)
+     MUXCY:S->O            1   0.464   0.000  U_1/cpudpath/I6/ALUU2/Madd_multiplicant_s_cy<0> (U_1/cpudpath/I6/ALUU2/Madd_multiplicant_s_cy<0>)
+     MUXCY:CI->O           1   0.059   0.000  U_1/cpudpath/I6/ALUU2/Madd_multiplicant_s_cy<1> (U_1/cpudpath/I6/ALUU2/Madd_multiplicant_s_cy<1>)
+     MUXCY:CI->O           1   0.059   0.000  U_1/cpudpath/I6/ALUU2/Madd_multiplicant_s_cy<2> (U_1/cpudpath/I6/ALUU2/Madd_multiplicant_s_cy<2>)
+     MUXCY:CI->O           1   0.059   0.000  U_1/cpudpath/I6/ALUU2/Madd_multiplicant_s_cy<3> (U_1/cpudpath/I6/ALUU2/Madd_multiplicant_s_cy<3>)
+     MUXCY:CI->O           1   0.059   0.000  U_1/cpudpath/I6/ALUU2/Madd_multiplicant_s_cy<4> (U_1/cpudpath/I6/ALUU2/Madd_multiplicant_s_cy<4>)
+     MUXCY:CI->O           1   0.059   0.000  U_1/cpudpath/I6/ALUU2/Madd_multiplicant_s_cy<5> (U_1/cpudpath/I6/ALUU2/Madd_multiplicant_s_cy<5>)
+     MUXCY:CI->O           1   0.059   0.000  U_1/cpudpath/I6/ALUU2/Madd_multiplicant_s_cy<6> (U_1/cpudpath/I6/ALUU2/Madd_multiplicant_s_cy<6>)
+     MUXCY:CI->O           1   0.059   0.000  U_1/cpudpath/I6/ALUU2/Madd_multiplicant_s_cy<7> (U_1/cpudpath/I6/ALUU2/Madd_multiplicant_s_cy<7>)
+     MUXCY:CI->O           1   0.059   0.000  U_1/cpudpath/I6/ALUU2/Madd_multiplicant_s_cy<8> (U_1/cpudpath/I6/ALUU2/Madd_multiplicant_s_cy<8>)
+     MUXCY:CI->O           1   0.059   0.000  U_1/cpudpath/I6/ALUU2/Madd_multiplicant_s_cy<9> (U_1/cpudpath/I6/ALUU2/Madd_multiplicant_s_cy<9>)
+     MUXCY:CI->O           1   0.059   0.000  U_1/cpudpath/I6/ALUU2/Madd_multiplicant_s_cy<10> (U_1/cpudpath/I6/ALUU2/Madd_multiplicant_s_cy<10>)
+     MUXCY:CI->O           1   0.059   0.000  U_1/cpudpath/I6/ALUU2/Madd_multiplicant_s_cy<11> (U_1/cpudpath/I6/ALUU2/Madd_multiplicant_s_cy<11>)
+     MUXCY:CI->O           1   0.059   0.000  U_1/cpudpath/I6/ALUU2/Madd_multiplicant_s_cy<12> (U_1/cpudpath/I6/ALUU2/Madd_multiplicant_s_cy<12>)
+     MUXCY:CI->O           1   0.059   0.000  U_1/cpudpath/I6/ALUU2/Madd_multiplicant_s_cy<13> (U_1/cpudpath/I6/ALUU2/Madd_multiplicant_s_cy<13>)
+     MUXCY:CI->O           0   0.059   0.000  U_1/cpudpath/I6/ALUU2/Madd_multiplicant_s_cy<14> (U_1/cpudpath/I6/ALUU2/Madd_multiplicant_s_cy<14>)
+     XORCY:CI->O           1   0.804   0.420  U_1/cpudpath/I6/ALUU2/Madd_multiplicant_s_xor<15> (U_1/cpudpath/I6/ALUU2/multiplicant_s<15>)
+     MULT18X18SIO:A15->P16    5   4.860   0.633  U_1/cpudpath/I6/ALUU2/Mmult_product_s (U_1/cpudpath/I6/ALUU2/product_s<16>)
+     INV:I->O              1   0.704   0.000  U_1/cpudpath/I6/ALUU2/Madd_product_not0000<16>1_INV_0 (U_1/cpudpath/I6/ALUU2/Madd_product_not0000<16>)
+     MUXCY:S->O            1   0.464   0.000  U_1/cpudpath/I6/ALUU2/Madd_product_addsub0000_cy<16> (U_1/cpudpath/I6/ALUU2/Madd_product_addsub0000_cy<16>)
+     MUXCY:CI->O           1   0.059   0.000  U_1/cpudpath/I6/ALUU2/Madd_product_addsub0000_cy<17> (U_1/cpudpath/I6/ALUU2/Madd_product_addsub0000_cy<17>)
+     MUXCY:CI->O           1   0.059   0.000  U_1/cpudpath/I6/ALUU2/Madd_product_addsub0000_cy<18> (U_1/cpudpath/I6/ALUU2/Madd_product_addsub0000_cy<18>)
+     MUXCY:CI->O           1   0.059   0.000  U_1/cpudpath/I6/ALUU2/Madd_product_addsub0000_cy<19> (U_1/cpudpath/I6/ALUU2/Madd_product_addsub0000_cy<19>)
+     MUXCY:CI->O           1   0.059   0.000  U_1/cpudpath/I6/ALUU2/Madd_product_addsub0000_cy<20> (U_1/cpudpath/I6/ALUU2/Madd_product_addsub0000_cy<20>)
+     MUXCY:CI->O           1   0.059   0.000  U_1/cpudpath/I6/ALUU2/Madd_product_addsub0000_cy<21> (U_1/cpudpath/I6/ALUU2/Madd_product_addsub0000_cy<21>)
+     MUXCY:CI->O           1   0.059   0.000  U_1/cpudpath/I6/ALUU2/Madd_product_addsub0000_cy<22> (U_1/cpudpath/I6/ALUU2/Madd_product_addsub0000_cy<22>)
+     MUXCY:CI->O           1   0.059   0.000  U_1/cpudpath/I6/ALUU2/Madd_product_addsub0000_cy<23> (U_1/cpudpath/I6/ALUU2/Madd_product_addsub0000_cy<23>)
+     MUXCY:CI->O           1   0.059   0.000  U_1/cpudpath/I6/ALUU2/Madd_product_addsub0000_cy<24> (U_1/cpudpath/I6/ALUU2/Madd_product_addsub0000_cy<24>)
+     MUXCY:CI->O           1   0.059   0.000  U_1/cpudpath/I6/ALUU2/Madd_product_addsub0000_cy<25> (U_1/cpudpath/I6/ALUU2/Madd_product_addsub0000_cy<25>)
+     MUXCY:CI->O           1   0.059   0.000  U_1/cpudpath/I6/ALUU2/Madd_product_addsub0000_cy<26> (U_1/cpudpath/I6/ALUU2/Madd_product_addsub0000_cy<26>)
+     XORCY:CI->O           2   0.804   0.482  U_1/cpudpath/I6/ALUU2/Madd_product_addsub0000_xor<27> (U_1/cpudpath/I6/ALUU2/product_addsub0000<27>)
+     LUT3_D:I2->O          1   0.704   0.455  U_1/cpudpath/I6/ALUU2/product<27>1 (U_1/cpudpath/I6/product_s<27>)
+     LUT4:I2->O            4   0.704   0.591  U_1/cpudpath/I6/zflagdx_s24 (U_1/cpudpath/I6/zflagdx_s24)
+     LUT4_D:I3->O          1   0.704   0.424  U_1/cpudpath/I6/zflagdx_s39 (U_1/cpudpath/I6/zflagdx_s)
+     LUT4:I3->O            1   0.704   0.499  U_1/cpudpath/I6/overflow_s461 (U_1/cpudpath/I6/overflow_s461)
+     LUT4:I1->O            1   0.704   0.455  U_1/cpudpath/I6/overflow_s877_SW0 (N698)
+     LUT4:I2->O            1   0.704   0.000  U_1/cpudpath/I6/psrreg_s_11_mux0000187 (U_1/cpudpath/I6/psrreg_s_11_mux0000)
+     FDCE:D                    0.308          U_1/cpudpath/I6/psrreg_s_11
+    ----------------------------------------
+    Total                     23.746ns (16.751ns logic, 6.995ns route)
+                                       (70.5% logic, 29.5% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'CLOCK_40MHZ'
+  Total number of paths / destination ports: 2 / 2
+-------------------------------------------------------------------------
+Offset:              1.946ns (Levels of Logic = 1)
+  Source:            RXD (PAD)
+  Destination:       U_0/U_0/UART_IS_SIN/iD_0 (FF)
+  Destination Clock: CLOCK_40MHZ rising
+
+  Data Path: RXD to U_0/U_0/UART_IS_SIN/iD_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             1   1.218   0.420  RXD_IBUF (RXD_IBUF)
+     FDC:D                     0.308          U_0/U_0/UART_IS_SIN/iD_0
+    ----------------------------------------
+    Total                      1.946ns (1.526ns logic, 0.420ns route)
+                                       (78.4% logic, 21.6% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'CLOCK_40MHZ'
+  Total number of paths / destination ports: 7 / 6
+-------------------------------------------------------------------------
+Offset:              5.582ns (Levels of Logic = 2)
+  Source:            U_1/cpuproc/proc_err_s (FF)
+  Destination:       LED1 (PAD)
+  Source Clock:      CLOCK_40MHZ rising
+
+  Data Path: U_1/cpuproc/proc_err_s to LED1
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCE:C->Q             1   0.591   0.595  U_1/cpuproc/proc_err_s (U_1/cpuproc/proc_err_s)
+     LUT2:I0->O            1   0.704   0.420  U_1/cpuerror1 (LED1_OBUF)
+     OBUF:I->O                 3.272          LED1_OBUF (LED1)
+    ----------------------------------------
+    Total                      5.582ns (4.567ns logic, 1.015ns route)
+                                       (81.8% logic, 18.2% route)
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 208.00 secs
+Total CPU time to Xst completion: 208.25 secs
+ 
+--> 
+
+Total memory usage is 463296 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :   91 (   0 filtered)
+Number of infos    :   18 (   0 filtered)
+

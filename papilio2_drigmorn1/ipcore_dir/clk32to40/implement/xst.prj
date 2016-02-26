@@ -1,0 +1,2 @@
+vhdl work ../../clk32to40.vhd
+vhdl work ../example_design/clk32to40_exdes.vhd

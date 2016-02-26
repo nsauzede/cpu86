@@ -1,0 +1,104 @@
+
+NET "CLOCK_40MHZ" TNM_NET = "CLOCK_40MHZ";
+TIMESPEC "TS_CLOCK_40MHZ" = PERIOD "CLOCK_40MHZ" 25 ns HIGH 50 %;
+
+#####################################
+#CLOCK
+#####################################
+NET "CLOCK_40MHZ" LOC = "M6";
+
+#####################################
+#RS232 PINS
+#####################################
+NET "RTS" LOC = "A9";     #OUTPUT FROM RS232 CHIP
+NET "TXD" LOC = "B9";     #OUTPUT FROM RS232 CHIP
+NET "CTS" LOC = "M12";    #INPUT FROM RS232 CHIP
+NET "RXD" LOC = "A7";     #INPUT FROM RS232 CHIP
+
+
+#####################################
+#LED PINS                                                   
+#####################################                       
+NET "LED1"     LOC = "C14";  #'1' = ON                        
+NET "LED2N"    LOC = "P6";   #'0' = ON                        
+NET "LED3N"    LOC = "P7";   #'0' = ON                        
+
+
+#####################################                       
+#MODULE I/O PINOUT                                          
+#####################################                       
+#                                                            
+#                    ---------                                        
+#                    | RS232 |                                        
+#            --------------------------                             
+#     1  --|DGND                 5V IN |--  40                           
+#     2  --|DGND                 DGND  |--  39                           
+#     3  --|PIN3                 PIN38 |--  38                            
+#     4  --|PIN4                 PIN37 |--  37                            
+#     5  --|PIN5                 PIN36 |--  36                            
+#     6  --|PIN6                 PIN35 |--  35                            
+#     7  --|PIN7                 PIN34 |--  34                            
+#     8  --|PIN8                 PIN33 |--  33                            
+#     9  --|PIN9                 PIN32 |--  32                            
+#     10 --|PIN10                PIN31 |--  31                            
+#     11 --|PIN11                PIN30 |--  30                            
+#     12 --|PIN12                PIN29 |--  29                            
+#     13 --|PIN13                PIN28 |--  28                            
+#     14 --|PIN14                PIN27 |--  27                            
+#     15 --|PIN15                PIN26 |--  26                            
+#     16 --|PIN16                PIN25 |--  25                            
+#     17 --|PIN17                PIN24 |--  24                            
+#     18 --|PIN18                PIN23 |--  23                            
+#     19 --|DGND                 DGND  |--  22                           
+#     20 --|DGND                 DGND  |--  21                           
+#            ----------------------------                                 
+#                               | 5V |                        
+#                               | IN |                        
+#                               ------                             
+#####################################                       
+#LHS PINS FROM TOP                                          
+#####################################                       
+#PIN1 = DGND                                                
+#PIN2 = DGND                                                
+NET "PIN3"	LOC = "L14";	#"FPGA_IO27"                     
+NET "PIN4"	LOC = "N14";	#"FPGA_IO25"                     
+#NET "PIN5"	LOC = "H12";	#"FPGA_IO24"
+#NET "PIN6"	LOC = "J12";	#"FPGA_IO23"
+#NET "PIN7"	LOC = "G13";	#"FPGA_IO20"
+#NET "PIN8"	LOC = "J14";	#"FPGA_IO21"
+#NET "PIN9"	LOC = "K14";	#"FPGA_IO22"
+#NET "PIN10" LOC = "C12";	#"FPGA_IO16"
+#NET "PIN11" LOC = "F12";	#"FPGA_IO17"
+#NET "PIN12" LOC = "F14";	#"FPGA_IO18"
+#NET "PIN13" LOC = "F2";		#"FPGA_IO19"
+#NET "PIN14" LOC = "G14";	#"FPGA_IO15"
+#NET "PIN15" LOC = "A13";	#"FPGA_IO14"
+#NET "PIN16" LOC = "A10";	#"FPGA_IO13"
+#NET "PIN17" LOC = "C9";		#"FPGA_IO12"
+#NET "PIN18" LOC = "G3";   	#"FPGA_IO11"
+#PIN19 = DGND											
+#PIN20 = DGND											
+
+#####################################
+#RHS PINS FROM TOP
+#####################################
+#PIN40 = 5V
+#PIN39 = DGND
+#NET "PIN38" LOC = "M5";	   #"FPGA_IO32" 
+#NET "PIN37" LOC = "P4";	   #"FPGA_IO33" 
+#NET "PIN36" LOC = "L3";	   #"FPGA_IO26" 
+#NET "PIN35" LOC = "M4";	   #"FPGA_IO38" 
+#NET "PIN34" LOC = "F1";	   #"FPGA_IO34" 
+#NET "PIN33" LOC = "H1";	   #"FPGA_IO37" 
+#NET "PIN32" LOC = "J3";	   #"FPGA_IO36" 
+#NET "PIN31" LOC = "H3";	   #"FPGA_IO35" 
+#NET "PIN30" LOC = "A3";	   #"FPGA_IO3"  
+#NET "PIN29" LOC = "F3";	   #"FPGA_IO2"  
+#NET "PIN28" LOC = "G1";	   #"FPGA_IO1"  
+#NET "PIN27" LOC = "B1";	   #"FPGA_IO0"  
+#NET "PIN26" LOC = "C5";	   #"FPGA_IO4"  
+#NET "PIN25" LOC = "C3";	   #"FPGA_IO5"  
+#NET "PIN24" LOC = "C6";	   #"FPGA_IO6"  
+#NET "PIN23" LOC = "B5";	   #"FPGA_IO7"  
+#PIN22 = DGND
+#PIN21 = DGND

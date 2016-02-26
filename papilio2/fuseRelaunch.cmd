@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -lib "secureip" -o "C:/nico/perso/hack/hackerspace/fpga/x86/cpu86/papilio2/papilio1_tb_isim_beh.exe" -prj "C:/nico/perso/hack/hackerspace/fpga/x86/cpu86/papilio2/papilio1_tb_beh.prj" "work.papilio1_tb" 
