@@ -1,8 +1,8 @@
 INTSTYLE=ise
-INFILE=C:\nico\perso\hack\hackerspace\fpga\x86\cpu86\papilio1\papilio1_top.ncd
-OUTFILE=C:\nico\perso\hack\hackerspace\fpga\x86\cpu86\papilio1\papilio1_top.bit
+INFILE=C:\Users\user\Documents\git\cpu86\papilio1\papilio1_top.ncd
+OUTFILE=C:\Users\user\Documents\git\cpu86\papilio1\papilio1_top.bit
 FAMILY=Spartan3E
 PART=xc3s500e-4vq100
-WORKINGDIR=C:\nico\perso\hack\hackerspace\fpga\x86\cpu86\papilio1
+WORKINGDIR=C:\Users\user\Documents\git\cpu86\papilio1
 LICENSE=WebPack
-USER_INFO=202522545_0_0_135
+USER_INFO=202522545_0_0_937

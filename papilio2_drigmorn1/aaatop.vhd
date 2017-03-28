@@ -72,6 +72,12 @@ architecture Behavioral of Aaatop is
 
 COMPONENT drigmorn1_top 
   PORT( 
+	sram_addr : out std_logic_vector(20 downto 0);
+	sram_data : inout std_logic_vector(7 downto 0);
+	sram_ce : out std_logic;
+	sram_we : out std_logic;
+	sram_oe : out std_logic;
+
       CLOCK_40MHZ : IN     std_logic;
       CTS         : IN     std_logic  := '1';
       PIN3        : IN     std_logic;
@@ -95,18 +101,30 @@ end component;
 begin
   ARD_RESET <= not(DUO_SW1);
 
-	sram_addr <= (others => '0');
-	sram_ce <= '0';
-	sram_we <= '0';
-	sram_oe <= '0';
-
 	CTS <= '1';
---	w1b(1) <= 'Z';
---	PIN3 <= not w1b(1); -- por
-	PIN3 <= '1';
+	PIN3 <= not Arduino(40); -- por
 
+--	Arduino(38) <= Arduino(40);
+--	Arduino(42) <= Arduino(44);
+--	Arduino(46) <= Arduino(48);
+--	Arduino(50) <= Arduino(52);
+	Arduino(38) <= LED1;
+	Arduino(42) <= LED2N;
+	Arduino(46) <= LED3N;
+	Arduino(50) <= '0';
+
+--	sram_addr <= (others => '0');
+--	sram_ce <= '0';
+--	sram_we <= '0';
+--	sram_oe <= '0';
 	drigmorn1_top0 : drigmorn1_top
    PORT map( 
+	sram_addr => sram_addr,
+	sram_data => sram_data,
+	sram_ce => sram_ce,
+	sram_we => sram_we,
+	sram_oe => sram_oe,
+	
       CLOCK_40MHZ => CLOCK_40MHZ,
       CTS => CTS,
       PIN3 => PIN3,

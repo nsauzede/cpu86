@@ -7,16 +7,18 @@
    <ItemView engineview="SynthesisOnly" guiview="Source" compilemode="AutoCompile" >
       <ClosedNodes>
          <ClosedNodesVersion>2</ClosedNodesVersion>
+         <ClosedNode>/Aaatop - Behavioral C:|Users|user|Documents|git|cpu86|papilio2_drigmorn1|aaatop.vhd/drigmorn1_top0 - drigmorn1_top - struct/U_0 - uart_top - struct</ClosedNode>
+         <ClosedNode>/Aaatop - Behavioral C:|Users|user|Documents|git|cpu86|papilio2_drigmorn1|aaatop.vhd/drigmorn1_top0 - drigmorn1_top - struct/U_1 - cpu86 - struct</ClosedNode>
          <ClosedNode>/Aaatop - Behavioral C:|nico|perso|hack|hackerspace|fpga|x86|cpu86|papilio2_drigmorn1|aaatop.vhd/drigmorn1_top0 - drigmorn1_top - struct</ClosedNode>
       </ClosedNodes>
       <SelectedItems>
-         <SelectedItem>Aaatop - Behavioral (C:/nico/msys/home/sauzeden/git/cpu86/papilio2_drigmorn1/aaatop.vhd)</SelectedItem>
+         <SelectedItem>drigmorn1_top0 - drigmorn1_top - struct (C:/Users/user/Documents/git/cpu86/papilio2_drigmorn1/drigmorn1_top.vhd)</SelectedItem>
       </SelectedItems>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
-      <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000202000000010000000100000064000001eb000000020000000000000000000000000200000064ffffffff000000810000000300000002000001eb0000000100000003000000000000000100000003</ViewHeaderState>
+      <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000202000000010000000100000064000001a1000000020000000000000000000000000200000064ffffffff000000810000000300000002000001a10000000100000003000000000000000100000003</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >true</UserChangedColumnWidths>
-      <CurrentItem>Aaatop - Behavioral (C:/nico/msys/home/sauzeden/git/cpu86/papilio2_drigmorn1/aaatop.vhd)</CurrentItem>
+      <CurrentItem>drigmorn1_top0 - drigmorn1_top - struct (C:/Users/user/Documents/git/cpu86/papilio2_drigmorn1/drigmorn1_top.vhd)</CurrentItem>
    </ItemView>
    <ItemView engineview="SynthesisOnly" sourcetype="DESUT_VHDL_ARCHITECTURE" guiview="Process" >
       <ClosedNodes>
@@ -32,7 +34,7 @@
       </SelectedItems>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
-      <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000000000000000000f8000000010000000100000000000000000000000064ffffffff000000810000000000000001000000f80000000100000000</ViewHeaderState>
+      <ViewHeaderState orientation="horizontal" >000000ff00000000000000010000000100000000000000000000000000000000000000000000000185000000010000000100000000000000000000000064ffffffff000000810000000000000001000001850000000100000000</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
       <CurrentItem></CurrentItem>
    </ItemView>
@@ -43,7 +45,7 @@
       <SelectedItems/>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
-      <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000000000000000100000000000000000000000000000000000002f2000000040101000100000000000000000000000064ffffffff000000810000000000000004000000960000000100000000000000d700000001000000000000006600000001000000000000011f0000000100000000</ViewHeaderState>
+      <ViewHeaderState orientation="horizontal" >000000ff00000000000000010000000000000000010000000000000000000000000000000000000392000000040101000100000000000000000000000064ffffffff000000810000000000000004000000960000000100000000000000d70000000100000000000000660000000100000000000001bf0000000100000000</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
       <CurrentItem>aaatop.vhd</CurrentItem>
    </ItemView>
@@ -61,20 +63,20 @@
    </ItemView>
    <CopyAdditionalFiles/>
    <SourceProcessView>000000ff00000000000000020000011b0000011b01000000050100000002</SourceProcessView>
-   <CurrentView>Behavioral Simulation</CurrentView>
+   <CurrentView>Implementation</CurrentView>
    <ItemView engineview="BehavioralSim" guiview="Source" compilemode="AutoCompile" >
       <ClosedNodes>
          <ClosedNodesVersion>2</ClosedNodesVersion>
          <ClosedNode>/Aaatop - Behavioral C:|nico|perso|hack|hackerspace|fpga|x86|cpu86|papilio2_drigmorn1|aaatop.vhd/drigmorn1_top0 - drigmorn1_top - struct</ClosedNode>
       </ClosedNodes>
       <SelectedItems>
-         <SelectedItem>Unassigned User Library Modules</SelectedItem>
+         <SelectedItem>Aaatop - Behavioral (C:/Users/user/Documents/git/cpu86/papilio2_drigmorn1/aaatop.vhd)</SelectedItem>
       </SelectedItems>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
       <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000202000000010000000100000064000001eb000000020000000000000000000000000200000064ffffffff000000810000000300000002000001eb0000000100000003000000000000000100000003</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >true</UserChangedColumnWidths>
-      <CurrentItem>Unassigned User Library Modules</CurrentItem>
+      <CurrentItem>Aaatop - Behavioral (C:/Users/user/Documents/git/cpu86/papilio2_drigmorn1/aaatop.vhd)</CurrentItem>
    </ItemView>
    <ItemView engineview="BehavioralSim" sourcetype="" guiview="Process" >
       <ClosedNodes>
@@ -82,13 +84,13 @@
          <ClosedNode>Design Utilities</ClosedNode>
       </ClosedNodes>
       <SelectedItems>
-         <SelectedItem></SelectedItem>
+         <SelectedItem/>
       </SelectedItems>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
-      <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000000000000000000f8000000010000000100000000000000000000000064ffffffff000000810000000000000001000000f80000000100000000</ViewHeaderState>
+      <ViewHeaderState orientation="horizontal" >000000ff00000000000000010000000100000000000000000000000000000000000000000000000185000000010000000100000000000000000000000064ffffffff000000810000000000000001000001850000000100000000</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
-      <CurrentItem></CurrentItem>
+      <CurrentItem/>
    </ItemView>
    <ItemView engineview="BehavioralSim" sourcetype="DESUT_VHDL_ARCHITECTURE" guiview="Process" >
       <ClosedNodes>
@@ -100,7 +102,7 @@
       </SelectedItems>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
-      <ViewHeaderState orientation="horizontal" >000000ff0000000000000001000000010000000000000000000000000000000000000000000000013a000000010000000100000000000000000000000064ffffffff0000008100000000000000010000013a0000000100000000</ViewHeaderState>
+      <ViewHeaderState orientation="horizontal" >000000ff00000000000000010000000100000000000000000000000000000000000000000000000185000000010000000100000000000000000000000064ffffffff000000810000000000000001000001850000000100000000</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
       <CurrentItem/>
    </ItemView>

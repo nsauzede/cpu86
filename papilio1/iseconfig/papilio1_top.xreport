@@ -1,11 +1,11 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2016-02-26T21:02:29</DateModified>
+  <DateModified>2017-03-22T22:38:38</DateModified>
   <ModuleName>papilio1_top</ModuleName>
   <SummaryTimeStamp>2015-02-22T16:59:24</SummaryTimeStamp>
-  <SavedFilePath>C:/nico/msys/home/sauzeden/git/cpu86/papilio1/iseconfig/papilio1_top.xreport</SavedFilePath>
-  <ImplementationReportsDirectory>C:/nico/msys/home/sauzeden/git/cpu86/papilio1\</ImplementationReportsDirectory>
+  <SavedFilePath>C:/Users/user/Documents/git/cpu86/papilio1/iseconfig/papilio1_top.xreport</SavedFilePath>
+  <ImplementationReportsDirectory>C:/Users/user/Documents/git/cpu86/papilio1\</ImplementationReportsDirectory>
   <DateInitialized>2015-02-17T13:47:47</DateInitialized>
   <EnableMessageFiltering>false</EnableMessageFiltering>
  </header>
