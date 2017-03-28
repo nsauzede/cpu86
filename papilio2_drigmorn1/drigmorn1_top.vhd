@@ -71,6 +71,7 @@ ARCHITECTURE struct OF drigmorn1_top IS
    -- Architecture declarations
    signal csromn : std_logic;
    signal csesramn : std_logic;
+   signal csisramn : std_logic;
 
    -- Internal signal declarations
    SIGNAL DCDn        : std_logic := '1';
@@ -198,9 +199,9 @@ BEGIN
          case sel_s is
               when "011"  => dbus_in_cpu <= dbus_com1;  -- UART     
               when "101"  => dbus_in_cpu <= dbus_rom;   -- BootStrap Loader  
-              when "110"  => dbus_in_cpu <= dbus_esram;  -- External SRAM  
-              when others=> dbus_in_cpu <= dbus_in;    -- Embedded SRAM        
-          end case;         
+              when "110"  => dbus_in_cpu <= dbus_in;    -- Embedded SRAM        
+              when others => dbus_in_cpu <= dbus_esram;  -- External SRAM  
+          end case;
    end process;
 
    -- HDL Embedded Text Block 7 clogic
@@ -211,7 +212,7 @@ BEGIN
    PIN4  <= resoutn; -- For debug only
    
    -- dbus_in_cpu multiplexer
-   sel_s <= cscom1 & csromn & csesramn;
+   sel_s <= cscom1 & csromn & csisramn;
    
    -- chip_select 
    -- Comport, uart_16550
@@ -224,7 +225,12 @@ BEGIN
 
    -- external SRAM
    -- 0x5F8-0x5FF
-   csesramn <= '0' when (abus(15 downto 3)="0000010111111" AND iom='1') else '1';
+   csesramn <= '0' when (csromn='1' and csisramn='1' AND iom='0') else '1';
+--	csesramn <= not (cscom1 and csromnn and csiramn);
+  
+   -- internal SRAM
+   -- below 0x4000
+   csisramn <= '0' when (abus(19 downto 14)="000000" AND iom='0') else '1';
    
 
    nmi   <= '0';
