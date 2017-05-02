@@ -75,7 +75,7 @@ begin
 --            addrb => addr_read,
 --            doutb => dout
 --        );
-	vramaddr <= "010" & addr_read;
+	vramaddr <= "000" & addr_read;
 	dout <= vramdata;
 	-- instantiate font ROM
 	font_unit: entity work.font_rom

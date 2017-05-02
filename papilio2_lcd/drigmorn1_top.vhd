@@ -43,6 +43,8 @@
 LIBRARY ieee;
 USE ieee.std_logic_1164.all;
 USE ieee.std_logic_arith.all;
+use IEEE.STD_LOGIC_UNSIGNED.ALL;
+use IEEE.NUMERIC_STD.ALL;
 
 ENTITY drigmorn1_top IS
    PORT( 
@@ -76,6 +78,8 @@ ARCHITECTURE struct OF drigmorn1_top IS
    signal csisramn : std_logic;
 
    -- Internal signal declarations
+   signal vramaddr2 : STD_LOGIC_VECTOR(15 DOWNTO 0);
+   signal vrambase : STD_LOGIC_VECTOR(15 DOWNTO 0):=x"4000";
    SIGNAL DCDn        : std_logic := '1';
    SIGNAL DSRn        : std_logic := '1';
    SIGNAL RIn         : std_logic := '1';
@@ -284,6 +288,7 @@ BEGIN
 --         wea   => wea,
 --         douta => dbus_in
 --      );
+	vramaddr2 <= vramaddr + vrambase;
    U_3 : blk_mem_40K
       PORT MAP (
          clka  => clk,
@@ -294,7 +299,7 @@ BEGIN
 			,
          clkb  => clk,
          dinb  => (others => '0'),
-         addrb => vramaddr,
+         addrb => vramaddr2,
          web   => (others => '0'),
          doutb => vramdata
       );
