@@ -85,7 +85,8 @@ begin
 			data => font_word
 		);
 	-- tile RAM read
-	addr_read <= ((pixel_y(9 downto 4) & "000000") + ("00" & pixel_y(9 downto 4) & "0000") + ("00000" & pixel_x(9 downto 3))) & attr_not_char;
+--	addr_read <= ((pixel_y(9 downto 4) & "000000") + ("00" & pixel_y(9 downto 4) & "0000") + ("00000" & pixel_x(9 downto 3))) & attr_not_char;
+	addr_read <= ((pixel_y(9 downto 4) * "000101") + ("00000" & pixel_x(9 downto 3))) & attr_not_char;
 	process(clk,clk_fast,video_on)
 	begin
 		if rising_edge(clk) then
