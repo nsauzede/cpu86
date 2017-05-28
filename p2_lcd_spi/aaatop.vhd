@@ -67,14 +67,14 @@ Port (
 end Aaatop;
  
 architecture Behavioral of Aaatop is
-   signal   CLOCK_40MHZ :     std_logic;
-   signal   CTS         :      std_logic  := '1';
-   signal   PIN3        :      std_logic;
-   signal   LED1        :     std_logic;
-   signal   LED2N       :     std_logic;
-   signal   LED3N       :     std_logic;
-   signal   PIN4        :     std_logic;
-   signal   RTS         :     std_logic;
+signal   CLOCK_40MHZ :     std_logic;
+signal   CTS         :      std_logic  := '1';
+signal   PIN3        :      std_logic;
+signal   LED1        :     std_logic;
+signal   LED2N       :     std_logic;
+signal   LED3N       :     std_logic;
+signal   PIN4        :     std_logic;
+signal   RTS         :     std_logic;
 
 signal SD_MISO : std_logic;
 signal SD_MOSI : std_logic;
@@ -217,5 +217,5 @@ begin
 		buttons => buttons2,
 		leds => leds
 	);
-	leds <= buttons2;
+--	leds <= buttons2;
 end Behavioral;

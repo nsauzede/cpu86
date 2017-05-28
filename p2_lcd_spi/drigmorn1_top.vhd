@@ -121,81 +121,6 @@ ARCHITECTURE struct OF drigmorn1_top IS
    SIGNAL wrn         : std_logic;
    signal rxclk_s	  : std_logic;
 
-   -- Component Declarations
-   COMPONENT cpu86
-   PORT( 
-      clk      : IN     std_logic;
-      dbus_in  : IN     std_logic_vector (7 DOWNTO 0);
-      intr     : IN     std_logic;
-      nmi      : IN     std_logic;
-      por      : IN     std_logic;
-      abus     : OUT    std_logic_vector (19 DOWNTO 0);
-      dbus_out : OUT    std_logic_vector (7 DOWNTO 0);
-      cpuerror : OUT    std_logic;
-      inta     : OUT    std_logic;
-      iom      : OUT    std_logic;
-      rdn      : OUT    std_logic;
-      resoutn  : OUT    std_logic;
-      wran     : OUT    std_logic;
-      wrn      : OUT    std_logic
-   );
-   END COMPONENT;
---   COMPONENT blk_mem_40K
---   PORT (
---      addra : IN     std_logic_VECTOR (15 DOWNTO 0);
---      clka  : IN     std_logic;
---      dina  : IN     std_logic_VECTOR (7 DOWNTO 0);
---      wea   : IN     std_logic_VECTOR (0 DOWNTO 0);
---      douta : OUT    std_logic_VECTOR (7 DOWNTO 0)
---   );
---   END COMPONENT;
-component blk_mem_40K 
-  PORT (
-    clka : IN STD_LOGIC;
-    wea : IN STD_LOGIC_VECTOR(0 DOWNTO 0);
-    addra : IN STD_LOGIC_VECTOR(15 DOWNTO 0);
-    dina : IN STD_LOGIC_VECTOR(7 DOWNTO 0);
-    douta : OUT STD_LOGIC_VECTOR(7 DOWNTO 0);
-    clkb : IN STD_LOGIC;
-    web : IN STD_LOGIC_VECTOR(0 DOWNTO 0);
-    addrb : IN STD_LOGIC_VECTOR(15 DOWNTO 0);
-    dinb : IN STD_LOGIC_VECTOR(7 DOWNTO 0);
-    doutb : OUT STD_LOGIC_VECTOR(7 DOWNTO 0)
-  );
-END component;
-   COMPONENT bootstrap
-   PORT (
-      abus : IN     std_logic_vector (7 DOWNTO 0);
-      dbus : OUT    std_logic_vector (7 DOWNTO 0)
-   );
-   END COMPONENT;
-   COMPONENT uart_top
-   PORT (
-      BR_clk   : IN     std_logic ;
-      CTSn     : IN     std_logic  := '1';
-      DCDn     : IN     std_logic  := '1';
-      DSRn     : IN     std_logic  := '1';
-      RIn      : IN     std_logic  := '1';
-      abus     : IN     std_logic_vector (2 DOWNTO 0);
-      clk      : IN     std_logic ;
-      csn      : IN     std_logic ;
-      dbus_in  : IN     std_logic_vector (7 DOWNTO 0);
-      rdn      : IN     std_logic ;
-      resetn   : IN     std_logic ;
-      sRX      : IN     std_logic ;
-      wrn      : IN     std_logic ;
-      B_CLK    : OUT    std_logic ;
-      DTRn     : OUT    std_logic ;
-      IRQ      : OUT    std_logic ;
-      OUT1n    : OUT    std_logic ;
-      OUT2n    : OUT    std_logic ;
-      RTSn     : OUT    std_logic ;
-      dbus_out : OUT    std_logic_vector (7 DOWNTO 0);
-      stx      : OUT    std_logic 
-   );
-   END COMPONENT;
-
-
 BEGIN
 	sram_addr <= '0' & abus;
 ----	sram_data <= dbus_.
@@ -311,7 +236,7 @@ BEGIN
    por <= NOT(PIN3);
 
    -- Instance port mappings.
-   U_1 : cpu86
+   U_1 : entity work.cpu86
       PORT MAP (
          clk        => clk,
          dbus_in    => dbus_in_cpu,
@@ -337,7 +262,7 @@ BEGIN
 --         douta => dbus_in
 --      );
 	vramaddr2 <= vramaddr + vrambase;
-   U_3 : blk_mem_40K
+   U_3 : entity work.blk_mem_40K
       PORT MAP (
          clka  => clk,
          dina  => dbus_out,
@@ -350,12 +275,12 @@ BEGIN
          web   => (others => '0'),
          doutb => vramdata
       );
-   U_2 : bootstrap
+   U_2 : entity work.bootstrap
       PORT MAP (
          abus => abus(7 DOWNTO 0),
          dbus => dbus_rom
       );
-   U_0 : uart_top
+   U_0 : entity work.uart_top
    PORT MAP (
        BR_clk   => rxclk_s,
        CTSn     => CTS,
