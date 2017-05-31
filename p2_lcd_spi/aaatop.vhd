@@ -144,8 +144,8 @@ begin
 		spi_clk => spi_clk,
 		spi_mosi => spi_mosi,
 		spi_miso => spi_miso,
---		buttons => buttons2,
---		leds => leds,
+		buttons => buttons2,
+		leds => leds,
 	
       CLOCK_40MHZ => CLOCK_40MHZ,
       CTS => CTS,

@@ -99,20 +99,25 @@
     <transform xil_pn:end_ts="1490218758" xil_pn:in_ck="3295689442312750829" xil_pn:name="TRAN_xawsTohdl" xil_pn:prop_ck="3722055649997117020" xil_pn:start_ts="1490218756">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
       <outfile xil_pn:name="dcm32to40.vhd"/>
     </transform>
     <transform xil_pn:end_ts="1490218758" xil_pn:name="TRAN_SubProjectPreToStructuralProxy" xil_pn:prop_ck="-3893270297138737980" xil_pn:start_ts="1490218758">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
     </transform>
     <transform xil_pn:end_ts="1490218758" xil_pn:name="TRAN_platgen" xil_pn:prop_ck="-3169614871292535356" xil_pn:start_ts="1490218758">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
     </transform>
     <transform xil_pn:end_ts="1490218897" xil_pn:in_ck="7595377397945471411" xil_pn:name="TRANEXT_xstsynthesize_spartan3e" xil_pn:prop_ck="-7153480121051535166" xil_pn:start_ts="1490218758">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="WarningsGenerated"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
       <status xil_pn:value="OutOfDateForOutputs"/>
       <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="_xmsgs/xst.xmsgs"/>
@@ -131,11 +136,14 @@
     <transform xil_pn:end_ts="1490218897" xil_pn:in_ck="-4480321233387866732" xil_pn:name="TRAN_compileBCD2" xil_pn:prop_ck="2736941359626508049" xil_pn:start_ts="1490218897">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
     </transform>
     <transform xil_pn:end_ts="1490218904" xil_pn:in_ck="7969051550784480715" xil_pn:name="TRANEXT_ngdbuild_FPGA" xil_pn:prop_ck="7181131388338960039" xil_pn:start_ts="1490218897">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="WarningsGenerated"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
       <outfile xil_pn:name="_ngo"/>
       <outfile xil_pn:name="_xmsgs/ngdbuild.xmsgs"/>
       <outfile xil_pn:name="papilio1_top.bld"/>
@@ -146,6 +154,8 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="WarningsGenerated"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
       <outfile xil_pn:name="_xmsgs/map.xmsgs"/>
       <outfile xil_pn:name="papilio1_top.pcf"/>
       <outfile xil_pn:name="papilio1_top_map.map"/>
@@ -160,6 +170,8 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="WarningsGenerated"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
       <outfile xil_pn:name="_xmsgs/par.xmsgs"/>
       <outfile xil_pn:name="papilio1_top.ncd"/>
       <outfile xil_pn:name="papilio1_top.pad"/>
@@ -175,6 +187,7 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="WarningsGenerated"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
       <outfile xil_pn:name="_xmsgs/bitgen.xmsgs"/>
       <outfile xil_pn:name="papilio1_top.bgn"/>
       <outfile xil_pn:name="papilio1_top.bit"/>
@@ -187,6 +200,7 @@
     <transform xil_pn:end_ts="1490218976" xil_pn:in_ck="7969051550784480584" xil_pn:name="TRAN_postRouteTrce" xil_pn:prop_ck="445577401284416186" xil_pn:start_ts="1490218969">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
       <outfile xil_pn:name="_xmsgs/trce.xmsgs"/>
       <outfile xil_pn:name="papilio1_top.twr"/>
       <outfile xil_pn:name="papilio1_top.twx"/>

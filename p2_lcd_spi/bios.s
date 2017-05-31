@@ -16,19 +16,30 @@ times 0x100 db 0x90
 ; this is the BIOS entry point
 entry:
 cli
-mov sp,0x0380
-;mov sp,0x1000
-mov ss,sp
-mov sp,0x0100
-mov ax,cs
-mov ds,ax
+;mov sp,0x0380
+;;mov sp,0x1000
+;mov ss,sp
+;mov sp,0x0100
+
 xor di,di
 mov es,di
-;mov di,(20-1)*4
+
+mov ax,cs
+mov ds,ax
+
+mov di,(13h)*4
 ; TODO : fix int13h hook!!
 ;mov word [di],int13_handler
 ;mov word [di+2],ax
+mov ax,int13_handler
+stosw
+mov ax,cs
+stosw
+
 sti
+
+xor di,di
+
 ;mov dx,0x500
 ;mov al,0x55
 ;out dx,al
@@ -45,18 +56,48 @@ call print
 ;mov di,0x0000
 ;mov di,0x0500
 ; assume es=0
+
 mov di,0x7c00
 call spi_read
-;int 13h
+
 ;jmp 0:0x7c00
+
+mov dx,0x500
+mov al,0x03
+out dx,al
+
+xor ax,ax
+mov ds,ax
+mov si,0x004c
+lodsw
+;mov ax,0x1234
+call put4hex
+lodsw
+call put4hex
+;jmp int13_handler
+
+int 13h
+
+mov dx,0x500
+mov al,0x09
+out dx,al
+
+jmp $
 
 ;exit:
 MOV     AX,04C00h
 int 0x21
 
 int13_handler:
-mov ax,0x0E41
-int 10h
+;jmp $
+push ax
+push dx
+mov dx,0x500
+mov ax,0x0c
+out dx,al
+pop dx
+pop ax
+;jmp $
 iret
 
 print:

@@ -59,8 +59,8 @@ ENTITY drigmorn1_top IS
 	spi_clk        : out std_logic;
 	spi_mosi       : out std_logic;
 	spi_miso       : in  std_logic;
---	buttons : in  STD_LOGIC_VECTOR (3 downto 0);
---	leds : out  STD_LOGIC_VECTOR (3 downto 0);
+	buttons : in  STD_LOGIC_VECTOR (3 downto 0);
+	leds : out  STD_LOGIC_VECTOR (3 downto 0);
 
       CLOCK_40MHZ : IN     std_logic;
       CTS         : IN     std_logic  := '1';
@@ -84,10 +84,10 @@ ARCHITECTURE struct OF drigmorn1_top IS
    signal csisramn : std_logic;
    signal csspin : std_logic;
    signal csspi : std_logic;
---   signal csbutled : std_logic;
+   signal csbutled : std_logic := '1';
 
    -- Internal signal declarations
---	signal leds_b : STD_LOGIC_VECTOR (3 downto 0);
+	signal leds_b : STD_LOGIC_VECTOR (3 downto 0);
    signal vramaddr2 : STD_LOGIC_VECTOR(15 DOWNTO 0);
 --   signal vrambase : STD_LOGIC_VECTOR(15 DOWNTO 0):=x"4000";
    signal vrambase : STD_LOGIC_VECTOR(15 DOWNTO 0):=x"0000";
@@ -112,8 +112,8 @@ ARCHITECTURE struct OF drigmorn1_top IS
    SIGNAL por         : std_logic;
    SIGNAL rdn         : std_logic;
    SIGNAL resoutn     : std_logic;
---   SIGNAL sel_s       : std_logic_vector(5 DOWNTO 0);
-   SIGNAL sel_s       : std_logic_vector(4 DOWNTO 0);
+   SIGNAL sel_s       : std_logic_vector(5 DOWNTO 0);
+--   SIGNAL sel_s       : std_logic_vector(4 DOWNTO 0);
    SIGNAL wea         : std_logic_VECTOR(0 DOWNTO 0);
    SIGNAL wran        : std_logic;
    SIGNAL wrcom       : std_logic;
@@ -149,23 +149,24 @@ BEGIN
 		end if;
 	end process;
 
---	leds <= leds_b;
---	leds_b <= dbus_out(3 downto 0) when (csbutled='0') and (wrn='0') else leds_b;
+	leds <= leds_b;
+	leds_b <= dbus_out(3 downto 0) when (csbutled='0') and (wrn='0') else leds_b;
 
    -- Architecture concurrent statements
    -- HDL Embedded Text Block 4 mux
    -- dmux 1
-   process(sel_s,dbus_com1,dbus_in,dbus_rom,dbus_esram,dbus_spi)
+   process(sel_s,dbus_com1,dbus_in,dbus_rom,dbus_esram,dbus_spi,buttons)
+--   process(sel_s,dbus_com1,dbus_in,dbus_rom,dbus_esram,dbus_spi)
       begin
          case sel_s is
-              when "01111" => dbus_in_cpu <= dbus_com1;  -- UART
-              when "10111" => dbus_in_cpu <= dbus_rom;   -- BootStrap Loader
-              when "11011" => dbus_in_cpu <= dbus_in;    -- Embedded SRAM
-              when "11101" => dbus_in_cpu <= dbus_spi;   -- SPI
---              when "11110" => dbus_in_cpu <= dbus_esram; -- External SRAM
-              when "11110" => dbus_in_cpu <= sram_data; -- External SRAM
---              when "111110" => dbus_in_cpu <= x"0" & buttons; -- butled
-              when others => dbus_in_cpu <= dbus_in;  	-- Embedded SRAM
+              when "011111" => dbus_in_cpu <= dbus_com1;  -- UART
+              when "101111" => dbus_in_cpu <= dbus_rom;   -- BootStrap Loader
+              when "110111" => dbus_in_cpu <= dbus_in;    -- Embedded SRAM
+              when "111011" => dbus_in_cpu <= dbus_spi;   -- SPI
+--              when "111101" => dbus_in_cpu <= dbus_esram; -- External SRAM
+              when "111101" => dbus_in_cpu <= sram_data; -- External SRAM
+              when "111110" => dbus_in_cpu <= x"0" & buttons; -- butled
+              when others => dbus_in_cpu <= dbus_in_cpu;  	-- Embedded SRAM
           end case;
    end process;
 
@@ -178,8 +179,8 @@ BEGIN
    PIN4  <= resoutn; -- For debug only
    
    -- dbus_in_cpu multiplexer
---   sel_s <= cscom1 & csromn & csisramn & csspin & csesramn & csbutled;
-   sel_s <= cscom1 & csromn & csisramn & csspin & csesramn;
+   sel_s <= cscom1 & csromn & csisramn & csspin & csesramn & csbutled;
+--   sel_s <= cscom1 & csromn & csisramn & csspin & csesramn;
    
    -- chip_select 
    -- Comport, uart_16550
@@ -193,7 +194,7 @@ BEGIN
    csspi <= not csspin;
    
    -- BUTLED, 0x500-0x507
---   csbutled <= '0' when ((abus(15 downto 4)=X"050") AND iom='1') else '1';
+   csbutled <= '0' when ((abus(15 downto 4)=X"050") AND iom='1') else '1';
    
    -- Bootstrap ROM 256 bytes 
    -- FFFFF-FF=FFF00
