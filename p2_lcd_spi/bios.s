@@ -10,7 +10,7 @@ CPU 8086
 
 ORG 0x0000
 
-; we define stack area (MON86 insists on that)
+; we define stack area (MON88 insists on that)
 times 0x100 db 0x90
 
 ; this is the BIOS entry point
@@ -29,7 +29,7 @@ mov ds,ax
 xor di,di
 mov es,di
 mov di,(13h)*4
-; FIXME : on CPU86, following MOVs don't work ? MON86 after-effect ?
+; FIXME : on CPU86, following MOVs don't work ? MON88 after-effect ?
 ;mov word [di],int13_handler
 ;mov word [di+2],ax
 mov ax,int13_handler

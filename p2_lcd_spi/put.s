@@ -27,20 +27,20 @@ PUTHEX1:
 	ADD     AL, 7                       ; Add the adjustment for hex alpha
 NUMERIC:
 	ADD     AL, '0'                     ; Add the numeric bias
-	CALL    _txchar                     ; Send to the console
+	CALL    txchar                     ; Send to the console
 	POP     AX
 	RET
 
 crlf:
 	push ax
 	mov al,0xa
-	call _txchar
+	call txchar
 	mov al,0xd
-	call _txchar
+	call txchar
 	pop ax
 	ret
 
-_txchar:
-	mov ah,0x0E
-	int 10h
-	ret
+;_txchar:
+;	mov ah,0x0E
+;	int 10h
+;	ret

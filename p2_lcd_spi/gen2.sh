@@ -2,7 +2,8 @@
 export LD_LIBRARY_PATH=/usr/lib/x86_64-linux-gnu:/lib/x86_64-linux-gnu
 #nasm spi.s -o a
 #nasm hello.s -o a
-nasm bios.s -o a
+#nasm bios.s -o a
+nasm bios2.s -o a
 srec_cat -Output a.ihex -Intel a -Binary -offset 0x0000 -Data_Only
 #echo cres1000 > a2.ihex
 #echo >> a2.ihex

@@ -201,8 +201,9 @@ BEGIN
    csromn <= '0' when ((abus(19 downto 8)=X"FFF") AND iom='0') else '1';   
 
    -- external SRAM
-   -- 0x10000
-   csesramn <= '0' when ((abus(19 downto 16)=X"1") AND iom='0') else '1';
+   -- 0xE0000
+--   csesramn <= '0' when ((abus(19 downto 16)=X"1") AND iom='0') else '1';	-- 0x10000
+   csesramn <= '0' when ((abus(19 downto 16)=X"E") AND iom='0') else '1';		-- 0xE0000
 --   csesramn <= '0' when (csromn='1' and csisramn='1' AND iom='0') else '1';
 --	csesramn <= not (cscom1 and csromnn and csiramn);
   
