@@ -31,13 +31,12 @@ NUMERIC:
 	POP     AX
 	RET
 
-crlf:
-	push ax
+; clobbers al
+_crlf:
 	mov al,0xa
 	call txchar
 	mov al,0xd
 	call txchar
-	pop ax
 	ret
 
 ;_txchar:

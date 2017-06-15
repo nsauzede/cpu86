@@ -1,10 +1,10 @@
 BITS 16
 CPU 8086
 
-; BIOS not using MON88 interrupt service routines
+; BIOS not using MON88 interrupt service routines, to be ROMABLE at any address
 ; GPL license
 ; contains some MON88 parts (GPLv2+) from HT-LAB http://www.ht-lab.com
-; contains some Mymon (MON86) (GPLv3) from N.Sauzede git@github.com:nsauzede/mon86.git
+; contains some MyMon (MON86) (GPLv3) from N.Sauzede git@github.com:nsauzede/mon86.git
 
 ;SPI at 0400-0407
 %define spi_clk_div_port 0x0404
@@ -12,6 +12,19 @@ CPU 8086
 %define spi_transmit_port 0x0402
 %define spi_status_port 0x0401
 %define spi_cs_ctl_port 0x0400
+
+; 16550 UART settings, use COM1
+;----------------------------------------------------------------------
+
+; Actel 9.8421MHz
+;   Xtal=40MHz-> 9.8421E6/38400/16=16
+;BRATE_LOW   EQU 16
+;BRATE_HIGH  EQU 0
+
+; Assume Clk=40MHz
+;   Xtal=40MHz-> 40MHz/38400/16=65.10->65
+BRATE_LOW   EQU 65
+BRATE_HIGH  EQU 0
 
 ; UART settings, COM1
 COM1        EQU     03F8h
@@ -41,84 +54,110 @@ times 0x100 db 0x90
 
 ; this is the BIOS entry point
 entry:
+	cli
 ;	mov al,'B'
 ;	call txchar
 ;	jmp $
 
-cli
 ;mov sp,0x0380
 ;;mov sp,0x1000
 ;mov ss,sp
 ;mov sp,0x0100
 
-mov ax,cs
+	mov ax,cs
 ; assume ds=cs for local prints
-mov ds,ax
+	mov ds,ax
 
 ; hook interrupt vectors at [0:xxx]
-xor di,di
-mov es,di
+	xor di,di
+	mov es,di
 %if 1
 ; hook int3h vector at [0:0xc]
-;mov di,(3h)*4
-mov di,(23h)*4
-;mov di,(1h)*4
-mov ax,int3_handler
-stosw
-mov ax,cs
-stosw
+%if 1
+	mov di,(3h)*4
+%else
+	mov di,(23h)*4
+%endif
+	;mov di,(1h)*4
+	mov ax,int3_handler
+	stosw
+	mov ax,cs
+	stosw
+%endif
+%if 1
+; hook int1h vector at [0:0x4]
+	mov di,(1h)*4
+	mov ax,int3_handler
+	stosw
+	mov ax,cs
+	stosw
 %endif
 ; hook int13h vector at [0:0x4c]
-mov di,(13h)*4
+	mov di,(13h)*4
 ; FIXME : on CPU86, following MOVs don't work ? MON88 after-effect ?
-;mov word [di],int13_handler
-;mov word [di+2],ax
-mov ax,int13_handler
-stosw
-mov ax,cs
-stosw
+	;mov word [di],int13_handler
+	;mov word [di+2],ax
+	mov ax,int13_handler
+	stosw
+	mov ax,cs
+	stosw
 ; hook int16h vector at [0:0x58]
-mov di,(16h)*4
-mov ax,int16_handler
-stosw
-mov ax,cs
-stosw
+	mov di,(16h)*4
+	mov ax,int16_handler
+	stosw
+	mov ax,cs
+	stosw
 
-mov di,(1eh)*4
-mov ax,int13_fdpt
-stosw
-mov ax,cs
-stosw
+	mov di,(1eh)*4
+	mov ax,int13_fdpt
+	stosw
+	mov ax,cs
+	stosw
 
-sti
+	call _init_serial
 
-xor di,di
+	xor di,di
 
-MOV     DX,welcome
-call print
+%if 0
+	mov ax,0x7001
+	mov bx,0x6002
+	mov cx,0x5003
+	mov dx,0x4004
+	mov si,0x3005
+	mov di,0x2006
+	mov bp,0x1007
+;	int 1
+	int3
+%endif
+	MOV     DX,welcome
+	call print
 
-;	int3
+	mov dx,0x500
+	mov al,0x01
+	out dx,al
 
-;mov ax,0x0380
-;mov di,0x0100
-;mov di,0x0000
-;mov di,0x0500
-; assume es=0
-
-;mov di,0x7c00
-;call spi_read
-;jmp exit
-
-mov dx,0x500
-mov al,0x03
-out dx,al
+%if 0
+; to debug the "repe cmpsb" issue
+	int3
+	xor si,si
+	mov ds,si
+	mov es,si
+	xor di,di
+	mov cx,0xb
+	repz cmpsb
+	jmp $
+%endif
 
 ; read sectors from drive
 ; ah=02 al=sectors_count
 ; ch=cylinder cl=sector
 ; dh=head dl=drive
 ; [es:bx]=buffer
+%if 1
 mov ax,0x0201
+%else
+mov ax,0x0202
+%endif
 mov cx,0x0001
 mov dx,0x0000
 mov bx,0x0000
@@ -129,14 +168,14 @@ jnc nerr0
 
 err0:
 mov dx,0x500
-mov al,0x09
+mov al,0x0f
 out dx,al
 ;jmp $
 jmp exit
 
 nerr0:
 mov dx,0x500
-mov al,0x01
+mov al,0x02
 out dx,al
 
 ; DOS boot : (QEMU)
@@ -193,28 +232,77 @@ out dx,al
 ;  +0aH     1  bMotorOn     motor-startup time (in 1/8th-second intervals)
 ;          11               length of DisketteParmRec
 
-;int3
-jmp 0:0x7c00
-;jmp $
+; these values at boot from QEMU
+	xor bp,bp
+	xor cx,cx
+	xor dx,dx
+	xor bx,bx
+	xor si,si
+	xor di,di
+	xor ax,ax
+	mov ds,ax
+	mov es,ax
+	mov ss,ax
+	mov sp,0x6ef0
+	mov ax,0x202
+	push ax
+	popf
+	mov ax,0xaa55
+	int3
+	jmp 0:0x7c00
+;	jmp $
 
 exit:
-MOV     AX,04C00h
-int 0x21
+	int3	; return to our monitor
 
-s_ax: db 'ax=',0
-s_bx: db 'bx=',0
-s_cx: db 'cx=',0
-s_dx: db 'dx=',0
-s_sp: db 'sp=',0
-s_bp: db 'bp=',0
-s_si: db 'si=',0
-s_di: db 'di=',0
-s_ds: db 'ds=',0
-s_es: db 'es=',0
-s_ss: db 'ss=',0
-s_cs: db 'cs=',0
-s_ip: db 'ip=',0
-s_fl: db 'fl=',0
+die:	; return to MON88
+	MOV     AX,04C00h
+	int 0x21
+
+; clobbers AL, DX
+_init_serial:
+; Set baudrate for 16550
+;----------------------------------------------------------------------
+INITCOM:    MOV     AL,080h                     ; Init 16550, DLAB=1
+            MOV     DX,LCR
+            OUT     DX,AL
+
+            MOV     AL,BRATE_LOW                ; 25MHz/(16*38400)=41 (40.6).
+            MOV     DX,DLL
+            OUT     DX,AL                       ; Set low byte Latch Divisor
+
+            MOV     AL,BRATE_HIGH               ;
+            MOV     DX,DLM
+            OUT     DX,AL                       ; Set high byte Latch Divisor
+
+            MOV     AL,03
+            MOV     DX,LCR
+            OUT     DX,AL                       ; 8 Bits, No Parity, 1 Stop Bit, DLAB=0
+
+            MOV     AL,0C7h
+            MOV     DX,FCR
+            OUT     DX,AL                       ; FIFO Control Register
+
+            MOV     AL,08h                      ; out1 low, out2 high, for debug only...
+            MOV     DX,MCR
+            OUT     DX,AL
+            ret
+
+
+s_ax: db 'ax',0
+s_bx: db 'bx',0
+s_cx: db 'cx',0
+s_dx: db 'dx',0
+s_sp: db 'sp',0
+s_bp: db 'bp',0
+s_si: db 'si',0
+s_di: db 'di',0
+s_ds: db 'ds',0
+s_es: db 'es',0
+s_ss: db 'ss',0
+s_cs: db 'cs',0
+s_ip: db 'ip',0
+s_fl: db 'fl',0
 
 ; entering int13
 ; in our mon
@@ -250,66 +338,99 @@ int3_handler:
 ; bp-12 cx
 ; bp-14 bx
 ; bp-16 ax
+	call _crlf
 
 	mov si,s_ax
-	call print_str_ax	; ax
+	mov ax,[bp-16]	; ax
+	call _cprint_str_ax	; ax
 
 	mov si,s_bx
 	mov ax,bx
-	call print_str_ax	; bx
+	call _cprint_str_ax	; bx
 
 	mov si,s_cx
 	mov ax,cx
-	call print_str_ax	; cx
+	call _cprint_str_ax	; cx
 
 	mov si,s_dx
 	mov ax,dx
-	call print_str_ax	; dx
+	call _cprint_str_ax	; dx
 
 	mov si,s_sp
 	lea ax,[bp+8]	; sp
-	call print_str_ax	; sp
+	call _cprint_str_ax	; sp
 
 	mov si,s_bp
 	mov ax,[bp+0]
-	call print_str_ax	; bp
+	call _cprint_str_ax	; bp
 
 	mov si,s_si
 	mov ax,[bp-6]	; si
-	call print_str_ax	; si
+	call _cprint_str_ax	; si
 
 	mov si,s_di
 	mov ax,di
-	call print_str_ax	; di
+	call _cprint_str_ax	; di
 
-	call crlf
+	call _crlf
 
 	mov si,s_ds
 	mov ax,ds
-	call print_str_ax	; ds
+	call _cprint_str_ax	; ds
 
 	mov si,s_es
 	mov ax,es
-	call print_str_ax	; es
+	call _cprint_str_ax	; es
 
 	mov si,s_ss
 	mov ax,ss
-	call print_str_ax	; ss
+	call _cprint_str_ax	; ss
 
 	mov si,s_cs
-	mov ax,cs
-	call print_str_ax	; cs
+	mov ax,[bp+4]	; cs
+	mov ds,ax		; store cs for later cs:ip dump..
+	call _cprint_str_ax	; cs
 
 	mov si,s_ip
 	mov ax,[bp+2]	; ip
-	dec ax
-	call print_str_ax	; ip
+	mov bx,ax		; store ip for later cs:ip dump..
+;	test WORD [SS:BP+6],0100h
+;	jnz not_int_3
+;	dec ax			; if int3, must decr shown IP
+;not_int_3:
+	call _cprint_str_ax	; ip
 
 	mov si,s_fl
 	mov ax,[bp+6]	; fl
-	call print_str_ax	; fl
+	and ax,0x0eff	; remove reserved bits
+	call _cprint_str_ax	; fl
 
+	mov si,bx
+	mov cx,6
+dump0:
+	lodsb	; read bytes at cs:ip
+	call put2hex
+	loop dump0
+
+	mov al,'>'
+	call txchar
 	call rxchar
+	cmp al,'s'
+	je step
+	cmp al,'c'
+	je cont
+	cmp al,'q'
+	je die
+	jmp leave
+step:
+;ODITSZA1P1C=0000-01010
+;               T SZ A  P C
+;F06E : 1111 0000 0110 1110
+	or WORD [SS:BP+6],0100h	; set TF in stack stored flags
+	jmp leave
+cont:
+	and WORD [SS:BP+6],~0100h	; clear TF in stack stored flags
+leave:
 
 	pop ax
 	pop bx
@@ -320,12 +441,11 @@ int3_handler:
 	pop es
 	pop di
 	pop bp
-;	jmp exit
 	iret
 
 ; print string from cs:si, '=', AX, ' '
 ; clobbers ax
-print_str_ax:
+_cprint_str_ax:
 	push ax
 	call cputs
 	mov al,'='
@@ -368,7 +488,7 @@ isr16_01:
 ;	jne isr16_x
 isr16_x:
 	mov dx,0x500
-	mov al,0x0f
+	mov al,0x0e
 	out dx,al
 	jmp $
 
@@ -411,70 +531,6 @@ WAITTX:     IN      AL,DX
             POP     DX
             RET
 
-%if 0
-BRK:
-	push ax
-	call print_ax	; ax
-	mov ax,bx
-	call print_ax	; bx
-	mov ax,cx
-	call print_ax	; cx
-	mov ax,dx
-	call print_ax	; dx
-	mov ax,sp
-	add ax,8
-	call print_ax	; sp
-	mov ax,bp
-	call print_ax	; bp
-	mov ax,si
-	call print_ax	; si
-	mov ax,di
-	call print_ax	; di
-	call crlf
-	mov ax,ds
-	call print_ax	; ds
-	mov ax,es
-	call print_ax	; ds
-	mov ax,ss
-	call print_ax	; ds
-	mov ax,cs
-	call print_ax	; cs
-
-	call rxchar
-	pop ax
-	jmp exit
-	ret
-%endif
-
-%if 0
-str_regs:
-db 'axbxcxdx'
-db 'bpsssp'
-%define N_REGS 17
-
-BRK_:
-	pusha
-
-	mov si str_regs
-	mov cx,N_REGS
-	xor di,di
-	push cs
-	pop ds
-.looprint:
-	call txchar
-	lodsb
-	stosw
-	mov al,'='
-	stosw
-	lea di,[di+4*2]
-	mov al,' '
-	stosw
-	loop .looprint
-
-	popa
-	ret
-%endif
-
 int13_fdpt:
 db 0xaf,0x02,0x25,0x02,0x12,0x1b,0xff,0x6c,0xf6,0x0f,0x08
 
@@ -499,45 +555,123 @@ db 0xaf,0x02,0x25,0x02,0x12,0x1b,0xff,0x6c,0xf6,0x0f,0x08
 ; dh=head dl=drive
 ; [es:bx]=buffer
 int13_handler:
-	int3
-;         fedc ba98 7654 3210
-; f06e => 1111 0000 0110 1110
-; P1C
-	pushf
-	pop ax
-	int3
-;	call BRK
-push ax
+;	int3
 push bp
 mov bp,sp
 push dx
+push bx
 push di
+push si
 push es
 push cx
+push ax
 
 cmp ah,00h
 je int13_reset0
+cmp ah,01h
+je int13_status0
 cmp ah,02h
 je int13_read0
 jmp int13_fail0
+
 int13_reset0:
-jmp ok0
+jmp bailout0
+
+int13_status0:
+xor ah,ah
+jmp ok_code0
+
+s_int13read_cnt: db 13,10,'INT13:cnt',0
+s_int13read_cyl: db 'cyl',0
+s_int13read_sec: db 'sec',0
+s_int13read_head: db 'head',0
+s_int13read_drv: db 'drv',0
+s_int13read_es: db 'es',0
+s_int13read_bx: db 'bx',0
+s_int13read_lba: db 'LBA',0
+; read sectors from drive
+; ah=02 al=sectors_count
+; ch=cylinder cl=sector
+; dh=head dl=drive
+; [es:bx]=buffer
 int13_read0:
-mov di,bx
-mov ax,cx
-dec ax
-call spi_read
-test al,al
-jz ok0
+push ax
+mov si,s_int13read_cnt
+xor ah,ah
+call _cprint_str_ax
+mov si,s_int13read_cyl
+mov al,ch
+call _cprint_str_ax
+mov si,s_int13read_sec
+mov al,cl
+call _cprint_str_ax
+mov si,s_int13read_head
+mov al,dh
+call _cprint_str_ax
+mov si,s_int13read_drv
+mov al,dl
+call _cprint_str_ax
+mov si,s_int13read_es
+mov ax,es
+call _cprint_str_ax
+mov si,s_int13read_bx
+mov ax,bx
+call _cprint_str_ax
+pop ax
+
+%if 1
+	mov di,bx
+	mov bx,ax
+	xchg bx,cx	; bx now contains cyl:sec
+	mov ch,cl	; ch now contains nsec
+;ax<=(ch*2+dh)*SPT+(cl-1)
+	shl bh,1	; bh=cyl*2
+	add bh,dh	; bh=cyl*2+head
+	mov al,9
+	mul bh		; ax=(cyl*2+head)*SPT
+	xor bh,bh	; bx=sec
+	add ax,bx	; ax=(cyl*2+head)*SPT+sec
+	dec ax		; ax=(cyl*2+head)*SPT+sec-1
+%else
+	mov di,bx
+	xchg ax,cx
+	mov ch,cl
+	dec ax
+%endif
+	push ax
+	mov si,s_int13read_lba
+	call _cprint_str_ax
+	pop ax
+
+;	int3
+;read ch sectors (512 bytes) at ax from SDCARD (SPI mode) into [es:di]
+; clobbers ax, flags
+; returns al=00 if OK, al=ff if FAIL
+call _spi_read
+mov ah,al
+test ah,ah
+jz ok_code0
 int13_fail0:
 or WORD [SS:BP+8],0001h	; set CF in stack stored flags
-ok0:
+jmp bailout0
+
+ok_code0:	; this guy patch ah in return ax
+pop cx
+mov	ch,ah		; ah=return code
+push cx
+
+ok_cf0:
+and WORD [SS:BP+8],0fffeh	; clear CF in stack stored flags
+
+bailout0:
+pop ax
 pop cx
 pop es
+pop si
 pop di
+pop bx
 pop dx
 pop bp
-pop ax
 ;jmp $
 iret
 
@@ -559,7 +693,7 @@ puts:       PUSH    SI
             CLD
 PRINT_:      LODSB                               ; AL=DS:[SI++]
             OR      AL,AL                       ; Zero?
-            JZ      PRINT_X                     ; then exit
+            JZ      PRINT_X                     ; then leave
             CALL    txchar
             JMP     PRINT_                       ; Next Character
 PRINT_X:    POP     AX
@@ -578,14 +712,16 @@ cputs:
 	pop ds
 	ret
 
-;read a sector at ax from SDCARD (SPI mode) into [es:di]
+;read ch sectors (512 bytes) at ax from SDCARD (SPI mode) into [es:di]
 ; clobbers ax, flags
 ; returns al=00 if OK, al=ff if FAIL
-spi_read:
+_spi_read:
+;	int3
 push cx
 push dx
 push bx
-mov bx,ax
+push bp
+mov bp,ax
 
 mov al,0xff
 mov dx,spi_clk_div_port
@@ -596,7 +732,7 @@ out dx,al
 mov cl,12
 mov ah,0xff
 loop_init0:
-call spi_inout
+call _spi_inout
 dec cl
 jnz loop_init0
 mov al,0xfe
@@ -604,70 +740,70 @@ mov dx,spi_cs_ctl_port
 out dx,al
 
 mov ah,0x40
-call spi_inout
+call _spi_inout
 mov ah,0x00
-call spi_inout
-call spi_inout
-call spi_inout
-call spi_inout
+call _spi_inout
+call _spi_inout
+call _spi_inout
+call _spi_inout
 mov ah,0x95
-call spi_inout
+call _spi_inout
 mov ah,0xff
-call spi_inout
-call spi_inout
+call _spi_inout
+call _spi_inout
 cmp al,0x01
 jne fail0
 
 mov ah,0x48
-call spi_inout
+call _spi_inout
 mov ah,0x00
-call spi_inout
-call spi_inout
+call _spi_inout
+call _spi_inout
 mov ah,0x01
-call spi_inout
+call _spi_inout
 mov ah,0xaa
-call spi_inout
+call _spi_inout
 mov ah,0x87
-call spi_inout
+call _spi_inout
 mov ah,0xff
-call spi_inout
-call spi_inout
+call _spi_inout
+call _spi_inout
 cmp al,0x01
 jne fail0
-call spi_inout
-call spi_inout
-call spi_inout
-call spi_inout
+call _spi_inout
+call _spi_inout
+call _spi_inout
+call _spi_inout
 
 mov cl,255
 sd_read_loop_init1:
 mov ah,0x77
-call spi_inout
+call _spi_inout
 mov ah,0x00
-call spi_inout
-call spi_inout
-call spi_inout
-call spi_inout
+call _spi_inout
+call _spi_inout
+call _spi_inout
+call _spi_inout
 mov ah,0x65
-call spi_inout
+call _spi_inout
 mov ah,0xff
-call spi_inout
-call spi_inout
+call _spi_inout
+call _spi_inout
 cmp al,0x01
 jne fail0
 mov ah,0x69
-call spi_inout
+call _spi_inout
 mov ah,0x40
-call spi_inout
+call _spi_inout
 mov ah,0x00
-call spi_inout
-call spi_inout
-call spi_inout
+call _spi_inout
+call _spi_inout
+call _spi_inout
 mov ah,0x77
-call spi_inout
+call _spi_inout
 mov ah,0xff
-call spi_inout
-call spi_inout
+call _spi_inout
+call _spi_inout
 cmp al,0x00
 je sd_read_loop_init1_done
 dec cl
@@ -676,60 +812,87 @@ call delay_20ms
 jmp sd_read_loop_init1
 sd_read_loop_init1_done:
 
+;	int3
 mov ah,0x51
-call spi_inout
+;mov ah,17|0x40
+;mov ah,18|0x40
+call _spi_inout
 mov ah,0x00
-call spi_inout
-call spi_inout
-mov ah,bh
-call spi_inout
-mov ah,bl
-call spi_inout
+call _spi_inout
+call _spi_inout
+mov ax,bp			; bp contains sector address
+call _spi_inout
+mov ax,bp			; bp contains sector address
+mov ah,al
+call _spi_inout
 mov ah,0x75
-call spi_inout
+call _spi_inout
 mov ah,0xff
-call spi_inout
-call spi_inout
+call _spi_inout
+call _spi_inout
 cmp al,0x00
 jne fail0
 ;call crlf
 
 wait_token:
 mov ah,0xff
-call spi_inout
+call _spi_inout
 cmp al,0xfe
 jz sd_read_loop_begin
 jmp wait_token
 
+;	int3
 sd_read_loop_begin:
-mov ch,02
+mov bh,02h			; 1 sector=2*256 bytes
 begin0:
-mov cl,0x00			; 00 means 256 loops
+mov bl,0x00			; 00 means 256 loops
 begin1:
 mov al,0xff
-call spi_inout
+call _spi_inout
 stosb
 ;call put2hex
-dec cl
+dec bl
 jnz begin1
-dec ch
+dec bh
 jnz begin0
 ;call crlf
 mov al,0xff
-call spi_inout		; read two-
+call _spi_inout		; read two-
 ;stosb
 ;call put2hex
-call spi_inout		; -byte checksum
+call _spi_inout		; -byte checksum (8A08 for first sector of MSDOS3.1)
 ;stosb
 ;call put2hex
 
+inc bp
+dec ch
+jnz sd_read_loop_init1_done
+
 mov al,0xff
-call spi_inout
+call _spi_inout
 mov al,0xff
 mov dx,spi_cs_ctl_port
 out dx,al
 mov al,0xff
-call spi_inout
+call _spi_inout
+
+;dec ch
+;jnz wait_token
+;
+;mov ah,12|0x40		; CMD12=STOP
+;call _spi_inout
+;mov ah,0x00
+;call _spi_inout
+;call _spi_inout
+;call _spi_inout
+;call _spi_inout
+;mov ah,0x75
+;call _spi_inout
+;mov ah,0xff
+;call _spi_inout
+;call _spi_inout
+;cmp al,0x00
+;jne fail0
 
 mov al,0x00	; OK
 jmp cont0
@@ -739,6 +902,7 @@ mov al,0xff	; FAIL
 
 cont0:
 ;call print
+pop bp
 pop bx
 pop dx
 pop cx
@@ -757,7 +921,7 @@ ret
 ; transmit ah
 ; receive in al
 ; clobbers dx, flags
-spi_inout:
+_spi_inout:
 mov al,ah
 mov dx,spi_transmit_port
 out dx,al
