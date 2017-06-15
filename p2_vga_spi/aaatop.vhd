@@ -101,6 +101,7 @@ signal rgb_reg, rgb_next: std_logic_vector(2 downto 0);
 signal hsync, vsync: std_logic;
 signal rgb: std_logic_vector(2 downto 0);
 signal buttons: std_logic_vector(3 downto 0);
+signal leds: std_logic_vector(3 downto 0);
 
 begin
 
@@ -135,7 +136,9 @@ begin
 		spi_clk => SD_SCK,
 		spi_mosi => SD_MOSI,
 		spi_miso => SD_MISO,
-	
+		buttons => buttons,
+		leds => leds,
+
       CLOCK_40MHZ => CLOCK_40MHZ,
       CTS => CTS,
       PIN3 => PIN3,
@@ -175,17 +178,16 @@ begin
 				vramaddr => vramaddr,
 				vramdata => vramdata,
             video_on => video_on,
-            buttons => buttons,
             pixel_x => pixel_x,
             pixel_y => pixel_y,
             rgb_text => rgb_next
         );
 	ARDUINO_RESET <= not(DUO_SW1);
     buttons <= sw_left & sw_right & sw_up & sw_down;
---    led1 <= buttons(0);
---    led2 <= buttons(1);
---    led3 <= buttons(2);
---    led4 <= buttons(3);
+    led1 <= leds(0);
+    led2 <= leds(1);
+    led3 <= leds(2);
+    led4 <= leds(3);
 
     -- rgb buffer
     process(clock)

@@ -51,12 +51,14 @@ ENTITY drigmorn1_top IS
 	sram_ce : out std_logic;
 	sram_we : out std_logic;
 	sram_oe : out std_logic;
-    vramaddr : IN STD_LOGIC_VECTOR(15 DOWNTO 0);
-    vramdata : OUT STD_LOGIC_VECTOR(7 DOWNTO 0);
+	vramaddr : IN STD_LOGIC_VECTOR(15 DOWNTO 0);
+	vramdata : OUT STD_LOGIC_VECTOR(7 DOWNTO 0);
 	spi_cs         : out std_logic;
 	spi_clk        : out std_logic;
 	spi_mosi       : out std_logic;
 	spi_miso       : in  std_logic;
+	buttons : in  STD_LOGIC_VECTOR (3 downto 0);
+	leds : out  STD_LOGIC_VECTOR (3 downto 0);
 
       CLOCK_40MHZ : IN     std_logic;
       CTS         : IN     std_logic  := '1';
@@ -80,6 +82,9 @@ ARCHITECTURE struct OF drigmorn1_top IS
    signal csisramn : std_logic;
    signal csspin : std_logic;
    signal csspi : std_logic;
+   signal csbutled : std_logic;
+
+    signal leds_b : STD_LOGIC_VECTOR (3 downto 0);
 
    -- Internal signal declarations
    SIGNAL DCDn        : std_logic := '1';
@@ -103,7 +108,7 @@ ARCHITECTURE struct OF drigmorn1_top IS
    SIGNAL por         : std_logic;
    SIGNAL rdn         : std_logic;
    SIGNAL resoutn     : std_logic;
-   SIGNAL sel_s       : std_logic_vector(3 DOWNTO 0);
+   SIGNAL sel_s       : std_logic_vector(5 DOWNTO 0);
    SIGNAL wea         : std_logic_VECTOR(0 DOWNTO 0);
    SIGNAL wran        : std_logic;
    SIGNAL wrcom       : std_logic;
@@ -214,18 +219,22 @@ BEGIN
 		end if;
 	end process;
 
+    leds <= leds_b;
+    leds_b <= dbus_out(3 downto 0) when (csbutled='0') and (wrn='0') else leds_b;
+
    -- Architecture concurrent statements
    -- HDL Embedded Text Block 4 mux
    -- dmux 1                        
-   process(sel_s,dbus_com1,dbus_in,dbus_rom,dbus_esram,dbus_spi)
+   process(sel_s,dbus_com1,dbus_in,dbus_rom,dbus_esram,dbus_spi,buttons)
       begin
          case sel_s is
-              when "0111"  => dbus_in_cpu <= dbus_com1;  -- UART     
-              when "1011"  => dbus_in_cpu <= dbus_rom;   -- BootStrap Loader  
-              when "1101"  => dbus_in_cpu <= dbus_in;    -- Embedded SRAM        
-              when "1110"  => dbus_in_cpu <= dbus_spi;   -- SPI
---              when "1110"  => dbus_in_cpu <= x"aa";   -- SPI
-              when others => dbus_in_cpu <= dbus_esram;  -- External SRAM  
+              when "011111"  => dbus_in_cpu <= dbus_com1;  -- UART     
+              when "101111"  => dbus_in_cpu <= dbus_rom;   -- BootStrap Loader  
+              when "110111"  => dbus_in_cpu <= dbus_in;    -- Embedded SRAM        
+              when "111011"  => dbus_in_cpu <= dbus_spi;   -- SPI
+              when "111101" => dbus_in_cpu <= sram_data;  -- External SRAM  
+              when "111110" => dbus_in_cpu <= x"0" & buttons;  -- butled
+              when others => dbus_in_cpu <= dbus_in_cpu;  -- default : latch
           end case;
    end process;
 
@@ -233,34 +242,38 @@ BEGIN
    clk <= CLOCK_40MHZ;
    
    wrcom <= not wrn;
-   wea(0)<= not wrn;
+   wea(0)<= not wrn and not csisramn;
    wspi<= not wrn;
    PIN4  <= resoutn; -- For debug only
    
    -- dbus_in_cpu multiplexer
-   sel_s <= cscom1 & csromn & csisramn & csspin;
+   sel_s <= cscom1 & csromn & csisramn & csspin & csesramn & csbutled;
    
    -- chip_select 
    -- Comport, uart_16550
    -- COM1, 0x3F8-0x3FF
-   cscom1 <= '0' when (abus(15 downto 3)="0000001111111" AND iom='1') else '1';
+   cscom1 <= '0' when (abus(15 downto 4)=x"03f" AND iom='1') else '1';
    
    -- SPI, 0x400-0x407
-   csspin <= '0' when (abus(15 downto 3)="0000010000000" AND iom='1') else '1';
+   csspin <= '0' when (abus(15 downto 4)=x"040" AND iom='1') else '1';
    csspi <= not csspin;
    
-   -- Bootstrap ROM 256 bytes 
+    -- BUTLED, 0x500-0x507
+   csbutled <= '0' when ((abus(15 downto 4)=X"050") AND iom='1') else '1';
+
+  -- Bootstrap ROM 256 bytes 
    -- FFFFF-FF=FFF00
    csromn <= '0' when ((abus(19 downto 8)=X"FFF") AND iom='0') else '1';   
 
    -- external SRAM
    -- 0x5F8-0x5FF
-   csesramn <= '0' when (csromn='1' and csisramn='1' AND iom='0') else '1';
+--   csesramn <= '0' when (csromn='1' and csisramn='1' AND iom='0') else '1';
 --	csesramn <= not (cscom1 and csromnn and csiramn);
+   csesramn <= '0' when ((abus(19 downto 16)=X"E") AND iom='0') else '1';   
   
    -- internal SRAM
    -- below 0x4000
-   csisramn <= '0' when (abus(19 downto 14)="000000" AND iom='0') else '1';
+   csisramn <= '0' when (abus(19 downto 16)=x"0" AND iom='0') else '1';
    
 	spim0: entity work.spi_master
     port map ( clk => clk,

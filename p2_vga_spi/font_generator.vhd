@@ -8,7 +8,6 @@ entity font_generator is
     vramaddr : OUT STD_LOGIC_VECTOR(15 DOWNTO 0);
     vramdata : IN STD_LOGIC_VECTOR(7 DOWNTO 0);
 		video_on: in std_logic;
-		buttons: in std_logic_vector(3 downto 0);
 		pixel_x, pixel_y: in std_logic_vector(9 downto 0);
 		rgb_text: out std_logic_vector(2 downto 0)
 	);
@@ -34,12 +33,8 @@ architecture Behavioral of font_generator is
 	signal font_word: std_logic_vector(7 downto 0);
 	signal font_bit: std_logic;
 	
-	signal addr_write: std_logic_vector(11 downto 0) := (others => '0');
 	signal addr_read: std_logic_vector(11 downto 0);
-	signal din: std_logic_vector(6 downto 0) := "1000001";
 	signal dout: std_logic_vector(6 downto 0) := "1000010";
-	signal bbut0: std_logic_vector(3 downto 0) := "0000";
-	signal bbut1: std_logic_vector(3 downto 0) := "0000";
 begin
 	-- instantiate font ROM
 	font_unit: entity work.font_rom
@@ -64,15 +59,6 @@ begin
     dout <= vramdata(6 downto 0);
 --	dout <= "1000010";
 	
-	din(3 downto 0) <= buttons;
-	addr_write(3 downto 0) <= buttons;
---	addr_write <= to_unsigned(addr_write,12) + 1 when bbut0="1110" else addr_write;
-	process(clock, buttons) begin
-		if rising_edge(clock) then
-			bbut0 <= bbut0(2 downto 0) & buttons(0);
-		end if;
-	end process;
-
 	-- tile RAM read
 	addr_read <= pixel_y(8 downto 4) & pixel_x(9 downto 3);
 	char_addr <= dout;
