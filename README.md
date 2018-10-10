@@ -14,6 +14,6 @@ I have ported the project to newer :
 
 Basic usage instructions coming soon..
 
-In the mean time there is a short wiki [here](wiki)
+In the mean time there is a short wiki [here](https://github.com/nsauzede/cpu86/wiki)
 
 Stay tuned and/or Have fun !
