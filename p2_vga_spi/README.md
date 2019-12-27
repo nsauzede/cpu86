@@ -13,4 +13,4 @@ This project builds upon work in the Drigmorn1 project and does the following:
 * [Open source 808x IP](http://www.ht-lab.com/cpu86.htm)
 * [Papilio Duo](http://papilio.cc/index.php?n=Papilio.DUOStart)
 * [Papilio Classic Computing Shield (VGA)](http://papilio.cc/index.php?n=Papilio.ClassicComputingShield#vga)
-* [Recreating ancient 8088 PC on FPGA (in french)](https://www.logre.eu/wiki/PC_8088_sur_FPGA)
+* [Recreating ancient 8088 PC on FPGA (in french)](https://wiki.logre.eu/index.php/PC_8088_sur_FPGA)
