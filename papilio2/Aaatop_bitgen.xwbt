@@ -1,8 +1,0 @@
-INTSTYLE=ise
-INFILE=C:\Users\user\Documents\git\cpu86\papilio2\Aaatop.ncd
-OUTFILE=C:\Users\user\Documents\git\cpu86\papilio2\Aaatop.bit
-FAMILY=Spartan6
-PART=xc6slx9-2tqg144
-WORKINGDIR=C:\Users\user\Documents\git\cpu86\papilio2
-LICENSE=WebPack
-USER_INFO=202522545_0_0_937
