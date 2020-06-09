@@ -15,131 +15,131 @@
   <version xil_pn:ise_version="14.7" xil_pn:schema_version="2"/>
 
   <files>
-    <file xil_pn:name="remote_sources/_/cpu86_rtl/a_table.vhd" xil_pn:type="FILE_VHDL">
+    <file xil_pn:name="../cpu86_rtl/a_table.vhd" xil_pn:type="FILE_VHDL">
       <association xil_pn:name="BehavioralSimulation" xil_pn:seqID="11"/>
       <association xil_pn:name="Implementation" xil_pn:seqID="11"/>
     </file>
-    <file xil_pn:name="remote_sources/_/cpu86_rtl/alu_rtl.vhd" xil_pn:type="FILE_VHDL">
+    <file xil_pn:name="../cpu86_rtl/alu_rtl.vhd" xil_pn:type="FILE_VHDL">
       <association xil_pn:name="BehavioralSimulation" xil_pn:seqID="27"/>
       <association xil_pn:name="Implementation" xil_pn:seqID="27"/>
     </file>
-    <file xil_pn:name="remote_sources/_/cpu86_rtl/biu_struct.vhd" xil_pn:type="FILE_VHDL">
+    <file xil_pn:name="../cpu86_rtl/biu_struct.vhd" xil_pn:type="FILE_VHDL">
       <association xil_pn:name="BehavioralSimulation" xil_pn:seqID="31"/>
       <association xil_pn:name="Implementation" xil_pn:seqID="31"/>
     </file>
-    <file xil_pn:name="remote_sources/_/cpu86_rtl/biufsm_fsm.vhd" xil_pn:type="FILE_VHDL">
+    <file xil_pn:name="../cpu86_rtl/biufsm_fsm.vhd" xil_pn:type="FILE_VHDL">
       <association xil_pn:name="BehavioralSimulation" xil_pn:seqID="26"/>
       <association xil_pn:name="Implementation" xil_pn:seqID="26"/>
     </file>
-    <file xil_pn:name="remote_sources/_/cpu86_rtl/cpu86_struct.vhd" xil_pn:type="FILE_VHDL">
+    <file xil_pn:name="../cpu86_rtl/cpu86_struct.vhd" xil_pn:type="FILE_VHDL">
       <association xil_pn:name="BehavioralSimulation" xil_pn:seqID="34"/>
       <association xil_pn:name="Implementation" xil_pn:seqID="34"/>
     </file>
-    <file xil_pn:name="remote_sources/_/cpu86_rtl/cpu86instr.vhd" xil_pn:type="FILE_VHDL">
+    <file xil_pn:name="../cpu86_rtl/cpu86instr.vhd" xil_pn:type="FILE_VHDL">
       <association xil_pn:name="BehavioralSimulation" xil_pn:seqID="10"/>
       <association xil_pn:name="Implementation" xil_pn:seqID="10"/>
     </file>
-    <file xil_pn:name="remote_sources/_/cpu86_rtl/cpu86pack.vhd" xil_pn:type="FILE_VHDL">
+    <file xil_pn:name="../cpu86_rtl/cpu86pack.vhd" xil_pn:type="FILE_VHDL">
       <association xil_pn:name="BehavioralSimulation" xil_pn:seqID="9"/>
       <association xil_pn:name="Implementation" xil_pn:seqID="9"/>
     </file>
-    <file xil_pn:name="remote_sources/_/cpu86_rtl/d_table.vhd" xil_pn:type="FILE_VHDL">
+    <file xil_pn:name="../cpu86_rtl/d_table.vhd" xil_pn:type="FILE_VHDL">
       <association xil_pn:name="BehavioralSimulation" xil_pn:seqID="7"/>
       <association xil_pn:name="Implementation" xil_pn:seqID="7"/>
     </file>
-    <file xil_pn:name="remote_sources/_/cpu86_rtl/datapath_struct.vhd" xil_pn:type="FILE_VHDL">
+    <file xil_pn:name="../cpu86_rtl/datapath_struct.vhd" xil_pn:type="FILE_VHDL">
       <association xil_pn:name="BehavioralSimulation" xil_pn:seqID="30"/>
       <association xil_pn:name="Implementation" xil_pn:seqID="30"/>
     </file>
-    <file xil_pn:name="remote_sources/_/cpu86_rtl/dataregfile_rtl.vhd" xil_pn:type="FILE_VHDL">
+    <file xil_pn:name="../cpu86_rtl/dataregfile_rtl.vhd" xil_pn:type="FILE_VHDL">
       <association xil_pn:name="BehavioralSimulation" xil_pn:seqID="25"/>
       <association xil_pn:name="Implementation" xil_pn:seqID="25"/>
     </file>
-    <file xil_pn:name="remote_sources/_/cpu86_rtl/divider_rtl_ser.vhd" xil_pn:type="FILE_VHDL">
+    <file xil_pn:name="../cpu86_rtl/divider_rtl_ser.vhd" xil_pn:type="FILE_VHDL">
       <association xil_pn:name="BehavioralSimulation" xil_pn:seqID="8"/>
       <association xil_pn:name="Implementation" xil_pn:seqID="8"/>
     </file>
-    <file xil_pn:name="remote_sources/_/cpu86_rtl/formatter_struct.vhd" xil_pn:type="FILE_VHDL">
+    <file xil_pn:name="../cpu86_rtl/formatter_struct.vhd" xil_pn:type="FILE_VHDL">
       <association xil_pn:name="BehavioralSimulation" xil_pn:seqID="24"/>
       <association xil_pn:name="Implementation" xil_pn:seqID="24"/>
     </file>
-    <file xil_pn:name="remote_sources/_/cpu86_rtl/ipregister_rtl.vhd" xil_pn:type="FILE_VHDL">
+    <file xil_pn:name="../cpu86_rtl/ipregister_rtl.vhd" xil_pn:type="FILE_VHDL">
       <association xil_pn:name="BehavioralSimulation" xil_pn:seqID="23"/>
       <association xil_pn:name="Implementation" xil_pn:seqID="23"/>
     </file>
-    <file xil_pn:name="remote_sources/_/cpu86_rtl/m_table.vhd" xil_pn:type="FILE_VHDL">
+    <file xil_pn:name="../cpu86_rtl/m_table.vhd" xil_pn:type="FILE_VHDL">
       <association xil_pn:name="BehavioralSimulation" xil_pn:seqID="5"/>
       <association xil_pn:name="Implementation" xil_pn:seqID="5"/>
     </file>
-    <file xil_pn:name="remote_sources/_/cpu86_rtl/multiplier_rtl.vhd" xil_pn:type="FILE_VHDL">
+    <file xil_pn:name="../cpu86_rtl/multiplier_rtl.vhd" xil_pn:type="FILE_VHDL">
       <association xil_pn:name="BehavioralSimulation" xil_pn:seqID="6"/>
       <association xil_pn:name="Implementation" xil_pn:seqID="6"/>
     </file>
-    <file xil_pn:name="remote_sources/_/cpu86_rtl/n_table.vhd" xil_pn:type="FILE_VHDL">
+    <file xil_pn:name="../cpu86_rtl/n_table.vhd" xil_pn:type="FILE_VHDL">
       <association xil_pn:name="BehavioralSimulation" xil_pn:seqID="4"/>
       <association xil_pn:name="Implementation" xil_pn:seqID="4"/>
     </file>
-    <file xil_pn:name="remote_sources/_/cpu86_rtl/proc_rtl.vhd" xil_pn:type="FILE_VHDL">
+    <file xil_pn:name="../cpu86_rtl/proc_rtl.vhd" xil_pn:type="FILE_VHDL">
       <association xil_pn:name="BehavioralSimulation" xil_pn:seqID="29"/>
       <association xil_pn:name="Implementation" xil_pn:seqID="29"/>
     </file>
-    <file xil_pn:name="remote_sources/_/cpu86_rtl/r_table.vhd" xil_pn:type="FILE_VHDL">
+    <file xil_pn:name="../cpu86_rtl/r_table.vhd" xil_pn:type="FILE_VHDL">
       <association xil_pn:name="BehavioralSimulation" xil_pn:seqID="3"/>
       <association xil_pn:name="Implementation" xil_pn:seqID="3"/>
     </file>
-    <file xil_pn:name="remote_sources/_/cpu86_rtl/regshiftmux_regshift.vhd" xil_pn:type="FILE_VHDL">
+    <file xil_pn:name="../cpu86_rtl/regshiftmux_regshift.vhd" xil_pn:type="FILE_VHDL">
       <association xil_pn:name="BehavioralSimulation" xil_pn:seqID="22"/>
       <association xil_pn:name="Implementation" xil_pn:seqID="22"/>
     </file>
-    <file xil_pn:name="remote_sources/_/cpu86_rtl/segregfile_rtl.vhd" xil_pn:type="FILE_VHDL">
+    <file xil_pn:name="../cpu86_rtl/segregfile_rtl.vhd" xil_pn:type="FILE_VHDL">
       <association xil_pn:name="BehavioralSimulation" xil_pn:seqID="21"/>
       <association xil_pn:name="Implementation" xil_pn:seqID="21"/>
     </file>
-    <file xil_pn:name="remote_sources/_/Opencores/uart_transmitter.vhd" xil_pn:type="FILE_VHDL">
+    <file xil_pn:name="../Opencores/uart_transmitter.vhd" xil_pn:type="FILE_VHDL">
       <association xil_pn:name="BehavioralSimulation" xil_pn:seqID="12"/>
       <association xil_pn:name="Implementation" xil_pn:seqID="12"/>
     </file>
-    <file xil_pn:name="remote_sources/_/Opencores/slib_clock_div.vhd" xil_pn:type="FILE_VHDL">
+    <file xil_pn:name="../Opencores/slib_clock_div.vhd" xil_pn:type="FILE_VHDL">
       <association xil_pn:name="BehavioralSimulation" xil_pn:seqID="20"/>
       <association xil_pn:name="Implementation" xil_pn:seqID="20"/>
     </file>
-    <file xil_pn:name="remote_sources/_/Opencores/slib_counter.vhd" xil_pn:type="FILE_VHDL">
+    <file xil_pn:name="../Opencores/slib_counter.vhd" xil_pn:type="FILE_VHDL">
       <association xil_pn:name="BehavioralSimulation" xil_pn:seqID="2"/>
       <association xil_pn:name="Implementation" xil_pn:seqID="2"/>
     </file>
-    <file xil_pn:name="remote_sources/_/Opencores/slib_edge_detect.vhd" xil_pn:type="FILE_VHDL">
+    <file xil_pn:name="../Opencores/slib_edge_detect.vhd" xil_pn:type="FILE_VHDL">
       <association xil_pn:name="BehavioralSimulation" xil_pn:seqID="19"/>
       <association xil_pn:name="Implementation" xil_pn:seqID="19"/>
     </file>
-    <file xil_pn:name="remote_sources/_/Opencores/slib_fifo.vhd" xil_pn:type="FILE_VHDL">
+    <file xil_pn:name="../Opencores/slib_fifo.vhd" xil_pn:type="FILE_VHDL">
       <association xil_pn:name="BehavioralSimulation" xil_pn:seqID="18"/>
       <association xil_pn:name="Implementation" xil_pn:seqID="18"/>
     </file>
-    <file xil_pn:name="remote_sources/_/Opencores/slib_input_filter.vhd" xil_pn:type="FILE_VHDL">
+    <file xil_pn:name="../Opencores/slib_input_filter.vhd" xil_pn:type="FILE_VHDL">
       <association xil_pn:name="BehavioralSimulation" xil_pn:seqID="17"/>
       <association xil_pn:name="Implementation" xil_pn:seqID="17"/>
     </file>
-    <file xil_pn:name="remote_sources/_/Opencores/slib_input_sync.vhd" xil_pn:type="FILE_VHDL">
+    <file xil_pn:name="../Opencores/slib_input_sync.vhd" xil_pn:type="FILE_VHDL">
       <association xil_pn:name="BehavioralSimulation" xil_pn:seqID="16"/>
       <association xil_pn:name="Implementation" xil_pn:seqID="16"/>
     </file>
-    <file xil_pn:name="remote_sources/_/Opencores/slib_mv_filter.vhd" xil_pn:type="FILE_VHDL">
+    <file xil_pn:name="../Opencores/slib_mv_filter.vhd" xil_pn:type="FILE_VHDL">
       <association xil_pn:name="BehavioralSimulation" xil_pn:seqID="1"/>
       <association xil_pn:name="Implementation" xil_pn:seqID="1"/>
     </file>
-    <file xil_pn:name="remote_sources/_/Opencores/uart_16750.vhd" xil_pn:type="FILE_VHDL">
+    <file xil_pn:name="../Opencores/uart_16750.vhd" xil_pn:type="FILE_VHDL">
       <association xil_pn:name="BehavioralSimulation" xil_pn:seqID="28"/>
       <association xil_pn:name="Implementation" xil_pn:seqID="28"/>
     </file>
-    <file xil_pn:name="remote_sources/_/Opencores/uart_baudgen.vhd" xil_pn:type="FILE_VHDL">
+    <file xil_pn:name="../Opencores/uart_baudgen.vhd" xil_pn:type="FILE_VHDL">
       <association xil_pn:name="BehavioralSimulation" xil_pn:seqID="15"/>
       <association xil_pn:name="Implementation" xil_pn:seqID="15"/>
     </file>
-    <file xil_pn:name="remote_sources/_/Opencores/uart_interrupt.vhd" xil_pn:type="FILE_VHDL">
+    <file xil_pn:name="../Opencores/uart_interrupt.vhd" xil_pn:type="FILE_VHDL">
       <association xil_pn:name="BehavioralSimulation" xil_pn:seqID="14"/>
       <association xil_pn:name="Implementation" xil_pn:seqID="14"/>
     </file>
-    <file xil_pn:name="remote_sources/_/Opencores/uart_receiver.vhd" xil_pn:type="FILE_VHDL">
+    <file xil_pn:name="../Opencores/uart_receiver.vhd" xil_pn:type="FILE_VHDL">
       <association xil_pn:name="BehavioralSimulation" xil_pn:seqID="13"/>
       <association xil_pn:name="Implementation" xil_pn:seqID="13"/>
     </file>
@@ -153,19 +153,19 @@
       <association xil_pn:name="PostRouteSimulation" xil_pn:seqID="35"/>
       <association xil_pn:name="PostTranslateSimulation" xil_pn:seqID="35"/>
     </file>
-    <file xil_pn:name="remote_sources/_/testbench/utils.vhd" xil_pn:type="FILE_VHDL">
+    <file xil_pn:name="../testbench/utils.vhd" xil_pn:type="FILE_VHDL">
       <association xil_pn:name="BehavioralSimulation" xil_pn:seqID="38"/>
       <association xil_pn:name="PostMapSimulation" xil_pn:seqID="36"/>
       <association xil_pn:name="PostRouteSimulation" xil_pn:seqID="36"/>
       <association xil_pn:name="PostTranslateSimulation" xil_pn:seqID="36"/>
     </file>
-    <file xil_pn:name="remote_sources/_/testbench/uartrx.vhd" xil_pn:type="FILE_VHDL">
+    <file xil_pn:name="../testbench/uartrx.vhd" xil_pn:type="FILE_VHDL">
       <association xil_pn:name="BehavioralSimulation" xil_pn:seqID="40"/>
       <association xil_pn:name="PostMapSimulation" xil_pn:seqID="37"/>
       <association xil_pn:name="PostRouteSimulation" xil_pn:seqID="37"/>
       <association xil_pn:name="PostTranslateSimulation" xil_pn:seqID="37"/>
     </file>
-    <file xil_pn:name="remote_sources/_/testbench/uarttx.vhd" xil_pn:type="FILE_VHDL">
+    <file xil_pn:name="../testbench/uarttx.vhd" xil_pn:type="FILE_VHDL">
       <association xil_pn:name="BehavioralSimulation" xil_pn:seqID="39"/>
       <association xil_pn:name="PostMapSimulation" xil_pn:seqID="38"/>
       <association xil_pn:name="PostRouteSimulation" xil_pn:seqID="38"/>
@@ -175,7 +175,7 @@
       <association xil_pn:name="BehavioralSimulation" xil_pn:seqID="35"/>
       <association xil_pn:name="Implementation" xil_pn:seqID="35"/>
     </file>
-    <file xil_pn:name="remote_sources/_/top_rtl/uart_top_struct.vhd" xil_pn:type="FILE_VHDL">
+    <file xil_pn:name="../top_rtl/uart_top_struct.vhd" xil_pn:type="FILE_VHDL">
       <association xil_pn:name="BehavioralSimulation" xil_pn:seqID="33"/>
       <association xil_pn:name="Implementation" xil_pn:seqID="33"/>
     </file>
