@@ -18,7 +18,7 @@ Basic usage instructions :
 ==========================
 Prerequisites :
 - Quartus 17.0.2
-- Terminal emulator (eg: Tera Term)
+- serial terminal emulator (eg: Tera Term, CuteCom, putty..)
 - nasm
 - make
 - srecord (eg: srecord-1.64-win32)
