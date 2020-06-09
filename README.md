@@ -21,7 +21,7 @@ Prerequisites :
 - Terminal emulator (eg: Tera Term)
 - nasm
 - make
-- srec (eg: srecord-1.64-win32)
+- srecord (eg: srecord-1.64-win32)
 
 To test cpu86 on the Max1000 board, open "cpu86/mx_sdram/top.qpf" in Quartus
 Build the max1k_88_top.sof bitstream (takes about 3min)
