@@ -1,0 +1,287 @@
+# -------------------------------------------------------------------------- #
+#
+# Copyright (C) 2017  Intel Corporation. All rights reserved.
+# Your use of Intel Corporation's design tools, logic functions 
+# and other software and tools, and its AMPP partner logic 
+# functions, and any output files from any of the foregoing 
+# (including device programming or simulation files), and any 
+# associated documentation or information are expressly subject 
+# to the terms and conditions of the Intel Program License 
+# Subscription Agreement, the Intel Quartus Prime License Agreement,
+# the Intel FPGA IP License Agreement, or other applicable license
+# agreement, including, without limitation, that your use is for
+# the sole purpose of programming logic devices manufactured by
+# Intel and sold by Intel or its authorized distributors.  Please
+# refer to the applicable agreement for further details.
+#
+# -------------------------------------------------------------------------- #
+#
+# Quartus Prime
+# Version 17.1.1 Internal Build 593 12/11/2017 SJ Lite Edition
+# Date created = 11:31:31  February 04, 2018
+#
+# -------------------------------------------------------------------------- #
+#
+# Notes:
+#
+# 1) The default values for assignments are stored in the file:
+#		max1k_88_top_assignment_defaults.qdf
+#    If this file doesn't exist, see file:
+#		assignment_defaults.qdf
+#
+# 2) Altera recommends that you do not modify this file. This
+#    file is updated automatically by the Quartus Prime software
+#    and any changes you make may be lost or overwritten.
+#
+# -------------------------------------------------------------------------- #
+
+
+set_global_assignment -name FAMILY "MAX 10"
+set_global_assignment -name DEVICE 10M08SAU169C8G
+set_global_assignment -name TOP_LEVEL_ENTITY max1k_88_top
+set_global_assignment -name ORIGINAL_QUARTUS_VERSION 17.1.1
+set_global_assignment -name PROJECT_CREATION_TIME_DATE "11:31:31  FEBRUARY 04, 2018"
+set_global_assignment -name LAST_QUARTUS_VERSION "17.0.2 Lite Edition"
+set_global_assignment -name PROJECT_OUTPUT_DIRECTORY output_files
+set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
+set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
+set_global_assignment -name ERROR_CHECK_FREQUENCY_DIVISOR 256
+set_global_assignment -name EDA_SIMULATION_TOOL "ModelSim-Altera (VHDL)"
+set_global_assignment -name EDA_TIME_SCALE "1 ps" -section_id eda_simulation
+set_global_assignment -name EDA_OUTPUT_DATA_FORMAT VHDL -section_id eda_simulation
+set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 200 LFPM AIRFLOW"
+set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
+set_global_assignment -name FLOW_ENABLE_POWER_ANALYZER ON
+set_global_assignment -name POWER_DEFAULT_INPUT_IO_TOGGLE_RATE "12.5 %"
+set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
+set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
+set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+set_location_assignment PIN_H6 -to CLK12M
+set_location_assignment PIN_E6 -to USER_BTN
+set_location_assignment PIN_D8 -to LED[7]
+set_location_assignment PIN_C10 -to LED[6]
+set_location_assignment PIN_C9 -to LED[5]
+set_location_assignment PIN_B10 -to LED[4]
+set_location_assignment PIN_A10 -to LED[3]
+set_location_assignment PIN_A11 -to LED[2]
+set_location_assignment PIN_A9 -to LED[1]
+set_location_assignment PIN_A8 -to LED[0]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LED
+set_instance_assignment -name IO_STANDARD "3.3 V SCHMITT TRIGGER" -to USER_BTN
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to CLK12M
+set_global_assignment -name VCCA_USER_VOLTAGE 3.3V
+set_global_assignment -name ENABLE_OCT_DONE ON
+set_global_assignment -name STRATIXV_CONFIGURATION_SCHEME "PASSIVE SERIAL"
+set_global_assignment -name USE_CONFIGURATION_DEVICE OFF
+set_global_assignment -name CRC_ERROR_OPEN_DRAIN OFF
+set_global_assignment -name STRATIX_DEVICE_IO_STANDARD "3.3-V LVTTL"
+set_global_assignment -name OUTPUT_IO_TIMING_NEAR_END_VMEAS "HALF VCCIO" -rise
+set_global_assignment -name OUTPUT_IO_TIMING_NEAR_END_VMEAS "HALF VCCIO" -fall
+set_global_assignment -name OUTPUT_IO_TIMING_FAR_END_VMEAS "HALF SIGNAL SWING" -rise
+set_global_assignment -name OUTPUT_IO_TIMING_FAR_END_VMEAS "HALF SIGNAL SWING" -fall
+set_global_assignment -name TIMEQUEST_MULTICORNER_ANALYSIS ON
+set_global_assignment -name NUM_PARALLEL_PROCESSORS 3
+set_global_assignment -name EXTERNAL_FLASH_FALLBACK_ADDRESS 00000000
+set_global_assignment -name INTERNAL_FLASH_UPDATE_MODE "SINGLE IMAGE WITH ERAM"
+set_location_assignment PIN_A4 -to RsRx
+set_location_assignment PIN_B4 -to RsTx
+set_global_assignment -name VERILOG_FILE NIOS_sdram_controller_0.v
+set_global_assignment -name VHDL_FILE ../Opencores/slib_mv_filter.vhd
+set_global_assignment -name VHDL_FILE ../Opencores/slib_input_sync.vhd
+set_global_assignment -name VHDL_FILE ../Opencores/slib_input_filter.vhd
+set_global_assignment -name VHDL_FILE ../Opencores/slib_fifo.vhd
+set_global_assignment -name VHDL_FILE ../Opencores/slib_edge_detect.vhd
+set_global_assignment -name VHDL_FILE ../Opencores/slib_counter.vhd
+set_global_assignment -name VHDL_FILE ../Opencores/slib_clock_div.vhd
+set_global_assignment -name VHDL_FILE ../Opencores/uart_transmitter.vhd
+set_global_assignment -name VHDL_FILE ../Opencores/uart_receiver.vhd
+set_global_assignment -name VHDL_FILE ../Opencores/uart_interrupt.vhd
+set_global_assignment -name VHDL_FILE ../Opencores/uart_baudgen.vhd
+set_global_assignment -name VHDL_FILE ../Opencores/uart_16750.vhd
+set_global_assignment -name VHDL_FILE max1k_88_top.vhd
+set_global_assignment -name VHDL_FILE ../cpu86_rtl/cpu86_struct.vhd
+set_global_assignment -name VHDL_FILE ../cpu86_rtl/cpu86pack.vhd
+set_global_assignment -name VHDL_FILE ../cpu86_rtl/cpu86instr.vhd
+set_global_assignment -name VHDL_FILE ../cpu86_rtl/a_table.vhd
+set_global_assignment -name VHDL_FILE ../cpu86_rtl/segregfile_rtl.vhd
+set_global_assignment -name VHDL_FILE ../cpu86_rtl/regshiftmux_regshift.vhd
+set_global_assignment -name VHDL_FILE ../cpu86_rtl/r_table.vhd
+set_global_assignment -name VHDL_FILE ../cpu86_rtl/proc_rtl.vhd
+set_global_assignment -name VHDL_FILE ../cpu86_rtl/n_table.vhd
+set_global_assignment -name VHDL_FILE ../cpu86_rtl/multiplier_rtl.vhd
+set_global_assignment -name VHDL_FILE ../cpu86_rtl/m_table.vhd
+set_global_assignment -name VHDL_FILE ../cpu86_rtl/ipregister_rtl.vhd
+set_global_assignment -name VHDL_FILE ../cpu86_rtl/formatter_struct.vhd
+set_global_assignment -name VHDL_FILE ../cpu86_rtl/divider_rtl_ser.vhd
+set_global_assignment -name VHDL_FILE ../cpu86_rtl/dataregfile_rtl.vhd
+set_global_assignment -name VHDL_FILE ../cpu86_rtl/datapath_struct.vhd
+set_global_assignment -name VHDL_FILE ../cpu86_rtl/d_table.vhd
+set_global_assignment -name VHDL_FILE ../cpu86_rtl/biufsm_fsm.vhd
+set_global_assignment -name VHDL_FILE ../cpu86_rtl/biu_struct.vhd
+set_global_assignment -name VHDL_FILE ../cpu86_rtl/alu_rtl.vhd
+set_global_assignment -name SDC_FILE max1k_88_top.sdc
+set_global_assignment -name VHDL_FILE ram.vhd
+set_global_assignment -name VHDL_FILE ../top_rtl/Bootstrap_rtl.vhd
+set_global_assignment -name VHDL_FILE ../top_rtl/uart_top_struct.vhd
+set_global_assignment -name QIP_FILE pll12to40.qip
+set_location_assignment PIN_M12 -to SDRAM_ADDR[13]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SDRAM_WEn -entity Max1000_Wasserwaage_SDRAM
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SDRAM_ADDR[11] -entity Max1000_Wasserwaage_SDRAM
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SDRAM_ADDR[10] -entity Max1000_Wasserwaage_SDRAM
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SDRAM_ADDR[9] -entity Max1000_Wasserwaage_SDRAM
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SDRAM_ADDR[8] -entity Max1000_Wasserwaage_SDRAM
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SDRAM_ADDR[7] -entity Max1000_Wasserwaage_SDRAM
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SDRAM_ADDR[6] -entity Max1000_Wasserwaage_SDRAM
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SDRAM_ADDR[5] -entity Max1000_Wasserwaage_SDRAM
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SDRAM_ADDR[4] -entity Max1000_Wasserwaage_SDRAM
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SDRAM_ADDR[3] -entity Max1000_Wasserwaage_SDRAM
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SDRAM_ADDR[2] -entity Max1000_Wasserwaage_SDRAM
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SDRAM_ADDR[1] -entity Max1000_Wasserwaage_SDRAM
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SDRAM_ADDR[0] -entity Max1000_Wasserwaage_SDRAM
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SDRAM_BA[1] -entity Max1000_Wasserwaage_SDRAM
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SDRAM_BA[0] -entity Max1000_Wasserwaage_SDRAM
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SDRAM_CASn -entity Max1000_Wasserwaage_SDRAM
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SDRAM_CKE -entity Max1000_Wasserwaage_SDRAM
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SDRAM_CLK -entity Max1000_Wasserwaage_SDRAM
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SDRAM_CSn -entity Max1000_Wasserwaage_SDRAM
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SDRAM_DQ[15] -entity Max1000_Wasserwaage_SDRAM
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SDRAM_DQ[14] -entity Max1000_Wasserwaage_SDRAM
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SDRAM_DQ[13] -entity Max1000_Wasserwaage_SDRAM
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SDRAM_DQ[12] -entity Max1000_Wasserwaage_SDRAM
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SDRAM_DQ[11] -entity Max1000_Wasserwaage_SDRAM
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SDRAM_DQ[10] -entity Max1000_Wasserwaage_SDRAM
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SDRAM_DQ[9] -entity Max1000_Wasserwaage_SDRAM
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SDRAM_DQ[8] -entity Max1000_Wasserwaage_SDRAM
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SDRAM_DQ[7] -entity Max1000_Wasserwaage_SDRAM
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SDRAM_DQ[6] -entity Max1000_Wasserwaage_SDRAM
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SDRAM_DQ[5] -entity Max1000_Wasserwaage_SDRAM
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SDRAM_DQ[4] -entity Max1000_Wasserwaage_SDRAM
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SDRAM_DQ[3] -entity Max1000_Wasserwaage_SDRAM
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SDRAM_DQ[2] -entity Max1000_Wasserwaage_SDRAM
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SDRAM_DQ[1] -entity Max1000_Wasserwaage_SDRAM
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SDRAM_DQ[0] -entity Max1000_Wasserwaage_SDRAM
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SDRAM_DQM[1] -entity Max1000_Wasserwaage_SDRAM
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SDRAM_DQM[0] -entity Max1000_Wasserwaage_SDRAM
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SDRAM_RASn -entity Max1000_Wasserwaage_SDRAM
+set_location_assignment PIN_D11 -to SDRAM_DQ[0]
+set_location_assignment PIN_G10 -to SDRAM_DQ[1]
+set_location_assignment PIN_F10 -to SDRAM_DQ[2]
+set_location_assignment PIN_F9 -to SDRAM_DQ[3]
+set_location_assignment PIN_E10 -to SDRAM_DQ[4]
+set_location_assignment PIN_D9 -to SDRAM_DQ[5]
+set_location_assignment PIN_G9 -to SDRAM_DQ[6]
+set_location_assignment PIN_F8 -to SDRAM_DQ[7]
+set_location_assignment PIN_F13 -to SDRAM_DQ[8]
+set_location_assignment PIN_E12 -to SDRAM_DQ[9]
+set_location_assignment PIN_E13 -to SDRAM_DQ[10]
+set_location_assignment PIN_D12 -to SDRAM_DQ[11]
+set_location_assignment PIN_C12 -to SDRAM_DQ[12]
+set_location_assignment PIN_B12 -to SDRAM_DQ[13]
+set_location_assignment PIN_B13 -to SDRAM_DQ[14]
+set_location_assignment PIN_A12 -to SDRAM_DQ[15]
+set_location_assignment PIN_E9 -to SDRAM_DQM[0]
+set_location_assignment PIN_F12 -to SDRAM_DQM[1]
+set_location_assignment PIN_K7 -to SDRAM_WEn
+set_location_assignment PIN_M7 -to SDRAM_RASn
+set_location_assignment PIN_M4 -to SDRAM_CSn
+set_location_assignment PIN_M9 -to SDRAM_CLK
+set_location_assignment PIN_M8 -to SDRAM_CKE
+set_location_assignment PIN_N7 -to SDRAM_CASn
+set_location_assignment PIN_N6 -to SDRAM_BA[0]
+set_location_assignment PIN_K8 -to SDRAM_BA[1]
+set_location_assignment PIN_K6 -to SDRAM_ADDR[0]
+set_location_assignment PIN_M5 -to SDRAM_ADDR[1]
+set_location_assignment PIN_N5 -to SDRAM_ADDR[2]
+set_location_assignment PIN_J8 -to SDRAM_ADDR[3]
+set_location_assignment PIN_N10 -to SDRAM_ADDR[4]
+set_location_assignment PIN_M11 -to SDRAM_ADDR[5]
+set_location_assignment PIN_N9 -to SDRAM_ADDR[6]
+set_location_assignment PIN_L10 -to SDRAM_ADDR[7]
+set_location_assignment PIN_M13 -to SDRAM_ADDR[8]
+set_location_assignment PIN_N8 -to SDRAM_ADDR[9]
+set_location_assignment PIN_N4 -to SDRAM_ADDR[10]
+set_location_assignment PIN_M10 -to SDRAM_ADDR[11]
+set_location_assignment PIN_L11 -to SDRAM_ADDR[12]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SDRAM_ADDR[13] -entity Max1000_Wasserwaage_SDRAM
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SDRAM_ADDR[12] -entity Max1000_Wasserwaage_SDRAM
+set_instance_assignment -name CURRENT_STRENGTH_NEW 8MA -to SDRAM_WEn -entity Max1000_Wasserwaage_SDRAM
+set_instance_assignment -name CURRENT_STRENGTH_NEW 8MA -to SDRAM_ADDR[13] -entity Max1000_Wasserwaage_SDRAM
+set_instance_assignment -name CURRENT_STRENGTH_NEW 8MA -to SDRAM_ADDR[12] -entity Max1000_Wasserwaage_SDRAM
+set_instance_assignment -name CURRENT_STRENGTH_NEW 8MA -to SDRAM_ADDR[11] -entity Max1000_Wasserwaage_SDRAM
+set_instance_assignment -name CURRENT_STRENGTH_NEW 8MA -to SDRAM_ADDR[10] -entity Max1000_Wasserwaage_SDRAM
+set_instance_assignment -name CURRENT_STRENGTH_NEW 8MA -to SDRAM_ADDR[9] -entity Max1000_Wasserwaage_SDRAM
+set_instance_assignment -name CURRENT_STRENGTH_NEW 8MA -to SDRAM_ADDR[8] -entity Max1000_Wasserwaage_SDRAM
+set_instance_assignment -name CURRENT_STRENGTH_NEW 8MA -to SDRAM_ADDR[7] -entity Max1000_Wasserwaage_SDRAM
+set_instance_assignment -name CURRENT_STRENGTH_NEW 8MA -to SDRAM_ADDR[6] -entity Max1000_Wasserwaage_SDRAM
+set_instance_assignment -name CURRENT_STRENGTH_NEW 8MA -to SDRAM_ADDR[5] -entity Max1000_Wasserwaage_SDRAM
+set_instance_assignment -name CURRENT_STRENGTH_NEW 8MA -to SDRAM_ADDR[4] -entity Max1000_Wasserwaage_SDRAM
+set_instance_assignment -name CURRENT_STRENGTH_NEW 8MA -to SDRAM_ADDR[3] -entity Max1000_Wasserwaage_SDRAM
+set_instance_assignment -name CURRENT_STRENGTH_NEW 8MA -to SDRAM_ADDR[2] -entity Max1000_Wasserwaage_SDRAM
+set_instance_assignment -name CURRENT_STRENGTH_NEW 8MA -to SDRAM_ADDR[1] -entity Max1000_Wasserwaage_SDRAM
+set_instance_assignment -name CURRENT_STRENGTH_NEW 8MA -to SDRAM_ADDR[0] -entity Max1000_Wasserwaage_SDRAM
+set_instance_assignment -name CURRENT_STRENGTH_NEW 8MA -to SDRAM_BA[1] -entity Max1000_Wasserwaage_SDRAM
+set_instance_assignment -name CURRENT_STRENGTH_NEW 8MA -to SDRAM_BA[0] -entity Max1000_Wasserwaage_SDRAM
+set_instance_assignment -name CURRENT_STRENGTH_NEW 8MA -to SDRAM_CASn -entity Max1000_Wasserwaage_SDRAM
+set_instance_assignment -name CURRENT_STRENGTH_NEW 8MA -to SDRAM_CKE -entity Max1000_Wasserwaage_SDRAM
+set_instance_assignment -name CURRENT_STRENGTH_NEW 8MA -to SDRAM_CLK -entity Max1000_Wasserwaage_SDRAM
+set_instance_assignment -name CURRENT_STRENGTH_NEW 8MA -to SDRAM_CSn -entity Max1000_Wasserwaage_SDRAM
+set_instance_assignment -name CURRENT_STRENGTH_NEW 8MA -to SDRAM_DQ[15] -entity Max1000_Wasserwaage_SDRAM
+set_instance_assignment -name CURRENT_STRENGTH_NEW 8MA -to SDRAM_DQ[14] -entity Max1000_Wasserwaage_SDRAM
+set_instance_assignment -name CURRENT_STRENGTH_NEW 8MA -to SDRAM_DQ[13] -entity Max1000_Wasserwaage_SDRAM
+set_instance_assignment -name CURRENT_STRENGTH_NEW 8MA -to SDRAM_DQ[12] -entity Max1000_Wasserwaage_SDRAM
+set_instance_assignment -name CURRENT_STRENGTH_NEW 8MA -to SDRAM_DQ[11] -entity Max1000_Wasserwaage_SDRAM
+set_instance_assignment -name CURRENT_STRENGTH_NEW 8MA -to SDRAM_DQ[10] -entity Max1000_Wasserwaage_SDRAM
+set_instance_assignment -name CURRENT_STRENGTH_NEW 8MA -to SDRAM_DQ[9] -entity Max1000_Wasserwaage_SDRAM
+set_instance_assignment -name CURRENT_STRENGTH_NEW 8MA -to SDRAM_DQ[8] -entity Max1000_Wasserwaage_SDRAM
+set_instance_assignment -name CURRENT_STRENGTH_NEW 8MA -to SDRAM_DQ[7] -entity Max1000_Wasserwaage_SDRAM
+set_instance_assignment -name CURRENT_STRENGTH_NEW 8MA -to SDRAM_DQ[6] -entity Max1000_Wasserwaage_SDRAM
+set_instance_assignment -name CURRENT_STRENGTH_NEW 8MA -to SDRAM_DQ[5] -entity Max1000_Wasserwaage_SDRAM
+set_instance_assignment -name CURRENT_STRENGTH_NEW 8MA -to SDRAM_DQ[4] -entity Max1000_Wasserwaage_SDRAM
+set_instance_assignment -name CURRENT_STRENGTH_NEW 8MA -to SDRAM_DQ[3] -entity Max1000_Wasserwaage_SDRAM
+set_instance_assignment -name CURRENT_STRENGTH_NEW 8MA -to SDRAM_DQ[2] -entity Max1000_Wasserwaage_SDRAM
+set_instance_assignment -name CURRENT_STRENGTH_NEW 8MA -to SDRAM_DQ[1] -entity Max1000_Wasserwaage_SDRAM
+set_instance_assignment -name CURRENT_STRENGTH_NEW 8MA -to SDRAM_DQ[0] -entity Max1000_Wasserwaage_SDRAM
+set_instance_assignment -name CURRENT_STRENGTH_NEW 8MA -to SDRAM_DQM[1] -entity Max1000_Wasserwaage_SDRAM
+set_instance_assignment -name CURRENT_STRENGTH_NEW 8MA -to SDRAM_DQM[0] -entity Max1000_Wasserwaage_SDRAM
+set_instance_assignment -name CURRENT_STRENGTH_NEW 8MA -to SDRAM_RASn -entity Max1000_Wasserwaage_SDRAM
+set_instance_assignment -name SLEW_RATE 2 -to SDRAM_WEn -entity Max1000_Wasserwaage_SDRAM
+set_instance_assignment -name SLEW_RATE 2 -to SDRAM_ADDR[13] -entity Max1000_Wasserwaage_SDRAM
+set_instance_assignment -name SLEW_RATE 2 -to SDRAM_ADDR[12] -entity Max1000_Wasserwaage_SDRAM
+set_instance_assignment -name SLEW_RATE 2 -to SDRAM_ADDR[11] -entity Max1000_Wasserwaage_SDRAM
+set_instance_assignment -name SLEW_RATE 2 -to SDRAM_ADDR[10] -entity Max1000_Wasserwaage_SDRAM
+set_instance_assignment -name SLEW_RATE 2 -to SDRAM_ADDR[9] -entity Max1000_Wasserwaage_SDRAM
+set_instance_assignment -name SLEW_RATE 2 -to SDRAM_ADDR[8] -entity Max1000_Wasserwaage_SDRAM
+set_instance_assignment -name SLEW_RATE 2 -to SDRAM_ADDR[7] -entity Max1000_Wasserwaage_SDRAM
+set_instance_assignment -name SLEW_RATE 2 -to SDRAM_ADDR[6] -entity Max1000_Wasserwaage_SDRAM
+set_instance_assignment -name SLEW_RATE 2 -to SDRAM_ADDR[5] -entity Max1000_Wasserwaage_SDRAM
+set_instance_assignment -name SLEW_RATE 2 -to SDRAM_ADDR[4] -entity Max1000_Wasserwaage_SDRAM
+set_instance_assignment -name SLEW_RATE 2 -to SDRAM_ADDR[3] -entity Max1000_Wasserwaage_SDRAM
+set_instance_assignment -name SLEW_RATE 2 -to SDRAM_ADDR[2] -entity Max1000_Wasserwaage_SDRAM
+set_instance_assignment -name SLEW_RATE 2 -to SDRAM_ADDR[1] -entity Max1000_Wasserwaage_SDRAM
+set_instance_assignment -name SLEW_RATE 2 -to SDRAM_ADDR[0] -entity Max1000_Wasserwaage_SDRAM
+set_instance_assignment -name SLEW_RATE 2 -to SDRAM_BA[1] -entity Max1000_Wasserwaage_SDRAM
+set_instance_assignment -name SLEW_RATE 2 -to SDRAM_BA[0] -entity Max1000_Wasserwaage_SDRAM
+set_instance_assignment -name SLEW_RATE 2 -to SDRAM_CASn -entity Max1000_Wasserwaage_SDRAM
+set_instance_assignment -name SLEW_RATE 2 -to SDRAM_CKE -entity Max1000_Wasserwaage_SDRAM
+set_instance_assignment -name SLEW_RATE 2 -to SDRAM_CLK -entity Max1000_Wasserwaage_SDRAM
+set_instance_assignment -name SLEW_RATE 2 -to SDRAM_CSn -entity Max1000_Wasserwaage_SDRAM
+set_instance_assignment -name SLEW_RATE 2 -to SDRAM_DQ[15] -entity Max1000_Wasserwaage_SDRAM
+set_instance_assignment -name SLEW_RATE 2 -to SDRAM_DQ[14] -entity Max1000_Wasserwaage_SDRAM
+set_instance_assignment -name SLEW_RATE 2 -to SDRAM_DQ[13] -entity Max1000_Wasserwaage_SDRAM
+set_instance_assignment -name SLEW_RATE 2 -to SDRAM_DQ[12] -entity Max1000_Wasserwaage_SDRAM
+set_instance_assignment -name SLEW_RATE 2 -to SDRAM_DQ[11] -entity Max1000_Wasserwaage_SDRAM
+set_instance_assignment -name SLEW_RATE 2 -to SDRAM_DQ[10] -entity Max1000_Wasserwaage_SDRAM
+set_instance_assignment -name SLEW_RATE 2 -to SDRAM_DQ[9] -entity Max1000_Wasserwaage_SDRAM
+set_instance_assignment -name SLEW_RATE 2 -to SDRAM_DQ[8] -entity Max1000_Wasserwaage_SDRAM
+set_instance_assignment -name SLEW_RATE 2 -to SDRAM_DQ[7] -entity Max1000_Wasserwaage_SDRAM
+set_instance_assignment -name SLEW_RATE 2 -to SDRAM_DQ[6] -entity Max1000_Wasserwaage_SDRAM
+set_instance_assignment -name SLEW_RATE 2 -to SDRAM_DQ[5] -entity Max1000_Wasserwaage_SDRAM
+set_instance_assignment -name SLEW_RATE 2 -to SDRAM_DQ[4] -entity Max1000_Wasserwaage_SDRAM
+set_instance_assignment -name SLEW_RATE 2 -to SDRAM_DQ[3] -entity Max1000_Wasserwaage_SDRAM
+set_instance_assignment -name SLEW_RATE 2 -to SDRAM_DQ[2] -entity Max1000_Wasserwaage_SDRAM
+set_instance_assignment -name SLEW_RATE 2 -to SDRAM_DQ[1] -entity Max1000_Wasserwaage_SDRAM
+set_instance_assignment -name SLEW_RATE 2 -to SDRAM_DQ[0] -entity Max1000_Wasserwaage_SDRAM
+set_instance_assignment -name SLEW_RATE 2 -to SDRAM_DQM[1] -entity Max1000_Wasserwaage_SDRAM
+set_instance_assignment -name SLEW_RATE 2 -to SDRAM_DQM[0] -entity Max1000_Wasserwaage_SDRAM
+set_instance_assignment -name SLEW_RATE 2 -to SDRAM_RASn -entity Max1000_Wasserwaage_SDRAM
+set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

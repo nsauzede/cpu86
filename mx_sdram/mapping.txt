@@ -1,0 +1,23 @@
+                        1  1
+                        9  6       8
+SRAM : 15 bits = 32kB : 00000000000000000000
+	00000-0FFFF decode
+	00000-07FFF contents
+SDRAM : 12 bits = 4kB
+  10000-FFEFF decode (= 959kB)
+  10000-10fff contents
+ROM : 8 bits = 256B		: 11111111111100000000
+  FFF00-FFFFF
+
+00000	SRAM BEGIN	0000:0000  35 17 00 00 16 14 00 00 35 17 00 00 16 14 00 00   5.......5.......
+ 07FFF	SRAM END	07FF:0000  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+08000	SRAM BEGIN	0800:0000  35 17 00 00 16 14 00 00 35 17 00 00 16 14 00 00   5.......5.......
+ 0FFFF	SRAM END	0FFF:0000  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+10000	SDRAM BEGIN	1000:0000  31 AA AA AA AA BA AA AA AA AA AA AA AA AA AA AB   1...............
+ FFEFF	ROM END		FFEF:0000  32 55 55 55 55 55 55 55 55 55 55 55 55 55 55 55   2UUUUUUUUUUUUUUU
+FFF00	ROM BEGIN		FFF0:0000  90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90   ................
+ FFFFF	ROM END		FFFF:0000  EA 00 04 00 00 00 90 90 90 90 90 90 90 90 90 90   ................
+
+SDRAM : 8MiB in 16 bits => 4Mwords => 400000 => 22 bits address ; removing 2 bits => 1MWord
+14 bits address
+2 bits bank
