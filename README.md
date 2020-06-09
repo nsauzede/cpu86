@@ -52,8 +52,24 @@ Now you just have to hit 'l' in MON88 and paste the following hex output :
 :020180002A0053
 :0400000300000100F8
 ```
-And follow the above instructions
+Now you can copy/paste the hex block (all lines beginning by ':') in the MON88 prompt, after having pressed 'l' (load intel hex file) :
+```
+Cmd>l
+Start upload now, load is terminated by :00000001FF
+>......
+*** Hello ***
+*** DIFFERENT ***
+*** SAME ***
+Program Terminated with exit code 0
+
+MON88 8088/8086 Monitor ver 0.12
+Copyright WWW.HT-LAB.COM 2005-2008
+All rights reserved.
+
+Cmd>
+```
+
+That's all for now !
+Stay tuned and/or Have fun !
 
 More to come in the [wiki](https://github.com/nsauzede/cpu86/wiki)..
-
-Stay tuned and/or Have fun !
