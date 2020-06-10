@@ -1,7 +1,7 @@
 ##############################################################
 #
 # Xilinx Core Generator version 14.7
-# Date: Fri Feb 20 13:15:03 2015
+# Date: Tue Jun  9 23:29:15 2020
 #
 ##############################################################
 #
@@ -46,7 +46,7 @@ CSET axi_id_width=4
 CSET axi_slave_type=Memory_Slave
 CSET axi_type=AXI4_Full
 CSET byte_size=9
-CSET coe_file=C:\nico\perso\hack\hackerspace\fpga\x86\cpu86\papilio2\MON88.COE
+CSET coe_file=/home/nico/git/cpu86/Software/Mon88/MON88.COE
 CSET collision_warnings=ALL
 CSET component_name=blk_mem_40K
 CSET disable_collision_warnings=false
@@ -105,4 +105,4 @@ CSET write_width_b=8
 MISC pkg_timestamp=2012-11-19T16:22:25Z
 # END Extra information
 GENERATE
-# CRC: c763f433
+# CRC: bbd57d21
