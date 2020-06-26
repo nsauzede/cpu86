@@ -15,4 +15,4 @@ This project builds upon work in the Drigmorn1 project and does the following:
 * [Open source 808x IP](http://www.ht-lab.com/cpu86.htm)
 * [Papilio Duo](http://papilio.cc/index.php?n=Papilio.DUOStart)
 * [Papilio LCD wing (Sharp LCD screens)](https://www.logre.eu/wiki/Ecran_Sharp_LQ084V1DG21/en)
-* [Recreating ancient 8088 PC on FPGA (in french)](https://www.logre.eu/wiki/PC_8088_sur_FPGA)
+* [Recreating ancient 8088 PC on FPGA (in french)](https://wiki.logre.eu/index.php/PC_8088_sur_FPGA)
