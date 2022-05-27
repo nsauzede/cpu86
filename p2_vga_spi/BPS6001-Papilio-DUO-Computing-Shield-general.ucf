@@ -11,8 +11,8 @@ NET CLK           LOC="P94"  | IOSTANDARD=LVTTL | PERIOD=31.25ns;               
 NET RX            LOC="P46"  | IOSTANDARD=LVTTL;                                # RX
 NET TX            LOC="P141" | IOSTANDARD=LVTTL | DRIVE=8 | SLEW=FAST;          # TX
 NET ARDUINO_RESET LOC="P139" | IOSTANDARD=LVTTL;                                # ARDUINO_RESET
-#NET RS232_RX      LOC="P116" | IOSTANDARD=LVTTL;                                # A0
-#NET RS232_TX      LOC="P117" | IOSTANDARD=LVTTL;                                # A1
+NET RS232_RX      LOC="P116" | IOSTANDARD=LVTTL;                                # A0
+NET RS232_TX      LOC="P117" | IOSTANDARD=LVTTL;                                # A1
 NET SD_MISO       LOC="P118" | IOSTANDARD=LVTTL;                                # A2
 #NET SD_CD         LOC="P119" | IOSTANDARD=LVTTL;                                # A3
 #NET PS2_DAT1      LOC="P120" | IOSTANDARD=LVTTL;                                # A4

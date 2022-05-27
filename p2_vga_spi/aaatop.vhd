@@ -156,7 +156,8 @@ begin
     CLK_IN1 => clk,
     -- Clock out ports
     CLK_OUT1 => CLOCK_40MHZ,
-    CLK_OUT2 => clock
+    CLK_OUT2 => clock,
+	 CLK_OUT3 => open
 	 );
 
     -- VGA signals

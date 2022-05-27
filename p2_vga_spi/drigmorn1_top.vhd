@@ -368,6 +368,7 @@ BEGIN
        RTSn     => RTS,
        dbus_out => dbus_com1,
        stx      => TXD
+--       stx      => RS232_TX
     );
 
 END struct;

@@ -56,6 +56,7 @@
 ------------------------------------------------------------------------------
 -- CLK_OUT1____40.000______0.000______50.0______286.298____184.405
 -- CLK_OUT2____50.526______0.000______50.0______265.785____184.405
+-- CLK_OUT3____16.000______0.000______50.0______387.987____184.405
 --
 ------------------------------------------------------------------------------
 -- "Input Clock   Freq (MHz)    Input Jitter (UI)"
@@ -71,7 +72,8 @@ port
   CLK_IN1           : in     std_logic;
   -- Clock out ports
   CLK_OUT1          : out    std_logic;
-  CLK_OUT2          : out    std_logic
+  CLK_OUT2          : out    std_logic;
+  CLK_OUT3          : out    std_logic
  );
 end component;
 
@@ -85,5 +87,6 @@ your_instance_name : clk32to40
     CLK_IN1 => CLK_IN1,
     -- Clock out ports
     CLK_OUT1 => CLK_OUT1,
-    CLK_OUT2 => CLK_OUT2);
+    CLK_OUT2 => CLK_OUT2,
+    CLK_OUT3 => CLK_OUT3);
 -- INST_TAG_END ------ End INSTANTIATION Template ------------
