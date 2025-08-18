@@ -4,6 +4,8 @@ Here is a port of CPU86, the Free VHDL CPU8088 IP core.
 
 The original website is :
 - http://ht-lab.com/cpu86.htm
+Site seems down, here is a backup of the original cpu86 archive, done circa 2014: [cpu86.zip](BACKUP/cpu86.zip).
+Also find backups of other reference archives of the time here: [BACKUP](BACKUP).
 
 Original Readme is [here](readme.txt)
 
